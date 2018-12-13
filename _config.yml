@@ -1,4 +1,4 @@
-baseurl: /
+baseurl: /starter
 permalink: pretty
 markdown: kramdown
 prose:
