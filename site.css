@@ -498,3 +498,4 @@ Details: http://www.positioniseverything.net/easyclearing.html
 .answer {display: none}
 .answer-title {margin-top: 40px}
 .answer-title:hover ~ .answer {display: inline-block}
+.answer-title:active ~ .answer {display: inline-block}
