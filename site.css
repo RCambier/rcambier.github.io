@@ -495,7 +495,7 @@ Details: http://www.positioniseverything.net/easyclearing.html
   }
 
 
-.answer {display: none}
+.answer {visibility: hidden}
 .answer-title {margin-top: 40px}
-.answer-title:hover ~ .answer {display: inline-block}
-.answer-title:active ~ .answer {display: inline-block}
+.answer-title:hover ~ .answer {visibility: visible}
+.answer-title:active ~ .answer {visibility: visible}
