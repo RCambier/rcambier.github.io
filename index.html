@@ -4,8 +4,9 @@ section: blog
 ---
 
 <div class='listing col6 pad4h margin3'>
-  {% for item in site.categories.blog limit:1000 %}
-    <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}}</a>
+  {% assign posts = site.categories.blog | sort:'difficulty' %}
+  {% for item in  posts %}
+    <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}} (difficulty {{item.difficulty}})</a> 
   {% endfor %}
 </div>
 

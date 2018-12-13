@@ -3,6 +3,7 @@ layout: blog
 category: blog
 published: true
 title: Prisoners and trees
+difficulty: 4
 ---
 The Seemingly Impossible Escape – Sunday Puzzle
 Here is a logic puzzle that depends on the game theory concept of common knowledge. Can you figure it out?
