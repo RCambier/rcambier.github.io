@@ -494,3 +494,6 @@ Details: http://www.positioniseverything.net/easyclearing.html
     }
   }
 
+
+.answer {display: none}
+.answer-title:hover ~ .answer {display: inline-block}
