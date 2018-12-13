@@ -7,6 +7,7 @@ section: blog
   {% assign posts = site.categories.blog | sort:'difficulty' %}
   {% for item in  posts %}
     <a class='item' href='{{site.baseurl}}{{item.url}}'>{{item.title}} (difficulty {{item.difficulty}})</a> 
+    {{ item.excerpt }}
   {% endfor %}
 </div>
 

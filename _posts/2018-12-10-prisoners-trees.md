@@ -5,8 +5,9 @@ published: true
 title: Prisoners and trees
 difficulty: 4
 ---
-The Seemingly Impossible Escape – Sunday Puzzle
-Here is a logic puzzle that depends on the game theory concept of common knowledge. Can you figure it out?
+Here is a logic puzzle that depends on the game theory concept of common knowledge. 
+
+Can you figure it out?
 Alice and Bob are taken prisoners by an evil logician. They are given one chance to be set free.
 Alice and Bob are placed in cells that have a view of a courtyard with trees. There are 20 trees in all, of which Alice sees 12 and Bob sees 8.
 Neither prisoner knows how many trees the other sees. But each prisoner is told the trees are partitioned between them: together they see all the trees, but individually no tree is seen by both of them.
