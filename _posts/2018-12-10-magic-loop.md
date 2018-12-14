@@ -25,7 +25,7 @@ When Alice had the five cards in hands, she needs to find a way to select one, a
 
 Here is the way to do that:
 - In the five cards, there are always two of the same suite. 
-- Alice is going to chose one of those two and tell which one to Bob using the 4 other cards. 
+- Alice is going to chose one of those two and tell which one to Bob using the 3 remaining cards. 
 - The thing to notice is: when having two cards of the same suite, they are alway 6 cards appart in some direction. For example 7-heart and 9-heart are 2 apart. But queen-spade and 2-spade are 3 apart: queen-king-ace-2.
 - Now since there are 12 different cards per suite, two cards are always going to be maximum 6 steps away from each other. 
 - So the way to do it is: from the two cards of the same suite, pick the one that allows reaching the other by adding up to 6 steps. So with 7-heart and 9-heart, pick 7-heart. With 2-spade and queen-spade, pick queen-spade.
