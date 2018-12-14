@@ -19,6 +19,7 @@ They did the trick again later to someone else. I watched for funny business. Al
 
 <div markdown="1" class='answer-title' style="color: lightgrey">_Hover to show the answer._
 </div>
+<div class='answer-wrapper'>
 <div markdown="1" class='answer' style="color: grey">
 When Alice had the five cards in hands, she needs to find a way to select one, and communicate which one she selected to Bob by showing Bob the four other cards.
 
@@ -36,4 +37,5 @@ Here is the way to do that:
 - So Bob sees the queen-spade, and then 3 cards that represent the number '3'. He can now guess that the 2-spade.
 
 
+</div>
 </div>

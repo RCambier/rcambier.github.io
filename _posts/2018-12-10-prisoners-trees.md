@@ -24,6 +24,9 @@ Obviously they could guess and have a 50% chance. But can they do better? Is the
 
 <div markdown="1" class='answer-title' style="color: lightgrey">_Hover to show the answer._
 </div>
+<div class='answer-wrapper'>
 <div markdown="1" class='answer' style="color: grey">
 This is a complex one. Answer is coming.
 </div>
+</div>
+
