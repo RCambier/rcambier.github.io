@@ -31,10 +31,10 @@ Here is the way to do that:
 - So the way to do it is: from the two cards of the same suite, pick the one that allows reaching the other by adding up to 6 steps. So with 7-heart and 9-heart, pick 7-heart. With 2-spade and queen-spade, pick queen-spade.
 - Let's continue in the case where Alice picked the queen-spade. 
 - Alice gives back to Bob 3 cards + the queen-spade on top. And Bob has to guess 2-spade.
-- The goal is now to make the number '3' with the 3 random cards. That way Bob knows he has to add '3' to the queen-spade, which will give him the 2-spade.
+- The goal is now to make the number '3' with the 3 remaining random cards. That way Bob knows he has to add '3' to the queen-spade, which will give him the 2-spade.
 - This is easily doable. With 3 cards you can make 6 combinations. Just assign each of them to a number.
 - Here is a way to do this: The 3 cards can always be ordered by value. So you can have card-1, card-2 and card-3. The six orders could be: [1-2-3, 1-3-2, 2-1-3, 2-3-1, 3-1-2, 3-2-1]. Here we would select the order '2-1-3' to represent the number 3.
-- So Bob sees the queen-spade, and then 3 cards that represent the number '3'. He can now guess that the 2-spade.
+- So Bob sees the queen-spade, and then 3 cards that represent the number '3'. He can now guess the 2-spade.
 
 
 </div>
