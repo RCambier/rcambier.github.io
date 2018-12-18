@@ -19,7 +19,7 @@ Similarly (by induction), all days are eliminated !
 Then they are happy and think the evil professor made a promise he couldn't hold, and don't prepare for the test. 
 However, the next week, on Wednesday, they have the exam. And all are surprised. 
 
-Where is the flaw in the logic 
+Where is the flaw in the logic ?
 
 <div markdown="1" class='answer-title' style="color: lightgrey">_Hover to show the answer._
 </div>
