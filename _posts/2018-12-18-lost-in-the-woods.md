@@ -16,6 +16,8 @@ What path do you follow ?
 <div markdown="1" class='answer' style="color: grey">
 
 The solution is the following path.
+![tree-path](/img/tree-path.png){:height="250px"}
+
 
 </div>
 </div>
