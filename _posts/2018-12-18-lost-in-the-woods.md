@@ -15,10 +15,7 @@ What path do you follow ?
 <div class='answer-wrapper'>
 <div markdown="1" class='answer' style="color: grey">
 
-Here is an example path:
-
-![tree-path](/img/tree-path.png){:height="500px"}
-
+[Click the link](/img/tree-path.png) to view an example of a path shorter than 13 km.
 
 </div>
 </div>
