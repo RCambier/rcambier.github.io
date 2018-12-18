@@ -15,9 +15,9 @@ What path do you follow ?
 <div class='answer-wrapper'>
 <div markdown="1" class='answer' style="color: grey">
 
-The solution is the following path.
+Here is an example path:
 
-![tree-path](/img/tree-path.png){:height="350px"}
+![tree-path](/img/tree-path.png){:height="500px"}
 
 
 </div>
