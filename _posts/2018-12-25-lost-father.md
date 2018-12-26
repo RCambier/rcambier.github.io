@@ -21,8 +21,8 @@ Where is the father?
 - M = C + 21
 - M + 6 = 5* (C + 6)
 
-- Solving gives C = -4/5
-- -4/5 year means minus 9 months. If the child is -9 months, it means that the father is with the mother, in their bed...
+- Solving gives C = -3/4
+- -3/4 year means minus 9 months. If the child is -9 months, it means that the father is with the mother, in their bed...
 
 
 </div>
