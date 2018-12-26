@@ -19,7 +19,13 @@ There is no way to differentiate the coins in the dark (by touch or other means.
 <div class='answer-wrapper'>
 <div markdown="1" class='answer' style="color: grey">
 
-You take 20 coins from the stack and flip them to create another stack. 
+You take 20 coins from the stack and flip them to create another stack. The two stacks are the original stack withtout the 20 coins, and the stack of 20 coins you created.
+
+If the 20 coins you select are golden side up, then you will flip them and have 20 silver coins in each stack. 
+
+If the 20 coins you select are silver side up, then you will flip them and have 0 silver coins in each stack. 
+
+If the 20 coins you select contain _n_ silver and 20-_n_ gold coins, then you will flip them and have 20-n silver coins in each stack. 
 
 
 </div>
