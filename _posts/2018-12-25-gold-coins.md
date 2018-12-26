@@ -19,7 +19,7 @@ There is no way to differentiate the coins in the dark (by touch or other means.
 <div class='answer-wrapper'>
 <div markdown="1" class='answer' style="color: grey">
 
-You take 20 coins from the stack and flip them. 
+You take 20 coins from the stack and flip them to create another stack. 
 
 
 </div>
