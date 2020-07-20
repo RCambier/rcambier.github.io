@@ -20,7 +20,7 @@ If by speed of the wheels, we consider the speed of the the center of the wheels
 
 Another way to see it is that the wheels are just there to keep the plane above the ground. They can spin at the speed they want, if the plane can move forward, it will take off.
 
-Now, if by speed of the wheels, we consider the angular speed of the wheels then it gets complicated. This would basically be like saying "the conveyor belt makes everything possible to make the plane not move". 
+Now, if by speed of the wheels, we consider the angular speed of the wheels then it gets complicated. This would basically be like saying "the conveyor belt does everything possible to make the plane not move". 
 
 At that point, if the plane moves forward, the problem becomes mathematically impossible. When the plane is not moving, the angular speed is 0. When the plane moves, the angular speed is, let's say, 10 ms/s. Now if the conveyor belt matches that speed, it will spin at 10m/s. But since the plane is still moving forward, this will make the wheels go at 20m/s (We consider here that the friction of the wheels is 0, they don't affect the plane). So now the conveyor belt will have to match that speed. If the conveyor belt just tries to match the angular speed of the wheels, it will just go faster and faster up to infinity. If the friction of the wheels is 0, you could still argue in that situation that the plane will take off, with the wheel spinning infinitely fast in the opposite direction. 
 
