@@ -3,7 +3,7 @@ layout: blog
 category: blog
 published: true
 title: Evil professor
-difficulty: 99999
+difficulty: 99
 ---
 
 
