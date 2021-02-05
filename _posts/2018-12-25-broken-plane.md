@@ -3,7 +3,7 @@ layout: blog
 category: blog
 published: true
 title: Broken plane
-difficulty: 666
+difficulty: 10
 ---
 
 Imagine a 747 is sitting on a conveyor belt, as wide and long as a runway. The conveyor belt is designed to [try to ?] exactly match the speed of the wheels, moving in the opposite direction. Can the plane take off? (different answers if you consider the words between brackets or not)
