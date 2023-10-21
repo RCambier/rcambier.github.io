@@ -193,7 +193,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="cell-1" class="cell" data-execution_count="361">
+<p>I’ve always struggled to understand how Bayesian inference worked, what was the difference between events and random variables, why sampling was need, how it was used for regression and more.</p>
+<p>As always, to start understanding things better, I code them from scratch in Python :)</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="bayesian_header.png" class="img-fluid figure-img"></p>
+<figcaption>bayesian</figcaption>
+</figure>
+</div>
+<div id="cell-3" class="cell" data-execution_count="361">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> binom</span>
@@ -235,7 +243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>image.png</figcaption>
 </figure>
 </div>
-<div id="cell-8" class="cell" data-outputid="736ee3cb-a615-4757-9bc5-3e9a8ca390f8" data-execution_count="362">
+<div id="cell-10" class="cell" data-outputid="736ee3cb-a615-4757-9bc5-3e9a8ca390f8" data-execution_count="362">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>probabilities <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'events'</span>: [<span class="st">'Rain'</span>, <span class="st">'NoRain'</span>],</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'prior_knowledge'</span>: [<span class="fl">0.5</span>, <span class="fl">0.5</span>],</span>
@@ -496,7 +504,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>image.png</figcaption>
 </figure>
 </div>
-<div id="cell-12" class="cell" data-outputid="1e5ba3a3-b746-47b7-f6b2-4a7514487269" data-execution_count="363">
+<div id="cell-14" class="cell" data-outputid="1e5ba3a3-b746-47b7-f6b2-4a7514487269" data-execution_count="363">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We observed the data when calling our friend</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>likelihood <span class="op">=</span> pd.DataFrame({<span class="op">\</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'events'</span>: [<span class="st">'Rain'</span>, <span class="st">'NoRain'</span>],</span>
@@ -755,7 +763,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>image.png</figcaption>
 </figure>
 </div>
-<div id="cell-17" class="cell" data-outputid="abcf3263-99cd-4da0-bf2c-1a2e03ae56cf" data-execution_count="364">
+<div id="cell-19" class="cell" data-outputid="abcf3263-99cd-4da0-bf2c-1a2e03ae56cf" data-execution_count="364">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>bayes <span class="op">=</span> pd.concat([probabilities, likelihood.drop(columns<span class="op">=</span>[<span class="st">'events'</span>])], axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="364">
@@ -995,7 +1003,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-18" class="cell" data-outputid="f0b44f1b-d3d9-4061-f939-132e9c044a23" data-execution_count="365">
+<div id="cell-20" class="cell" data-outputid="f0b44f1b-d3d9-4061-f939-132e9c044a23" data-execution_count="365">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>bayes[<span class="st">'posterior_unnormalized'</span>] <span class="op">=</span> bayes[<span class="st">'prior_knowledge'</span>] <span class="op">*</span> bayes[<span class="st">'likelihood'</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="365">
@@ -1244,7 +1252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>image.png</figcaption>
 </figure>
 </div>
-<div id="cell-20" class="cell" data-outputid="723226de-f8a4-419e-d305-9a78a100f9e0" data-execution_count="366">
+<div id="cell-22" class="cell" data-outputid="723226de-f8a4-419e-d305-9a78a100f9e0" data-execution_count="366">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bayes[<span class="st">'posterior'</span>] <span class="op">=</span> bayes[<span class="st">'posterior_unnormalized'</span>] <span class="op">/</span> bayes[<span class="st">'posterior_unnormalized'</span>].<span class="bu">sum</span>()</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="366">
@@ -1506,7 +1514,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>image.png</figcaption>
 </figure>
 </div>
-<div id="cell-25" class="cell" data-outputid="8bcf5f98-28b4-4d72-a9bc-b4a94ac51315" data-execution_count="367">
+<div id="cell-27" class="cell" data-outputid="8bcf5f98-28b4-4d72-a9bc-b4a94ac51315" data-execution_count="367">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We observered the data when the person said "pop"</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>probabilities <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'events'</span>: [<span class="st">'M'</span>, <span class="st">'N'</span>, <span class="st">'S'</span>, <span class="st">'W'</span>],</span>
@@ -1767,7 +1775,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>image.png</figcaption>
 </figure>
 </div>
-<div id="cell-28" class="cell" data-outputid="10de08f5-e15c-4340-b5a9-f3c6d20260ff" data-execution_count="368">
+<div id="cell-30" class="cell" data-outputid="10de08f5-e15c-4340-b5a9-f3c6d20260ff" data-execution_count="368">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>likelihood <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'events'</span>: [<span class="st">'M'</span>, <span class="st">'N'</span>, <span class="st">'S'</span>, <span class="st">'W'</span>],</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'likelihood'</span>: [<span class="fl">0.6447</span>, <span class="fl">0.2734</span>, <span class="fl">0.07922</span>, <span class="fl">0.2943</span>], <span class="co"># We use our system, here obserbing data in each region, to link the observations to each event</span></span>
@@ -2018,7 +2026,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-29" class="cell" data-outputid="dc784557-5222-4ed7-92d7-bc697652d25c" data-execution_count="369">
+<div id="cell-31" class="cell" data-outputid="dc784557-5222-4ed7-92d7-bc697652d25c" data-execution_count="369">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>bayes <span class="op">=</span> pd.concat([probabilities, likelihood.drop(columns<span class="op">=</span>[<span class="st">'events'</span>])], axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="369">
@@ -2276,7 +2284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>image.png</figcaption>
 </figure>
 </div>
-<div id="cell-31" class="cell" data-outputid="5068230f-3dcc-430e-ad0d-c69b16287171" data-execution_count="370">
+<div id="cell-33" class="cell" data-outputid="5068230f-3dcc-430e-ad0d-c69b16287171" data-execution_count="370">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bayes[<span class="st">'posterior_unnormalized'</span>] <span class="op">=</span> bayes[<span class="st">'prior_knowledge'</span>] <span class="op">*</span> bayes[<span class="st">'likelihood'</span>]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="370">
@@ -2539,7 +2547,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <figcaption>image.png</figcaption>
 </figure>
 </div>
-<div id="cell-33" class="cell" data-outputid="00514771-8fe7-48c6-eead-79829488805b" data-execution_count="371">
+<div id="cell-35" class="cell" data-outputid="00514771-8fe7-48c6-eead-79829488805b" data-execution_count="371">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bayes[<span class="st">'posterior'</span>] <span class="op">=</span> bayes[<span class="st">'posterior_unnormalized'</span>] <span class="op">/</span> bayes[<span class="st">'posterior_unnormalized'</span>].<span class="bu">sum</span>()</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="371">
@@ -2807,7 +2815,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We now have a system where, if we have prior events with prior probabilities, and some “data” event happening that relate to the prior events with some probabilities, we can derive a posterior where we update our knowledge on the prior events.</p>
 <p><em>The Trick</em></p>
 <p>Magically, we can use this exact system with a Statistical Model, and adapt it the following way: - The “prior events” are going to be a random variable of a statistical model - The “data events” are going to be observations you make of the statistical model outputs</p>
-<div id="cell-37" class="cell" data-outputid="ef89e7ea-86f4-4830-d192-da17bf10c77a" data-execution_count="372">
+<div id="cell-39" class="cell" data-outputid="ef89e7ea-86f4-4830-d192-da17bf10c77a" data-execution_count="372">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>probabilities <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'events'</span>: [<span class="st">'0.2'</span>, <span class="st">'0.5'</span>, <span class="st">'0.8'</span>],</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'prior_knowledge'</span>: [<span class="fl">0.1</span>, <span class="fl">0.25</span>, <span class="fl">0.65</span>],</span>
@@ -3054,7 +3062,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>the binomial model is the “system” we use to find the likelihood at each event, at each potential value of PI</p>
-<div id="cell-39" class="cell" data-outputid="6bca2dda-b029-4a19-e9f6-2e40aaa91b90" data-execution_count="373">
+<div id="cell-41" class="cell" data-outputid="6bca2dda-b029-4a19-e9f6-2e40aaa91b90" data-execution_count="373">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We observed 1 victory out of 6 games</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>likelihood <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'events'</span>: [<span class="st">'0.2'</span>, <span class="st">'0.5'</span>, <span class="st">'0.8'</span>],</span>
@@ -3304,7 +3312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-40" class="cell" data-outputid="42c346d5-0391-4215-e118-c3d4f85124d5" data-execution_count="374">
+<div id="cell-42" class="cell" data-outputid="42c346d5-0391-4215-e118-c3d4f85124d5" data-execution_count="374">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>bayes <span class="op">=</span> pd.concat([probabilities, likelihood.drop(columns<span class="op">=</span>[<span class="st">'events'</span>])], axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="374">
@@ -3550,7 +3558,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-41" class="cell" data-outputid="17bc1d49-1f2b-41bf-f1f1-72dadbafd739" data-execution_count="375">
+<div id="cell-43" class="cell" data-outputid="17bc1d49-1f2b-41bf-f1f1-72dadbafd739" data-execution_count="375">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>bayes[<span class="st">'posterior_unnormalized'</span>] <span class="op">=</span> bayes[<span class="st">'prior_knowledge'</span>] <span class="op">*</span> bayes[<span class="st">'likelihood'</span>]</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="375">
@@ -3800,7 +3808,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-42" class="cell" data-outputid="13157a2c-0f69-4cf0-d790-5938369c3fa7" data-execution_count="376">
+<div id="cell-44" class="cell" data-outputid="13157a2c-0f69-4cf0-d790-5938369c3fa7" data-execution_count="376">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>bayes[<span class="st">'posterior'</span>] <span class="op">=</span> bayes[<span class="st">'posterior_unnormalized'</span>] <span class="op">/</span> bayes[<span class="st">'posterior_unnormalized'</span>].<span class="bu">sum</span>()</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="376">
@@ -4058,7 +4066,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="bayes-for-continuous-random-variable" class="level1">
 <h1>Bayes for continuous random variable</h1>
 <p>Instead of considering only 3 possible events, 3 possible values to the PI, we can define a continuous set of possible events</p>
-<div id="cell-45" class="cell" data-outputid="27e49db9-52e8-4c3f-d2f6-8bab2e1f6faa" data-execution_count="377">
+<div id="cell-47" class="cell" data-outputid="27e49db9-52e8-4c3f-d2f6-8bab2e1f6faa" data-execution_count="377">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>linspace <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">30</span>)</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>pdf <span class="op">=</span> beta.pdf(x<span class="op">=</span>linspace, a<span class="op">=</span><span class="dv">3</span>, b<span class="op">=</span><span class="dv">3</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>pdf <span class="op">=</span> pdf<span class="op">/</span>pdf.<span class="bu">sum</span>()</span>
@@ -4068,7 +4076,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="2023-10-20-bayesian-inference-from-scratch_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div id="cell-46" class="cell" data-outputid="0147f075-05df-4dbe-ce88-6581ace73734" data-execution_count="378">
+<div id="cell-48" class="cell" data-outputid="0147f075-05df-4dbe-ce88-6581ace73734" data-execution_count="378">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>probabilities <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'events'</span>: linspace,</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'prior_knowledge'</span>: pdf,</span>
@@ -4449,7 +4457,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-47" class="cell" data-outputid="682578f7-3f35-4d3d-8dd8-cfb957938dfb" data-execution_count="379">
+<div id="cell-49" class="cell" data-outputid="682578f7-3f35-4d3d-8dd8-cfb957938dfb" data-execution_count="379">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We observed 5 YES and 3 NO</span></span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>likelihood <span class="op">=</span> pd.DataFrame({</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'events'</span>: linspace,</span>
@@ -4833,14 +4841,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-48" class="cell" data-outputid="3c89c1e3-221d-4ccd-e6c8-1822b06b322d" data-execution_count="380">
+<div id="cell-50" class="cell" data-outputid="3c89c1e3-221d-4ccd-e6c8-1822b06b322d" data-execution_count="380">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'likelihood'</span>)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>plt.stem(likelihood[<span class="st">'events'</span>], likelihood[<span class="st">'likelihood'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <p><img src="2023-10-20-bayesian-inference-from-scratch_files/figure-html/cell-21-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div id="cell-49" class="cell" data-outputid="f501ab5c-820a-4ced-a246-507504e3c1d0" data-execution_count="381">
+<div id="cell-51" class="cell" data-outputid="f501ab5c-820a-4ced-a246-507504e3c1d0" data-execution_count="381">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>bayes <span class="op">=</span> pd.concat([probabilities, likelihood.drop(columns<span class="op">=</span>[<span class="st">'events'</span>])], axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="381">
@@ -5248,7 +5256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-50" class="cell" data-outputid="7492f503-6a5c-4ca8-9242-f1cbb1b8407f" data-execution_count="382">
+<div id="cell-52" class="cell" data-outputid="7492f503-6a5c-4ca8-9242-f1cbb1b8407f" data-execution_count="382">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>bayes[<span class="st">'posterior_unnormalized'</span>] <span class="op">=</span> bayes[<span class="st">'prior_knowledge'</span>] <span class="op">*</span> bayes[<span class="st">'likelihood'</span>]</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="382">
@@ -5687,7 +5695,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-51" class="cell" data-outputid="5ea4a958-d5a0-4bfb-f12d-96d3614e982a" data-execution_count="383">
+<div id="cell-53" class="cell" data-outputid="5ea4a958-d5a0-4bfb-f12d-96d3614e982a" data-execution_count="383">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>bayes[<span class="st">'posterior'</span>] <span class="op">=</span> bayes[<span class="st">'posterior_unnormalized'</span>] <span class="op">/</span> bayes[<span class="st">'posterior_unnormalized'</span>].<span class="bu">sum</span>()</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>bayes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="383">
@@ -6157,7 +6165,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-52" class="cell" data-outputid="4145c7b2-98a2-42c0-d494-0c95a328f6b2" data-execution_count="384">
+<div id="cell-54" class="cell" data-outputid="4145c7b2-98a2-42c0-d494-0c95a328f6b2" data-execution_count="384">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'posterior'</span>)</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>plt.stem(linspace, bayes[<span class="st">'posterior'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -6170,10 +6178,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>https://www.bayesrulesbook.com/chapter-9</p>
 <p>So far, this is neat, but not very useful. How can we use this system for a regression ?</p>
 <p>The idea is to assign things in the following way: - For a regression Yi = Gaussian(mu=Alpha + Beta * Xi, sigma=variance) (for a single Sample!!) - The “events” are going to be the possible values of Alpha and Beta - The “system” linking a likelihood to each possible events is going to be applying the linear system with the chosen Alpha, Beta and the observed Xi and Yi fo this sample.</p>
-<div id="cell-56" class="cell" data-execution_count="385">
+<div id="cell-58" class="cell" data-execution_count="385">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> expon, beta, norm</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cell-57" class="cell" data-outputid="995a11fb-aff6-49fd-cba4-34e52dec88da" data-execution_count="386">
+<div id="cell-59" class="cell" data-outputid="995a11fb-aff6-49fd-cba4-34e52dec88da" data-execution_count="386">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>linspace <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">30</span>)</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>alpha_pdf <span class="op">=</span> norm.pdf(x<span class="op">=</span>linspace, loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>)</span>
@@ -6195,7 +6203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="2023-10-20-bayesian-inference-from-scratch_files/figure-html/cell-27-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div id="cell-58" class="cell" data-outputid="fba8f2cd-5090-4b49-e4ab-5489032ade85" data-execution_count="387">
+<div id="cell-60" class="cell" data-outputid="fba8f2cd-5090-4b49-e4ab-5489032ade85" data-execution_count="387">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>probabilities_alpha <span class="op">=</span> pd.DataFrame({</span>
@@ -6961,7 +6969,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-59" class="cell" data-outputid="26155468-e4ef-4b21-a7c9-8fe39efae6df" data-execution_count="388">
+<div id="cell-61" class="cell" data-outputid="26155468-e4ef-4b21-a7c9-8fe39efae6df" data-execution_count="388">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>all_possible_events<span class="op">=</span> pd.merge(</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    left<span class="op">=</span>pd.merge(left<span class="op">=</span>probabilities_alpha,</span>
 <span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>                  right<span class="op">=</span>probabilities_beta,</span>
@@ -7298,7 +7306,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-60" class="cell" data-outputid="a4566a02-c6fa-4c0c-d152-d63063270d8e" data-execution_count="389">
+<div id="cell-62" class="cell" data-outputid="a4566a02-c6fa-4c0c-d152-d63063270d8e" data-execution_count="389">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We image a system where each day, the chance of rain is represented by number_of_clients = alpha + beta * temperature</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="co"># We observed a day with 15 degrees, and 5 clients</span></span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co"># What is the likelihood of these observations at each possible "event" of alpha, beta and variance ?</span></span>
@@ -7652,7 +7660,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-61" class="cell" data-outputid="6be177be-784f-4adb-87d1-d5d278b824ef" data-execution_count="390">
+<div id="cell-63" class="cell" data-outputid="6be177be-784f-4adb-87d1-d5d278b824ef" data-execution_count="390">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>all_possible_events.sort_values(<span class="st">'likelihood'</span>, ascending<span class="op">=</span><span class="va">False</span>).head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="390">
 
@@ -7933,7 +7941,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-62" class="cell" data-outputid="9fd65aa0-f1fd-472a-fe08-54277dc11b7d" data-execution_count="391">
+<div id="cell-64" class="cell" data-outputid="9fd65aa0-f1fd-472a-fe08-54277dc11b7d" data-execution_count="391">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>all_possible_events[<span class="st">'posterior_unnormalized_alpha'</span>] <span class="op">=</span> all_possible_events[<span class="st">'prior_knowledge_alpha'</span>] <span class="op">*</span> all_possible_events[<span class="st">'likelihood'</span>]</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>all_possible_events[<span class="st">'posterior_unnormalized_beta'</span>] <span class="op">=</span> all_possible_events[<span class="st">'prior_knowledge_beta'</span>] <span class="op">*</span> all_possible_events[<span class="st">'likelihood'</span>]</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>all_possible_events[<span class="st">'posterior_unnormalized_variance'</span>] <span class="op">=</span> all_possible_events[<span class="st">'prior_knowledge_variance'</span>] <span class="op">*</span> all_possible_events[<span class="st">'likelihood'</span>]</span>
@@ -8314,7 +8322,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-63" class="cell" data-outputid="6494622e-2ff2-4d1d-85af-d264a3aa015a" data-execution_count="392">
+<div id="cell-65" class="cell" data-outputid="6494622e-2ff2-4d1d-85af-d264a3aa015a" data-execution_count="392">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>all_possible_events[<span class="st">'posterior_alpha'</span>] <span class="op">=</span> all_possible_events[<span class="st">'posterior_unnormalized_alpha'</span>] <span class="op">/</span> all_possible_events[<span class="st">'posterior_unnormalized_alpha'</span>].<span class="bu">sum</span>()</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>all_possible_events[<span class="st">'posterior_beta'</span>] <span class="op">=</span> all_possible_events[<span class="st">'posterior_unnormalized_beta'</span>] <span class="op">/</span> all_possible_events[<span class="st">'posterior_unnormalized_beta'</span>].<span class="bu">sum</span>()</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>all_possible_events[<span class="st">'posterior_variance'</span>] <span class="op">=</span> all_possible_events[<span class="st">'posterior_unnormalized_variance'</span>] <span class="op">/</span> all_possible_events[<span class="st">'posterior_unnormalized_variance'</span>].<span class="bu">sum</span>()</span>
@@ -8731,7 +8739,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </div>
 </div>
-<div id="cell-64" class="cell" data-outputid="e82a2c3f-9fae-4844-e641-e9aad66a987d" data-execution_count="393">
+<div id="cell-66" class="cell" data-outputid="e82a2c3f-9fae-4844-e641-e9aad66a987d" data-execution_count="393">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy.random <span class="im">import</span> choice</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'posterior alpha'</span>)</span>
@@ -8742,7 +8750,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="2023-10-20-bayesian-inference-from-scratch_files/figure-html/cell-34-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div id="cell-65" class="cell" data-outputid="fcb45ad0-3ec9-45db-ed52-f041c91a7143" data-execution_count="394">
+<div id="cell-67" class="cell" data-outputid="fcb45ad0-3ec9-45db-ed52-f041c91a7143" data-execution_count="394">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'posterior beta'</span>)</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>all_possible_events_ <span class="op">=</span> all_possible_events.dropna()</span>
 <span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>sample_events_beta <span class="op">=</span> choice(a<span class="op">=</span>all_possible_events_[<span class="st">'event_beta'</span>].values, p<span class="op">=</span>all_possible_events_[<span class="st">'posterior_beta'</span>].values, size<span class="op">=</span><span class="dv">1000</span>)</span>
@@ -8751,7 +8759,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="2023-10-20-bayesian-inference-from-scratch_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
 </div>
 </div>
-<div id="cell-66" class="cell" data-outputid="cc902bbe-94e1-4886-a396-dde91088e78f" data-execution_count="395">
+<div id="cell-68" class="cell" data-outputid="cc902bbe-94e1-4886-a396-dde91088e78f" data-execution_count="395">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'posterior variance'</span>)</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>all_possible_events_ <span class="op">=</span> all_possible_events.dropna()</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>sample_events_variance <span class="op">=</span> choice(a<span class="op">=</span>all_possible_events_[<span class="st">'event_variance'</span>].values, p<span class="op">=</span>all_possible_events_[<span class="st">'posterior_variance'</span>].values, size<span class="op">=</span><span class="dv">1000</span>)</span>
@@ -8763,7 +8771,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="doing-the-same-with-pymc" class="level1">
 <h1>Doing the same with PyMC</h1>
-<div id="cell-68" class="cell" data-outputid="a055b1e4-f9d5-4d1a-a53f-b398fee8955a" data-execution_count="396">
+<div id="cell-70" class="cell" data-outputid="a055b1e4-f9d5-4d1a-a53f-b398fee8955a" data-execution_count="396">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pymc <span class="im">as</span> pm</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> arviz <span class="im">as</span> az</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -8862,7 +8870,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Re-exploring the initial problem, but differently</h1>
 <p>In the first problem of this notebook, we analyzed the probability of 2 events, “Rain” and “NoRain” based on some additional observerd data.</p>
 <p>Let’s reproduce our results with PyMC, where we model the initial events as “Rain” and “NoRain”</p>
-<div id="cell-70" class="cell" data-outputid="af727ee9-ef34-4921-b90a-a8d73243e134" data-execution_count="397">
+<div id="cell-72" class="cell" data-outputid="af727ee9-ef34-4921-b90a-a8d73243e134" data-execution_count="397">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>basic_model <span class="op">=</span> pm.Model()</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> basic_model:</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -8930,7 +8938,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Another way to tackle the same problem is to consider the events to be all possible values of “p”, the probability of a binomial distribution that would represent the chances of raining.</p>
-<div id="cell-72" class="cell" data-outputid="ccb30eb1-0bbf-4f16-eb73-4774841574e3" data-execution_count="398">
+<div id="cell-74" class="cell" data-outputid="ccb30eb1-0bbf-4f16-eb73-4774841574e3" data-execution_count="398">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>linspace <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">30</span>)</span>
@@ -8985,7 +8993,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Now the same but with PyMC</p>
-<div id="cell-74" class="cell" data-outputid="8e385517-f683-4c7b-9a38-ae096db961da" data-execution_count="399">
+<div id="cell-76" class="cell" data-outputid="8e385517-f683-4c7b-9a38-ae096db961da" data-execution_count="399">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>basic_model <span class="op">=</span> pm.Model()</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> basic_model:</span>
 <span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    p <span class="op">=</span> pm.Uniform(<span class="st">"p"</span>, <span class="dv">0</span>, <span class="dv">1</span>) <span class="co"># A flat prior between 0 and 1 for the probability of rain</span></span>
