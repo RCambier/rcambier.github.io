@@ -1,20 +1,16 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/computer_science.html",
     "items": [
-      "/posts/2023-10-20-bayesian-inference-from-scratch.html",
-      "/posts/2023-01-14-shap-values.html",
       "/posts/2022-04-29-background-jobs.html",
       "/posts/2022-04-01-multiprocessing.html",
       "/posts/2021-10-15-cython.html",
-      "/posts/2021-09-27-bayesian-seattle.html",
-      "/posts/2021-09-20-random-forest.html",
-      "/posts/2021-09-19-word-embeddings.html",
-      "/posts/2021-09-18-boosting-trees.html",
-      "/posts/2021-09-16-svd.html",
-      "/posts/2021-09-15-pca.html",
-      "/posts/2021-09-14-linear-regression.html",
-      "/posts/2021-09-13-hypothesis-testing.html",
+      "/posts/2021-09-27-bayesian-seattle.html"
+    ]
+  },
+  {
+    "listing": "/riddles.html",
+    "items": [
       "/posts/2021-01-05-scoundrels.html",
       "/posts/2021-01-05-newcomb.html",
       "/posts/2020-07-29-pills.html",
@@ -43,17 +39,21 @@
     ]
   },
   {
-    "listing": "/computer_science.html",
+    "listing": "/index.html",
     "items": [
+      "/posts/2023-10-20-bayesian-inference-from-scratch.html",
+      "/posts/2023-01-14-shap-values.html",
       "/posts/2022-04-29-background-jobs.html",
       "/posts/2022-04-01-multiprocessing.html",
       "/posts/2021-10-15-cython.html",
-      "/posts/2021-09-27-bayesian-seattle.html"
-    ]
-  },
-  {
-    "listing": "/riddles.html",
-    "items": [
+      "/posts/2021-09-27-bayesian-seattle.html",
+      "/posts/2021-09-20-random-forest.html",
+      "/posts/2021-09-19-word-embeddings.html",
+      "/posts/2021-09-18-boosting-trees.html",
+      "/posts/2021-09-16-svd.html",
+      "/posts/2021-09-15-pca.html",
+      "/posts/2021-09-14-linear-regression.html",
+      "/posts/2021-09-13-hypothesis-testing.html",
       "/posts/2021-01-05-scoundrels.html",
       "/posts/2021-01-05-newcomb.html",
       "/posts/2020-07-29-pills.html",
