@@ -1,0 +1,11 @@
+---
+title: "About"
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/rodolphecambier/
+---
+
+Thanks for passing by :)

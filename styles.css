@@ -1,0 +1,9 @@
+/* css styles */
+.answer {visibility: hidden}
+.answer-title {margin-top: 40px; color: lightgrey}
+.answer-wrapper{margin:10px;
+                padding:10px;
+                background-color: #eaeaea
+   }
+.answer-wrapper:hover .answer {visibility: visible}
+.answer-wrapper:active .answer {visibility: visible}

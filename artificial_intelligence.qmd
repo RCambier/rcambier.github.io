@@ -1,0 +1,16 @@
+---
+title: "Rcambier's Blog"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  include:
+    categories: ai
+page-layout: full
+title-block-banner: true
+---
+
+

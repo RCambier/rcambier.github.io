@@ -1,0 +1,99 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/2023-10-20-bayesian-inference-from-scratch.html",
+      "/posts/2023-01-14-shap-values.html",
+      "/posts/2022-04-29-background-jobs.html",
+      "/posts/2022-04-01-multiprocessing.html",
+      "/posts/2021-10-15-cython.html",
+      "/posts/2021-09-27-bayesian-seattle.html",
+      "/posts/2021-09-20-random-forest.html",
+      "/posts/2021-09-19-word-embeddings.html",
+      "/posts/2021-09-18-boosting-trees.html",
+      "/posts/2021-09-16-svd.html",
+      "/posts/2021-09-15-pca.html",
+      "/posts/2021-09-14-linear-regression.html",
+      "/posts/2021-09-13-hypothesis-testing.html",
+      "/posts/2021-01-05-scoundrels.html",
+      "/posts/2021-01-05-newcomb.html",
+      "/posts/2020-07-29-pills.html",
+      "/posts/2020-04-19-reverse-number.html",
+      "/posts/2020-04-19-rope-triangle.html",
+      "/posts/2018-12-26-potatoes.html",
+      "/posts/2018-12-26-surprise-birthday.html",
+      "/posts/2018-12-26-simple-maths.html",
+      "/posts/2018-12-26-4-pieces.html",
+      "/posts/2018-12-25-poison.html",
+      "/posts/2018-12-25-prisoners-switch.html",
+      "/posts/2018-12-25-lost-father.html",
+      "/posts/2018-12-25-gold-coins.html",
+      "/posts/2018-12-25-cats-and-mouses.html",
+      "/posts/2018-12-25-running-in-circle.html",
+      "/posts/2018-12-25-broken-plane.html",
+      "/posts/2018-12-18-evil-professor.html",
+      "/posts/2018-12-18-lost-in-the-woods.html",
+      "/posts/2018-12-10-peeking.html",
+      "/posts/2018-12-10-gender.html",
+      "/posts/2018-12-10-prisoners-trees.html",
+      "/posts/2018-12-10-blue-eyes.html",
+      "/posts/2018-12-10-one-out.html",
+      "/posts/2018-12-10-magic-loop.html",
+      "/posts/2018-12-10-rope.html"
+    ]
+  },
+  {
+    "listing": "/computer_science.html",
+    "items": [
+      "/posts/2022-04-29-background-jobs.html",
+      "/posts/2022-04-01-multiprocessing.html",
+      "/posts/2021-10-15-cython.html",
+      "/posts/2021-09-27-bayesian-seattle.html"
+    ]
+  },
+  {
+    "listing": "/riddles.html",
+    "items": [
+      "/posts/2021-01-05-scoundrels.html",
+      "/posts/2021-01-05-newcomb.html",
+      "/posts/2020-07-29-pills.html",
+      "/posts/2020-04-19-reverse-number.html",
+      "/posts/2020-04-19-rope-triangle.html",
+      "/posts/2018-12-26-potatoes.html",
+      "/posts/2018-12-26-surprise-birthday.html",
+      "/posts/2018-12-26-simple-maths.html",
+      "/posts/2018-12-26-4-pieces.html",
+      "/posts/2018-12-25-poison.html",
+      "/posts/2018-12-25-prisoners-switch.html",
+      "/posts/2018-12-25-lost-father.html",
+      "/posts/2018-12-25-gold-coins.html",
+      "/posts/2018-12-25-cats-and-mouses.html",
+      "/posts/2018-12-25-running-in-circle.html",
+      "/posts/2018-12-25-broken-plane.html",
+      "/posts/2018-12-18-evil-professor.html",
+      "/posts/2018-12-18-lost-in-the-woods.html",
+      "/posts/2018-12-10-peeking.html",
+      "/posts/2018-12-10-gender.html",
+      "/posts/2018-12-10-prisoners-trees.html",
+      "/posts/2018-12-10-blue-eyes.html",
+      "/posts/2018-12-10-one-out.html",
+      "/posts/2018-12-10-magic-loop.html",
+      "/posts/2018-12-10-rope.html"
+    ]
+  },
+  {
+    "listing": "/artificial_intelligence.html",
+    "items": [
+      "/posts/2023-10-20-bayesian-inference-from-scratch.html",
+      "/posts/2023-01-14-shap-values.html",
+      "/posts/2021-09-27-bayesian-seattle.html",
+      "/posts/2021-09-20-random-forest.html",
+      "/posts/2021-09-19-word-embeddings.html",
+      "/posts/2021-09-18-boosting-trees.html",
+      "/posts/2021-09-16-svd.html",
+      "/posts/2021-09-15-pca.html",
+      "/posts/2021-09-14-linear-regression.html",
+      "/posts/2021-09-13-hypothesis-testing.html"
+    ]
+  }
+]

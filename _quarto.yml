@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "Rcambier's Blog"
+  navbar:
+    left: 
+      - text: "Artificial Intelligence"
+        file: artificial_intelligence.qmd
+      - text: "Computer Science"
+        file: computer_science.qmd
+      - text: "Riddles"
+        file: riddles.qmd
+    right:
+      - about.qmd
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+
