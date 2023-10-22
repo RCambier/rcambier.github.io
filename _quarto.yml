@@ -3,6 +3,7 @@ project:
 
 website:
   title: "Rcambier's Blog"
+  favicon: logo.png
   navbar:
     left: 
       - text: "Artificial Intelligence"
