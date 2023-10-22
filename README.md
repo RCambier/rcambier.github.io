@@ -1,2 +1,2 @@
 To deploy:
-> quarto publish gh-pages
+> quarto publish gh-pages --no-browser
