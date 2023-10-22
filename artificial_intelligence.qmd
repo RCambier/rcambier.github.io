@@ -1,5 +1,5 @@
 ---
-title: "Rcambier's Blog"
+title: "Artificial Intelligence topics, usually from scratch in Python"
 listing:
   contents: posts
   sort: "date desc"

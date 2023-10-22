@@ -1,5 +1,5 @@
 ---
-title: "Rcambier's Blog"
+title: "Computer Science, usually Python"
 listing:
   contents: posts
   sort: "date desc"
