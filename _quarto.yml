@@ -1,5 +1,7 @@
 project:
   type: website
+  resources: 
+    - "*.html"
 
 website:
   title: "Rcambier's Blog"
