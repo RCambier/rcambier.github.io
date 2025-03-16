@@ -27,7 +27,7 @@ The way I understand it is the following:
 
 - Since, as humans, we are used to refer to left and right in reference to our head and feet, we are under the impression that the being in the mirror is moving its left hand. But notice that if we define "right" as "the side of the heart", then we could not say that the reflection is moving his left hand. So this is only in reference to the head and feet. 
 
-- Picture a being that is symmetric in the other direction, as pictured here. We would call "bloublou" and "blibli" the 2 directions that are similar looking in the mirror. For that being, moving the "bloublou" side and looking into the mirror, it would be under the impression that the "blibli" side is moving. Because compared to the non-symmetrical parts of his body, this is what seems to be moving. 
+- Picture a being that is symmetric in the other direction, as pictured here. We would call "bloublou" and "blibli" the 2 directions that are indistinguishable. For that being, moving the "bloublou" side and looking into the mirror, it would be under the impression that the "blibli" side is moving. Because compared to the non-symmetrical parts of his body, this is what seems to be moving. 
 
 ![](mirror-flip.png)
 
