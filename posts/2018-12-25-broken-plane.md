@@ -4,7 +4,7 @@ aliases:
 categories: 
     - riddle
 date: '2018-12-25'
-difficulty: 10
+subtitle: difficulty 10
 layout: post
 published: true
 title: Broken plane

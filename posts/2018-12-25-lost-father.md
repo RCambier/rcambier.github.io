@@ -4,7 +4,7 @@ aliases:
 categories: 
     - riddle
 date: '2018-12-25'
-difficulty: 2.5
+subtitle: difficulty 2.5
 layout: post
 published: true
 title: Lost father

@@ -4,7 +4,7 @@ aliases:
 categories: 
     - riddle
 date: '2018-12-18'
-difficulty: 3.5
+subtitle: difficulty 3.5
 layout: post
 published: true
 title: Lost in the woods

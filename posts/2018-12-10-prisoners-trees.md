@@ -4,7 +4,7 @@ aliases:
 categories: 
     - riddle
 date: '2018-12-10'
-difficulty: 4
+subtitle: difficulty 4
 layout: post
 published: true
 title: Prisoners and trees

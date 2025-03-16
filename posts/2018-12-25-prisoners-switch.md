@@ -4,7 +4,7 @@ aliases:
 categories: 
  - riddle
 date: '2018-12-25'
-difficulty: 3
+subtitle: difficulty 3
 layout: post
 published: true
 title: Prisoner's switch

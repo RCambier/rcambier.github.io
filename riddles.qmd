@@ -13,4 +13,4 @@ page-layout: full
 title-block-banner: true
 ---
 
-
+Riddles I found and liked. They mostly have satisfying answers.

@@ -4,7 +4,7 @@ aliases:
 categories: 
  - riddle
 date: '2020-04-19'
-difficulty: 2
+subtitle: difficulty 2
 layout: post
 published: true
 title: The rope triangle

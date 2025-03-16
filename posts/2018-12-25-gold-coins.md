@@ -4,7 +4,7 @@ aliases:
 categories: 
     - riddle
 date: '2018-12-25'
-difficulty: 2
+subtitle: difficulty 2
 layout: post
 published: true
 title: Gold coins

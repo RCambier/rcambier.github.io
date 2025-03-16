@@ -4,7 +4,7 @@ aliases:
 categories: 
  - riddle
 date: '2021-01-05'
-difficulty: 99
+subtitle: difficulty 99
 layout: post
 published: true
 title: Three's a Crowd

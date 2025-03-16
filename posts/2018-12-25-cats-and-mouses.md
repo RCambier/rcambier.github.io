@@ -4,7 +4,7 @@ aliases:
 categories: 
     - riddle
 date: '2018-12-25'
-difficulty: 1
+subtitle: difficulty 1
 layout: post
 published: true
 title: Cats and mouses
