@@ -11,6 +11,7 @@
   {
     "listing": "/riddles.html",
     "items": [
+      "/posts/2025-03-16-mirror-flip.html",
       "/posts/2021-01-05-scoundrels.html",
       "/posts/2021-01-05-newcomb.html",
       "/posts/2020-07-29-pills.html",
@@ -41,6 +42,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/2025-03-16-mirror-flip.html",
       "/posts/2023-10-20-bayesian-inference-from-scratch.html",
       "/posts/2023-01-14-shap-values.html",
       "/posts/2022-04-29-background-jobs.html",

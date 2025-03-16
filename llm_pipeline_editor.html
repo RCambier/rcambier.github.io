@@ -1,0 +1,191 @@
+<template>
+    <div class="app-container">
+      <div class="editor-container">
+        <div id="rete-editor" ref="reteEditor" class="rete-editor"></div>
+      </div>
+      <div class="control-panel">
+        <textarea v-model="userInput" placeholder="Enter text to analyze..."></textarea>
+        <button @click="runPipeline">Run</button>
+        <pre>{{ output }}</pre>
+      </div>
+    </div>
+  </template>
+  
+  <script>
+  import Rete from 'rete';
+  import ConnectionPlugin from 'rete-connection-plugin';
+  import VueRenderPlugin from 'rete-vue-render-plugin';
+  
+  class TextPreprocessorComponent extends Rete.Component {
+    constructor() {
+      super('TextPreprocessor');
+    }
+  
+    builder(node) {
+      const input = new Rete.Input('input', 'Input', 'string');
+      const output = new Rete.Output('output', 'Output', 'string');
+      return node.addInput(input).addOutput(output);
+    }
+  
+    worker(node, inputs, outputs) {
+      const text = inputs['input'][0] || '';
+      outputs['output'] = text.toLowerCase().trim();
+    }
+  }
+  
+  class OpenAIClassifierComponent extends Rete.Component {
+    constructor() {
+      super('OpenAIClassifier');
+    }
+  
+    builder(node) {
+      const input = new Rete.Input('input', 'Input', 'string');
+      const output = new Rete.Output('output', 'Output', 'string');
+      return node.addInput(input).addOutput(output);
+    }
+  
+    worker(node, inputs, outputs) {
+      const text = inputs['input'][0] || '';
+      outputs['output'] = `Classified: ${text}`;
+    }
+  }
+  
+  class OpenAIReasonerComponent extends Rete.Component {
+    constructor() {
+      super('OpenAIReasoner');
+    }
+  
+    builder(node) {
+      const input = new Rete.Input('input', 'Input', 'string');
+      const output = new Rete.Output('output', 'Output', 'string');
+      return node.addInput(input).addOutput(output);
+    }
+  
+    worker(node, inputs, outputs) {
+      const text = inputs['input'][0] || '';
+      outputs['output'] = `Reasoned: ${text}`;
+    }
+  }
+  
+  export default {
+    data() {
+      return {
+        editor: null,
+        engine: null,
+        userInput: '',
+        output: '',
+      };
+    },
+    mounted() {
+      this.initializeReteEditor();
+    },
+    methods: {
+      async initializeReteEditor() {
+        const container = this.$refs.reteEditor;
+  
+        this.editor = new Rete.NodeEditor('demo@0.1.0', container);
+        this.editor.use(ConnectionPlugin);
+        this.editor.use(VueRenderPlugin);
+  
+        this.engine = new Rete.Engine('demo@0.1.0');
+  
+        const components = [
+          new TextPreprocessorComponent(),
+          new OpenAIClassifierComponent(),
+          new OpenAIReasonerComponent(),
+        ];
+  
+        components.forEach((component) => {
+          this.editor.register(component);
+          this.engine.register(component);
+        });
+  
+        const preprocessorNode = await components[0].createNode();
+        const classifierNode = await components[1].createNode();
+        const reasonerNode = await components[2].createNode();
+  
+        this.editor.addNode(preprocessorNode);
+        this.editor.addNode(classifierNode);
+        this.editor.addNode(reasonerNode);
+  
+        preprocessorNode.position = [80, 200];
+        classifierNode.position = [300, 200];
+        reasonerNode.position = [520, 200];
+  
+        this.editor.connect(
+          preprocessorNode.outputs.get('output'),
+          classifierNode.inputs.get('input')
+        );
+        this.editor.connect(
+          classifierNode.outputs.get('output'),
+          reasonerNode.inputs.get('input')
+        );
+  
+        this.editor.on(
+          'process nodecreated noderemoved connectioncreated connectionremoved',
+          async () => {
+            await this.engine.abort();
+            await this.engine.process(this.editor.toJSON());
+          }
+        );
+      },
+      async runPipeline() {
+        const nodes = this.editor.nodes;
+  
+        let currentInput = this.userInput;
+        for (const node of nodes) {
+          const component = this.editor.components.get(node.name);
+          const outputs = {};
+          await component.worker(node, { input: [currentInput] }, outputs);
+          currentInput = outputs.output;
+        }
+  
+        this.output = currentInput;
+      },
+    },
+  };
+  </script>
+  
+  <style>
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .editor-container {
+    width: 80%;
+    height: 60%;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+  }
+  .rete-editor {
+    width: 100%;
+    height: 100%;
+  }
+  textarea {
+    width: 80%;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  button {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #357ABD;
+  }
+  pre {
+    width: 80%;
+    background: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  </style>
+  

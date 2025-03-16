@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-03-16">
 
-<title>Rcambier’s Blog - Artificial Intelligence topics, usually from scratch in Python</title>
+<title>Rcambier’s Blog - The mirror flip</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +24,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,50 +67,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Rcambier’s Blog</span>
     </a>
   </div>
@@ -122,21 +90,21 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./artificial_intelligence.html" aria-current="page"> 
+    <a class="nav-link" href="../artificial_intelligence.html"> 
 <span class="menu-text">Artificial Intelligence</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./computer_science.html"> 
+    <a class="nav-link" href="../computer_science.html"> 
 <span class="menu-text">Computer Science</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./riddles.html"> 
+    <a class="nav-link" href="../riddles.html"> 
 <span class="menu-text">Riddles</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -149,292 +117,63 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Artificial Intelligence topics, usually from scratch in Python</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">The mirror flip</h1>
+            <p class="subtitle lead">difficulty 8</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">riddle</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 16, 2025</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p>You are looking to your reflection in a mirror. If you move your right hand, your reflection seems to be moving its left hand. However, if you move your head (your top), your reflection is also moving its head (its top). Why is the reflection flipped left/right but not top/bottom?</p>
+<div class="answer-title" data-markdown="1">
+<p><em>Hover to show the answer.</em></p>
+</div>
+<div class="answer-wrapper">
+<div class="answer" data-markdown="1" style="color: grey">
+<p>The way I understand it is the following: - The mirror is simply reflecting everything exactly in front of where it is. There is not yet any concept of right/left or top/bottom - Since, as humans, we are used to refer to left and right in reference to our head and feet, we are under the impression that the being in the mirror is moving its left hand. But notice that if we defined “right” as “the side of the heart”, than we could not say that the reflection is moving his left hand. So this is only in reference to the head and feet.</p>
+<ul>
+<li>Picture a being that is symmetric in the other direction, as pictured here. We would call “bloublou” and “blibli” the 2 directions that are similar looking in the mirror. For that being, moving the “bloublou” side and looking into the mirror, it would be under the impression that the “blibli” side is moving. Because compared to the non-symmetrical parts of his body, this is what seems to be moving.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="mirror-flip.jpg" class="img-fluid figure-img"></p>
+<figcaption>mirror</figcaption>
+</figure>
+</div>
+</div>
+</div>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="ai" data-listing-date-sort="1697925600000" data-listing-file-modified-sort="1697965312042" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" data-listing-word-count-sort="1472">
-<div class="thumbnail">
-<p><a href="./posts/2023-10-20-bayesian-inference-from-scratch.html"></a></p><a href="./posts/2023-10-20-bayesian-inference-from-scratch.html">
-<p><img src="./posts/bayesian_header.png" class="thumbnail-image"></p>
-</a><p><a href="./posts/2023-10-20-bayesian-inference-from-scratch.html"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023-10-20-bayesian-inference-from-scratch.html">Bayesien Inference from Scratch</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2023-10-20-bayesian-inference-from-scratch.html"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2023-10-20-bayesian-inference-from-scratch.html">Bayesien Inference from Scratch in Python</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2023-10-20-bayesian-inference-from-scratch.html">
-<div class="listing-date">
-Oct 22, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="ai" data-listing-date-sort="1673650800000" data-listing-file-modified-sort="1697922617195" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="414">
-<div class="thumbnail">
-<p><a href="./posts/2023-01-14-shap-values.html"></a></p><a href="./posts/2023-01-14-shap-values.html">
-<p class="card-img-top"><img src="https://christophm.github.io/interpretable-ml-book/images/shap-simplified-features.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/2023-01-14-shap-values.html"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2023-01-14-shap-values.html">SHAP values from scratch</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2023-01-14-shap-values.html"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2023-01-14-shap-values.html">How SHAP values are computed, in a few simple Python lines</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2023-01-14-shap-values.html">
-<div class="listing-date">
-Jan 14, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="programming,ai" data-listing-date-sort="1632693600000" data-listing-file-modified-sort="1697922617193" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1055">
-<div class="thumbnail">
-<p><a href="./posts/2021-09-27-bayesian-seattle.html"></a></p><a href="./posts/2021-09-27-bayesian-seattle.html">
-<p class="card-img-top"><img src="posts/2021-09-27-bayesian-seattle_files/figure-html/cell-2-output-5.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/2021-09-27-bayesian-seattle.html"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-09-27-bayesian-seattle.html">Bayesian riddle</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2021-09-27-bayesian-seattle.html"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2021-09-27-bayesian-seattle.html">The typical bayesian interview question, solved with PyMC3</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-09-27-bayesian-seattle.html">
-<div class="listing-date">
-Sep 27, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="ai" data-listing-date-sort="1632088800000" data-listing-file-modified-sort="1697922617191" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/2021-09-20-random-forest.html"></a></p><a href="./posts/2021-09-20-random-forest.html">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/2021-09-20-random-forest.html"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-09-20-random-forest.html">Random forest</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2021-09-20-random-forest.html"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2021-09-20-random-forest.html">Create random forest from scratch in Python</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-09-20-random-forest.html">
-<div class="listing-date">
-Sep 20, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="ai" data-listing-date-sort="1632002400000" data-listing-file-modified-sort="1697922617191" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="29">
-<div class="thumbnail">
-<p><a href="./posts/2021-09-19-word-embeddings.html"></a></p><a href="./posts/2021-09-19-word-embeddings.html">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/2021-09-19-word-embeddings.html"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-09-19-word-embeddings.html">Word embedding</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2021-09-19-word-embeddings.html"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2021-09-19-word-embeddings.html">Create word embeddings simply from scratch</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-09-19-word-embeddings.html">
-<div class="listing-date">
-Sep 19, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="ai" data-listing-date-sort="1631916000000" data-listing-file-modified-sort="1697922617190" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/2021-09-18-boosting-trees.html"></a></p><a href="./posts/2021-09-18-boosting-trees.html">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/2021-09-18-boosting-trees.html"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-09-18-boosting-trees.html">Gradient Boosting trees</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2021-09-18-boosting-trees.html"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2021-09-18-boosting-trees.html">Simple boosting trees, for regression and classification in python from scratch</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-09-18-boosting-trees.html">
-<div class="listing-date">
-Sep 18, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="ai" data-listing-date-sort="1631743200000" data-listing-file-modified-sort="1697922617190" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="13">
-<div class="thumbnail">
-<p><a href="./posts/2021-09-16-svd.html"></a></p><a href="./posts/2021-09-16-svd.html">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/2021-09-16-svd.html"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-09-16-svd.html">SVD</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2021-09-16-svd.html"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2021-09-16-svd.html">Singular value decomposition from scratch</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-09-16-svd.html">
-<div class="listing-date">
-Sep 16, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="ai" data-listing-date-sort="1631656800000" data-listing-file-modified-sort="1697922617190" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
-<div class="thumbnail">
-<p><a href="./posts/2021-09-15-pca.html"></a></p><a href="./posts/2021-09-15-pca.html">
-<p class="card-img-top"><img src="posts/2021-09-15-pca_files/figure-html/cell-3-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/2021-09-15-pca.html"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-09-15-pca.html">PCA</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2021-09-15-pca.html"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2021-09-15-pca.html">PCA dimensionality reduction from scratch</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-09-15-pca.html">
-<div class="listing-date">
-Sep 15, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="ai" data-listing-date-sort="1631570400000" data-listing-file-modified-sort="1697922617188" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="186">
-<div class="thumbnail">
-<p><a href="./posts/2021-09-14-linear-regression.html"></a></p><a href="./posts/2021-09-14-linear-regression.html">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/2021-09-14-linear-regression.html"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-09-14-linear-regression.html">Linear regression &amp; Logistic regression</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2021-09-14-linear-regression.html"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2021-09-14-linear-regression.html">Linear regression, ridge regression, logistic regression with r2 score from scratch in Python</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-09-14-linear-regression.html">
-<div class="listing-date">
-Sep 14, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="ai" data-listing-date-sort="1631484000000" data-listing-file-modified-sort="1697922617188" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="519">
-<div class="thumbnail">
-<p><a href="./posts/2021-09-13-hypothesis-testing.html"></a></p><a href="./posts/2021-09-13-hypothesis-testing.html">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/2021-09-13-hypothesis-testing.html"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-09-13-hypothesis-testing.html">Hypothesis testing</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/2021-09-13-hypothesis-testing.html"></a>
-</div>
-<div class="listing-description">
-<a href="./posts/2021-09-13-hypothesis-testing.html">Hypothesis testing, confidence interval</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-09-13-hypothesis-testing.html">
-<div class="listing-date">
-Sep 13, 2021
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
