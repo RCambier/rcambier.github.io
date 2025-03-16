@@ -29,7 +29,7 @@ The way I understand it is the following:
 
 - Picture a being that is symmetric in the other direction, as pictured here. We would call "bloublou" and "blibli" the 2 directions that are similar looking in the mirror. For that being, moving the "bloublou" side and looking into the mirror, it would be under the impression that the "blibli" side is moving. Because compared to the non-symmetrical parts of his body, this is what seems to be moving. 
 
-![mirror](mirror-flip.png)
+![](mirror-flip.png)
 
 
 </div>
