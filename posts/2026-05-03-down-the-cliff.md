@@ -17,6 +17,8 @@ There is a tree at the top of the cliff, and a branch sticking out of the cliff 
 
 How can you get down safely to the bottom of the cliff?
 
+![](down-the-cliff.svg)
+
 <div markdown="1" class='answer-title'>_Hover to show the answer._
 </div>
 <div class='answer-wrapper'>
