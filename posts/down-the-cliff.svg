@@ -1,103 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="892" viewBox="0 0 1280 892" role="img" aria-labelledby="title desc">
   <title id="title">Down the cliff riddle setup</title>
-  <desc id="desc">Question-only illustration: a 100 meter cliff, a tree at the top, a branch 50 meters below, and the available 75 meter rope and knife.</desc>
+  <desc id="desc">Question-only illustration showing a 100 meter cliff, a start point at the top, a branch 50 meters below the top, and the available equipment: a 75 meter rope and a knife.</desc>
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#dff4ff"/>
-      <stop offset="100%" stop-color="#ffffff"/>
-    </linearGradient>
-    <linearGradient id="cliff" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#a9896d"/>
-      <stop offset="100%" stop-color="#5b4638"/>
-    </linearGradient>
-    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111827"/>
-    </marker>
     <marker id="redArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#dc2626"/>
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#f21d1d"/>
     </marker>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.22"/>
+    <marker id="blackArrow" viewBox="0 0 10 10" refX="5" refY="5" markerHeight="8" markerWidth="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/>
+    </marker>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1.5" stdDeviation="1.5" flood-color="#000" flood-opacity="0.18"/>
     </filter>
-    <style>
-      .label { font: 700 24px Arial, sans-serif; fill: #111827; }
-      .small { font: 700 18px Arial, sans-serif; fill: #111827; }
-      .note { font: 600 16px Arial, sans-serif; fill: #374151; }
-      .measure { stroke: #111827; stroke-width: 3; marker-start: url(#arrow); marker-end: url(#arrow); }
-      .measure-red { stroke: #dc2626; stroke-width: 3; marker-start: url(#redArrow); marker-end: url(#redArrow); }
-    </style>
   </defs>
 
-  <rect width="1000" height="700" fill="url(#sky)"/>
-  <circle cx="140" cy="105" r="42" fill="#fde68a" opacity="0.9"/>
-  <rect x="0" y="620" width="1000" height="80" fill="#8fbc7a"/>
+  <rect width="1280" height="892" fill="#fbfbfb"/>
 
-  <!-- Cliff face -->
-  <path d="M 545 95 C 520 180 560 255 530 340 C 505 415 545 500 510 620 L 820 620 L 820 95 Z" fill="url(#cliff)" filter="url(#shadow)"/>
-  <path d="M 545 95 C 520 180 560 255 530 340 C 505 415 545 500 510 620" fill="none" stroke="#3f342b" stroke-width="5"/>
-  <path d="M 545 95 L 820 95 L 820 70 L 500 70 C 492 88 512 101 545 95 Z" fill="#7fb069"/>
-  <path d="M610 145 L690 190 M565 250 L720 310 M585 420 L685 470 M630 520 L780 575" stroke="#705a48" stroke-width="3" opacity="0.5"/>
-  <path d="M720 130 L680 235 M610 330 L660 420 M755 385 L715 540" stroke="#4d3f35" stroke-width="2" opacity="0.35"/>
+  <!-- Equipment card -->
+  <rect x="80" y="82" width="335" height="196" rx="16" fill="#fff" stroke="#aaa" stroke-width="2"/>
+  <text x="108" y="123" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700" fill="#111">equipment</text>
+  <path d="M115 201 C145 165 182 232 222 193 S292 166 331 203" fill="none" stroke="#f27d09" stroke-width="8" stroke-linecap="round"/>
+  <g transform="translate(324 170) rotate(-40)">
+    <rect x="-7" y="36" width="24" height="64" rx="5" fill="#8b3f2d" stroke="#5d271c" stroke-width="2"/>
+    <path d="M5 0 L34 47 L7 38 L-19 48 Z" fill="#c8c8c8" stroke="#777" stroke-width="2"/>
+    <line x1="-3" y1="40" x2="15" y2="40" stroke="#222" stroke-width="3"/>
+  </g>
+  <text x="108" y="253" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#111">75 m rope + knife</text>
 
-  <!-- Tree at the top -->
-  <rect x="622" y="25" width="28" height="75" rx="10" fill="#7c4a25"/>
-  <circle cx="608" cy="30" r="42" fill="#2f855a"/>
-  <circle cx="655" cy="24" r="48" fill="#38a169"/>
-  <circle cx="690" cy="48" r="38" fill="#2f855a"/>
-  <rect x="698" y="38" width="70" height="32" rx="10" fill="#ffffff" stroke="#d1d5db"/>
-  <text x="714" y="60" class="small">tree</text>
+  <!-- Question setup card -->
+  <rect x="80" y="667" width="435" height="135" rx="14" fill="#fff" stroke="#aaa" stroke-width="2"/>
+  <text x="99" y="710" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#111">question setup</text>
+  <text x="99" y="752" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#111">Get from the top to the bottom</text>
+  <text x="99" y="782" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#111">using only the 75 m rope and the knife.</text>
 
-  <!-- Person standing on the cliff top, next to the tree -->
-  <line x1="548" y1="101" x2="610" y2="101" stroke="#3f7f4f" stroke-width="4" stroke-linecap="round"/>
-  <circle cx="580" cy="38" r="11" fill="#f2c6a0" stroke="#111827" stroke-width="2"/>
-  <line x1="580" y1="50" x2="580" y2="78" stroke="#1f2937" stroke-width="5" stroke-linecap="round"/>
-  <line x1="580" y1="58" x2="558" y2="72" stroke="#1f2937" stroke-width="5" stroke-linecap="round"/>
-  <line x1="580" y1="58" x2="601" y2="72" stroke="#1f2937" stroke-width="5" stroke-linecap="round"/>
-  <line x1="580" y1="78" x2="565" y2="100" stroke="#1f2937" stroke-width="5" stroke-linecap="round"/>
-  <line x1="580" y1="78" x2="595" y2="100" stroke="#1f2937" stroke-width="5" stroke-linecap="round"/>
-  <rect x="405" y="28" width="130" height="34" rx="10" fill="#ffffff" stroke="#d1d5db"/>
-  <text x="421" y="51" class="small">you start here</text>
+  <!-- Cliff and ground -->
+  <rect x="598" y="798" width="631" height="65" fill="#6b963c"/>
+  <path d="M700 132 L1085 132 L1085 798 L648 798 C688 700 672 565 682 445 C690 345 682 244 700 132 Z" fill="#b49675"/>
+  <path d="M700 132 L1085 132" stroke="#6b963c" stroke-width="12" stroke-linecap="butt"/>
+  <rect x="922" y="817" width="108" height="36" rx="9" fill="#fff" stroke="#cfcfcf" stroke-width="2" filter="url(#softShadow)"/>
+  <text x="943" y="842" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#111">ground</text>
 
-  <!-- Branch halfway down -->
-  <path d="M 528 355 C 470 340 425 345 372 365" fill="none" stroke="#6b3f20" stroke-width="16" stroke-linecap="round"/>
-  <path d="M 425 352 C 405 333 386 324 362 316" fill="none" stroke="#6b3f20" stroke-width="8" stroke-linecap="round"/>
-  <ellipse cx="371" cy="366" rx="38" ry="13" fill="#4b2e17" opacity="0.25"/>
-  <rect x="208" y="320" width="232" height="36" rx="10" fill="#ffffff" stroke="#d1d5db"/>
-  <text x="225" y="344" class="small">branch, 50 m below top</text>
-
-  <!-- Equipment only: no solution path -->
-  <g transform="translate(70 90)" filter="url(#shadow)">
-    <rect x="0" y="0" width="250" height="128" rx="18" fill="#ffffff" stroke="#d1d5db" stroke-width="2"/>
-    <text x="20" y="34" class="small">equipment</text>
-    <path d="M32 82 C 55 58, 78 102, 103 78 S 153 56, 177 86" fill="none" stroke="#d97706" stroke-width="7" stroke-linecap="round"/>
-    <circle cx="32" cy="82" r="4" fill="#d97706"/>
-    <circle cx="177" cy="86" r="4" fill="#d97706"/>
-    <path d="M168 95 L194 72" stroke="#7c2d12" stroke-width="10" stroke-linecap="round"/>
-    <path d="M192 70 L230 38 L222 72 Z" fill="#cbd5e1" stroke="#4b5563" stroke-width="2"/>
-    <line x1="198" y1="67" x2="210" y2="79" stroke="#374151" stroke-width="3" stroke-linecap="round"/>
-    <text x="26" y="118" class="note">75 m rope + knife</text>
+  <!-- Bush and stump at top -->
+  <g fill="#2d7d3b" stroke="#226331" stroke-width="3">
+    <circle cx="917" cy="69" r="53"/>
+    <circle cx="867" cy="90" r="45"/>
+    <circle cx="958" cy="104" r="48"/>
+    <circle cx="902" cy="120" r="44"/>
+    <circle cx="986" cy="140" r="38"/>
+    <rect x="861" y="87" width="126" height="60" rx="25"/>
+  </g>
+  <g>
+    <path d="M875 104 L906 104 L904 141 L877 141 Z" fill="#a66a2f" stroke="#704016" stroke-width="2"/>
+    <ellipse cx="890" cy="104" rx="16" ry="4" fill="#7c4b20" stroke="#704016" stroke-width="2"/>
   </g>
 
-  <!-- Measurement annotations -->
-  <line x1="890" y1="95" x2="890" y2="620" class="measure"/>
-  <line x1="835" y1="95" x2="925" y2="95" stroke="#111827" stroke-width="2"/>
-  <line x1="835" y1="620" x2="925" y2="620" stroke="#111827" stroke-width="2"/>
-  <rect x="835" y="332" width="125" height="42" rx="10" fill="#ffffff" stroke="#111827" stroke-width="2"/>
-  <text x="855" y="360" class="label">100 m</text>
+  <!-- Person and start label -->
+  <g stroke="#000" stroke-width="4" stroke-linecap="round" fill="none">
+    <circle cx="820" cy="63" r="13" fill="#000"/>
+    <line x1="820" y1="78" x2="820" y2="113"/>
+    <line x1="820" y1="91" x2="800" y2="108"/>
+    <line x1="820" y1="91" x2="842" y2="108"/>
+    <line x1="820" y1="113" x2="800" y2="134"/>
+    <line x1="820" y1="113" x2="843" y2="134"/>
+  </g>
+  <rect x="582" y="31" width="199" height="55" rx="9" fill="#fff" stroke="#bcbcbc" stroke-width="2" filter="url(#softShadow)"/>
+  <path d="M779 58 L797 65 L779 72 Z" fill="#fff" stroke="#bcbcbc" stroke-width="2"/>
+  <text x="601" y="66" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#111">you start here</text>
 
-  <line x1="790" y1="95" x2="790" y2="360" class="measure-red"/>
-  <line x1="760" y1="360" x2="830" y2="360" stroke="#dc2626" stroke-width="2"/>
-  <rect x="730" y="207" width="112" height="40" rx="10" fill="#fff7ed" stroke="#dc2626" stroke-width="2"/>
-  <text x="750" y="234" class="label" fill="#991b1b">50 m</text>
+  <!-- Branch 50 m below top -->
+  <path d="M502 487 C560 456 623 459 700 466" fill="none" stroke="#6b3b18" stroke-width="12" stroke-linecap="round"/>
+  <path d="M510 487 C545 470 551 455 527 451" fill="none" stroke="#6b3b18" stroke-width="10" stroke-linecap="round"/>
+  <rect x="292" y="404" width="280" height="53" rx="10" fill="#fff" stroke="#bcbcbc" stroke-width="2"/>
+  <text x="316" y="437" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#111">branch, 50 m below top</text>
+  <line x1="700" y1="466" x2="1085" y2="466" stroke="#f21d1d" stroke-width="2" stroke-dasharray="7 7" opacity="0.8"/>
 
-  <line x1="545" y1="95" x2="820" y2="95" stroke="#111827" stroke-width="2" stroke-dasharray="5 6" opacity="0.6"/>
-  <line x1="528" y1="360" x2="820" y2="360" stroke="#dc2626" stroke-width="3" stroke-dasharray="7 6" opacity="0.65"/>
-  <line x1="510" y1="620" x2="820" y2="620" stroke="#111827" stroke-width="2" stroke-dasharray="5 6" opacity="0.6"/>
-  <rect x="707" y="628" width="86" height="30" rx="9" fill="#ffffff" stroke="#d1d5db"/>
-  <text x="724" y="649" class="small">ground</text>
+  <!-- Red 50m measurement -->
+  <line x1="1042" y1="151" x2="1042" y2="450" stroke="#f21d1d" stroke-width="5" marker-start="url(#redArrow)" marker-end="url(#redArrow)"/>
+  <rect x="977" y="290" width="101" height="51" rx="10" fill="#fff" stroke="#f21d1d" stroke-width="3"/>
+  <text x="997" y="323" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#111">50 m</text>
 
-  <rect x="55" y="560" width="430" height="88" rx="16" fill="#ffffff" stroke="#d1d5db" stroke-width="2" filter="url(#shadow)"/>
-  <text x="78" y="592" class="small">Question setup</text>
-  <text x="78" y="620" class="note">Get from the top to the bottom using only</text>
-  <text x="78" y="642" class="note">the 75 m rope and the knife.</text>
+  <!-- Full 100m measurement -->
+  <line x1="1114" y1="134" x2="1216" y2="134" stroke="#000" stroke-width="3"/>
+  <line x1="1114" y1="798" x2="1216" y2="798" stroke="#000" stroke-width="3"/>
+  <line x1="1165" y1="148" x2="1165" y2="784" stroke="#000" stroke-width="5" marker-start="url(#blackArrow)" marker-end="url(#blackArrow)"/>
+  <rect x="1107" y="427" width="116" height="53" rx="11" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="1128" y="462" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#111">100 m</text>
 </svg>
