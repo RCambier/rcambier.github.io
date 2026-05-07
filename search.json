@@ -389,14 +389,14 @@
     "href": "posts/2026-05-03-fake-coin.html",
     "title": "The fake coin",
     "section": "",
-    "text": "You have 12 coins. One of them is fake, and has a different weight from the others: it can be either lighter or heavier.\nUsing a balance scale, what is the minimum number of weighings needed to identify the fake coin?"
+    "text": "You have 11 coins. One of them is fake, and has a different weight from the others: it can be either lighter or heavier.\nUsing a balance scale, what is the minimum number of weighings needed to identify the fake coin?"
   },
   {
     "objectID": "posts/2026-05-03-fake-coin.html#case-1-a-and-b-balance",
     "href": "posts/2026-05-03-fake-coin.html#case-1-a-and-b-balance",
     "title": "The fake coin",
     "section": "Case 1: A and B balance",
-    "text": "Case 1: A and B balance\nThen the fake coin is in group C, and all coins in A and B are genuine.\nFor the second weighing, weigh three coins from C against three genuine coins.\n\nIf they balance, the fourth coin from C is the fake one.\nIf they do not balance, then you know whether the fake coin among those three is heavier or lighter.\n\nFor the third weighing, compare two of the remaining suspect coins. This identifies the fake coin."
+    "text": "Case 1: A and B balance\nThen the fake coin is in group C, and all coins in A and B are genuine.\nFor the second weighing, weigh one coin from C against one genuine coin.\n\nIf they do not balance, that coin from C is the fake one, and the direction tells you whether it is heavier or lighter.\nIf they balance, then the fake coin is one of the two remaining coins from C.\n\nFor the third weighing, compare one of those two remaining C coins against a genuine coin. If it balances, the other remaining C coin is fake; otherwise, the coin you weighed is fake."
   },
   {
     "objectID": "posts/2026-05-03-fake-coin.html#case-2-a-and-b-do-not-balance",

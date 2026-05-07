@@ -157,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>You have 12 coins. One of them is fake, and has a different weight from the others: it can be either lighter or heavier.</p>
+<p>You have 11 coins. One of them is fake, and has a different weight from the others: it can be either lighter or heavier.</p>
 <p>Using a balance scale, what is the minimum number of weighings needed to identify the fake coin?</p>
 <div class="answer-title" data-markdown="1">
 <p><em>Hover to show the answer.</em></p>
@@ -166,16 +166,16 @@ ul.task-list li input[type="checkbox"] {
 <div class="answer" data-markdown="1" style="color: grey">
 <p>The answer is <strong>3 weighings</strong>.</p>
 <p>Here is one way to do it.</p>
-<p>Split the coins into three groups of four: <strong>A</strong>, <strong>B</strong>, and <strong>C</strong>. First weigh <strong>A</strong> against <strong>B</strong>.</p>
+<p>Split the coins into three groups: <strong>A</strong> and <strong>B</strong> with four coins each, and <strong>C</strong> with the remaining three coins. First weigh <strong>A</strong> against <strong>B</strong>.</p>
 <section id="case-1-a-and-b-balance" class="level2">
 <h2 class="anchored" data-anchor-id="case-1-a-and-b-balance">Case 1: A and B balance</h2>
 <p>Then the fake coin is in group <strong>C</strong>, and all coins in <strong>A</strong> and <strong>B</strong> are genuine.</p>
-<p>For the second weighing, weigh three coins from <strong>C</strong> against three genuine coins.</p>
+<p>For the second weighing, weigh one coin from <strong>C</strong> against one genuine coin.</p>
 <ul>
-<li>If they balance, the fourth coin from <strong>C</strong> is the fake one.</li>
-<li>If they do not balance, then you know whether the fake coin among those three is heavier or lighter.</li>
+<li>If they do not balance, that coin from <strong>C</strong> is the fake one, and the direction tells you whether it is heavier or lighter.</li>
+<li>If they balance, then the fake coin is one of the two remaining coins from <strong>C</strong>.</li>
 </ul>
-<p>For the third weighing, compare two of the remaining suspect coins. This identifies the fake coin.</p>
+<p>For the third weighing, compare one of those two remaining <strong>C</strong> coins against a genuine coin. If it balances, the other remaining <strong>C</strong> coin is fake; otherwise, the coin you weighed is fake.</p>
 </section>
 <section id="case-2-a-and-b-do-not-balance" class="level2">
 <h2 class="anchored" data-anchor-id="case-2-a-and-b-do-not-balance">Case 2: A and B do not balance</h2>
