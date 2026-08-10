@@ -263,7 +263,7 @@
     "href": "posts/2026-08-10-discover-road-trip-narrator.html#practical",
     "title": "Discover — a road trip narrator",
     "section": "Practical",
-    "text": "Practical\nThe key is stored in your own browser and sent only to OpenAI. Driving costs roughly $0.15–0.40 an hour. The data sources — Nominatim, Wikipedia, Wikivoyage — are free and need no keys.\nIt is a browser tab, so it cannot run with the screen off; a wake lock keeps the screen on while mounted, like a navigation app. There is also a native iPhone version of the same engine.\nThe screenshots above come from the app’s own test drive: the road south from Monteriggioni to Siena, with the GPS fixes scripted and the voice server faked, so the same drive can be replayed on every change. The map, the tiles and the places are real; the car is not.\nSource: github.com/RCambier/Discover."
+    "text": "Practical\nThe key is stored in your own browser and sent only to OpenAI. Driving costs roughly $0.15–0.40 an hour. The data sources — Nominatim, Wikipedia, Wikivoyage — are free and need no keys.\nIt is a browser tab, so it cannot run with the screen off; a wake lock keeps the screen on while mounted, like a navigation app. There is also a native iPhone version of the same engine.\nThe screenshots above come from the app’s own test drive: the road south from Monteriggioni to Siena, with the GPS fixes scripted and the voice server faked, so the same drive can be replayed on every change. The map, the tiles and the places are real; the car is not."
   },
   {
     "objectID": "riddles.html",
