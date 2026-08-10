@@ -4,52 +4,50 @@ aliases:
 categories:
  - project
 date: '2026-08-10'
-subtitle: kanban boards and notes whose only backend is a sheet you own
+subtitle: kanban boards and notes stored in a Google Sheet you own
 layout: post
 published: true
 title: Memoria — a board your agents can write to
 
 ---
 
-[**Memoria**](https://memoria-board.vercel.app/) is a kanban board and a grid of
-markdown notes whose only backend is Google Sheets in your own Drive. There is no
-database, no server-side state, and no account to create beyond the Google one
-you already have.
+[**Memoria**](https://memoria-board.vercel.app/) is a kanban board and a set of
+markdown notes stored in a Google Sheet in your own Drive. There is no database
+and no account to create: you sign in with Google, and the app reads and writes
+rows in a spreadsheet you own.
 
 ![](memoria-landing.png)
 
-Two clients read and write the same sheet: the web app below, and an MCP server
-for coding agents. Neither holds state, so the board, your agents and Google
-Sheets itself are always looking at the same rows.
+Two things use that sheet: the web app, and an MCP server for coding agents.
+Neither of them keeps its own copy of the data, so the board, your agents and
+the spreadsheet always show the same thing.
 
 ![](memoria-board.png)
 
 ## Why a spreadsheet
 
-Because it outlives the app. The tasks are plain rows in a file you own, readable
-in ten years with or without this front end, and editable in Google Sheets
-directly if the UI is ever in the way. The deployment stores nothing about you:
-it is static files plus a stateless endpoint, and the only credential involved is
-your own Google sign-in. The app asks for the `drive.file` scope, so it can touch
-only the files it created or that you explicitly picked — never the rest of your
-Drive.
+Mostly because it keeps your data in your own hands. The tasks are plain rows
+in a file you own. You can open the sheet and edit them there directly, and
+they will still be readable in ten years even if this app is long gone. The app
+itself stores nothing about you, and it can only access the files it created or
+that you picked, never the rest of your Drive.
 
-## The agent half
+## Using it with agents
 
-Every deployment serves an MCP connector at `/api/mcp`. Add it in claude.ai under
-Connectors, or in Claude Code, sign in with Google, and an agent gets the board
-tools against your own boards — listing, adding, moving and completing tasks, and
-the same for notes. Nothing to install, and it works in scheduled and cloud runs
-too.
+Every deployment also works as an MCP connector. Add it in claude.ai under
+Connectors, or in Claude Code, sign in with Google, and your agent can list,
+add, move and complete tasks on your boards, and do the same with notes. It
+also works in scheduled and cloud runs.
 
-That is the part I actually wanted: a place an agent can leave something for me,
-and I can leave something for it, that is neither a chat log nor a file in a repo.
+This is the part I actually built it for: a place where an agent can leave
+something for me, and where I can leave something for it, without it being a
+chat log or a file in a repo.
 
-## Practical
+## Practical details
 
-Use the hosted instance at
-[memoria-board.vercel.app](https://memoria-board.vercel.app), or fork the repo and
-deploy your own with your own Google credentials — about fifteen minutes, all on
-free tiers.
+You can use the hosted version at
+[memoria-board.vercel.app](https://memoria-board.vercel.app), or fork the repo
+and deploy your own with your own Google credentials. That takes about fifteen
+minutes, all on free tiers.
 
 Source: [github.com/RCambier/Memoria](https://github.com/RCambier/Memoria). MIT.

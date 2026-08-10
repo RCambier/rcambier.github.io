@@ -11,10 +11,10 @@ title: Discover — a road trip narrator
 
 ---
 
-[**Discover**](https://discover-on-the-road.vercel.app/) is a web app you mount on
-the dashboard. It watches your GPS while you drive and talks to you about the
-places you pass — the region you are crossing, its history, and the specific
-things around the car right now. There is nothing to set up beyond an OpenAI key.
+[**Discover**](https://discover-on-the-road.vercel.app/) is a web app you put on
+the dashboard while driving. It follows your GPS position and talks about the
+places you pass: the region you are crossing, its history, and the landmarks
+coming up along the road. The only setup is pasting in an OpenAI key.
 
 ::: {layout-ncol=3}
 ![](discover-monteriggioni.png)
@@ -24,43 +24,43 @@ things around the car right now. There is nothing to set up beyond an OpenAI key
 ![](discover-settings.png)
 :::
 
-The map is the whole app. The circle is the detection radius around the car, the
-trail behind it is where you have been, and the place currently being spoken
-about is the one in violet. Everything else is grey: named if it may still be
-worth a sentence, an anonymous dot if it was scored and passed over. There is no
-transcript, because the narration is audio — what is being said is in the air.
+The main screen is a map. The circle around the car is the detection radius, the
+trail behind it is where you have been, and the violet marker is the place
+currently being talked about. The grey places were considered too: the named
+ones might still get a mention later, the small dots were looked at and skipped.
+There is no transcript, everything is spoken out loud.
 
-## What it actually does
+## How it works
 
-1. **Position.** High-accuracy `watchPosition`, with cached and coarse fixes
-   thrown away. Narration waits until the fix settles, because a phone's first
-   fixes can be kilometres off.
-2. **Research.** Every few kilometres: reverse geocoding through Nominatim,
-   Wikipedia geosearch in the local-language edition first, Wikivoyage for the
-   character of the area, and live web search for what encyclopedias are weak on.
-3. **Relevance.** Each candidate is scored — fame from live pageviews, article
-   depth, proximity, topic. The bar is roughly what a good local guide would
-   bother to mention. In the third screenshot you can add **special interests**;
-   they lower the bar for their own subject, so a railway halt that the general
-   bar skips gets narrated if you asked for railways.
-4. **Approach, not proximity.** A landmark is resolved against your heading and
-   speed, so it is announced once, shortly before it is visible, and on the
-   correct side. In the screenshots: *1.1 km · straight ahead*.
-5. **Voice.** One OpenAI Realtime session over WebRTC. No text at any point — the
-   words live in the audio. Hold the button to ask a question; the narrator can
-   look something up mid-sentence and carry on.
+1. **Position.** The app waits for the GPS signal to settle before it starts
+   talking, because a phone's first position fixes can be kilometres off.
+2. **Research.** Every few kilometres it looks up the surroundings: reverse
+   geocoding, Wikipedia in the local language first, Wikivoyage for the general
+   character of an area, and a web search for the things encyclopedias are weak
+   on.
+3. **Choosing what to mention.** Each place gets a score based on how well known
+   it is, how much there is to say about it, and how close you will pass. The
+   bar is roughly what a good local guide would bother to mention. In the third
+   screenshot you can add special interests: if you ask for railways, a small
+   railway stop that would normally be skipped gets narrated.
+4. **Timing.** A place is announced once, shortly before you can see it, and on
+   the correct side of the road, based on your heading and speed. In the
+   screenshots: *1.1 km · straight ahead*.
+5. **Voice.** The narration is a single OpenAI realtime voice session. You can
+   hold a button to ask a question, and the narrator can look something up while
+   it answers.
 
-## Practical
+## Practical details
 
-The key is stored in your own browser and sent only to OpenAI. Driving costs
-roughly $0.15–0.40 an hour. The data sources — Nominatim, Wikipedia, Wikivoyage —
-are free and need no keys.
+Your OpenAI key stays in your browser and is only ever sent to OpenAI. An hour
+of driving costs roughly $0.15 to $0.40. The other data sources (Nominatim,
+Wikipedia, Wikivoyage) are free.
 
-It is a browser tab, so it cannot run with the screen off; a wake lock keeps the
-screen on while mounted, like a navigation app. There is also a native iPhone
+Because it is a browser tab, it cannot run with the screen off, so it keeps the
+screen awake the way a navigation app does. There is also a native iPhone
 version of the same engine.
 
-The screenshots above come from the app's own test drive: the road south from
-Monteriggioni to Siena, with the GPS fixes scripted and the voice server faked,
-so the same drive can be replayed on every change. The map, the tiles and the
-places are real; the car is not.
+The screenshots come from the app's built-in test drive, on the road from
+Monteriggioni to Siena. The GPS is scripted and the voice server is faked so
+that the same drive can be replayed during development, but the map and the
+places are real.
