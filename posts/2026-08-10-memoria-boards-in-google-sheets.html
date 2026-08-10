@@ -132,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Memoria — a board your agents can write to</h1>
-            <p class="subtitle lead">kanban boards and notes whose only backend is a sheet you own</p>
+            <p class="subtitle lead">kanban boards and notes stored in a Google Sheet you own</p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">project</div>
               </div>
@@ -165,22 +165,22 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><a href="https://memoria-board.vercel.app/"><strong>Memoria</strong></a> is a kanban board and a grid of markdown notes whose only backend is Google Sheets in your own Drive. There is no database, no server-side state, and no account to create beyond the Google one you already have.</p>
+<p><a href="https://memoria-board.vercel.app/"><strong>Memoria</strong></a> is a kanban board and a set of markdown notes stored in a Google Sheet in your own Drive. There is no database and no account to create: you sign in with Google, and the app reads and writes rows in a spreadsheet you own.</p>
 <p><img src="memoria-landing.png" class="img-fluid"></p>
-<p>Two clients read and write the same sheet: the web app below, and an MCP server for coding agents. Neither holds state, so the board, your agents and Google Sheets itself are always looking at the same rows.</p>
+<p>Two things use that sheet: the web app, and an MCP server for coding agents. Neither of them keeps its own copy of the data, so the board, your agents and the spreadsheet always show the same thing.</p>
 <p><img src="memoria-board.png" class="img-fluid"></p>
 <section id="why-a-spreadsheet" class="level2">
 <h2 class="anchored" data-anchor-id="why-a-spreadsheet">Why a spreadsheet</h2>
-<p>Because it outlives the app. The tasks are plain rows in a file you own, readable in ten years with or without this front end, and editable in Google Sheets directly if the UI is ever in the way. The deployment stores nothing about you: it is static files plus a stateless endpoint, and the only credential involved is your own Google sign-in. The app asks for the <code>drive.file</code> scope, so it can touch only the files it created or that you explicitly picked — never the rest of your Drive.</p>
+<p>Mostly because it keeps your data in your own hands. The tasks are plain rows in a file you own. You can open the sheet and edit them there directly, and they will still be readable in ten years even if this app is long gone. The app itself stores nothing about you, and it can only access the files it created or that you picked, never the rest of your Drive.</p>
 </section>
-<section id="the-agent-half" class="level2">
-<h2 class="anchored" data-anchor-id="the-agent-half">The agent half</h2>
-<p>Every deployment serves an MCP connector at <code>/api/mcp</code>. Add it in claude.ai under Connectors, or in Claude Code, sign in with Google, and an agent gets the board tools against your own boards — listing, adding, moving and completing tasks, and the same for notes. Nothing to install, and it works in scheduled and cloud runs too.</p>
-<p>That is the part I actually wanted: a place an agent can leave something for me, and I can leave something for it, that is neither a chat log nor a file in a repo.</p>
+<section id="using-it-with-agents" class="level2">
+<h2 class="anchored" data-anchor-id="using-it-with-agents">Using it with agents</h2>
+<p>Every deployment also works as an MCP connector. Add it in claude.ai under Connectors, or in Claude Code, sign in with Google, and your agent can list, add, move and complete tasks on your boards, and do the same with notes. It also works in scheduled and cloud runs.</p>
+<p>This is the part I actually built it for: a place where an agent can leave something for me, and where I can leave something for it, without it being a chat log or a file in a repo.</p>
 </section>
-<section id="practical" class="level2">
-<h2 class="anchored" data-anchor-id="practical">Practical</h2>
-<p>Use the hosted instance at <a href="https://memoria-board.vercel.app">memoria-board.vercel.app</a>, or fork the repo and deploy your own with your own Google credentials — about fifteen minutes, all on free tiers.</p>
+<section id="practical-details" class="level2">
+<h2 class="anchored" data-anchor-id="practical-details">Practical details</h2>
+<p>You can use the hosted version at <a href="https://memoria-board.vercel.app">memoria-board.vercel.app</a>, or fork the repo and deploy your own with your own Google credentials. That takes about fifteen minutes, all on free tiers.</p>
 <p>Source: <a href="https://github.com/RCambier/Memoria">github.com/RCambier/Memoria</a>. MIT.</p>
 
 
