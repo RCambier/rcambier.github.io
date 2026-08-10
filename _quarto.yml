@@ -5,6 +5,7 @@ project:
 
 website:
   title: "Rcambier's Blog"
+  site-url: https://rcambier.github.io
   favicon: logo.png
   navbar:
     left: 
@@ -14,12 +15,15 @@ website:
         file: computer_science.qmd
       - text: "Riddles"
         file: riddles.qmd
+      - text: "Projects"
+        file: projects.qmd
     right:
       - about.qmd
 format:
   html:
     theme: cosmo
     css: styles.css
+    canonical-url: true
 
 
 
