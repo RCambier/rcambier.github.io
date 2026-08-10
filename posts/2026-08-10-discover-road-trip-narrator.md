@@ -64,5 +64,3 @@ The screenshots above come from the app's own test drive: the road south from
 Monteriggioni to Siena, with the GPS fixes scripted and the voice server faked,
 so the same drive can be replayed on every change. The map, the tiles and the
 places are real; the car is not.
-
-Source: [github.com/RCambier/Discover](https://github.com/RCambier/Discover).
