@@ -11,10 +11,11 @@ title: Discover — a road trip narrator
 
 ---
 
-[**Discover**](https://discover-on-the-road.vercel.app/) is a web app you put on
-the dashboard while driving. It follows your GPS position and talks about the
-places you pass: the region you are crossing, its history, and the landmarks
-coming up along the road. The only setup is pasting in an OpenAI key.
+[**Discover**](https://discover-on-the-road.vercel.app/) is a little app I built
+for road trips. You put your phone on the dashboard, and while you drive it
+tells you about the places you are passing: the region, its history, the castle
+on the hill you would otherwise drive straight past. All you need is an OpenAI
+key.
 
 ::: {layout-ncol=3}
 ![](discover-monteriggioni.png)
@@ -24,43 +25,41 @@ coming up along the road. The only setup is pasting in an OpenAI key.
 ![](discover-settings.png)
 :::
 
-The main screen is a map. The circle around the car is the detection radius, the
-trail behind it is where you have been, and the violet marker is the place
-currently being talked about. The grey places were considered too: the named
-ones might still get a mention later, the small dots were looked at and skipped.
-There is no transcript, everything is spoken out loud.
+The screen is just a map. The violet marker is the place it is currently
+talking about, and the grey ones are places it considered but decided were not
+worth interrupting you for. There is nothing to read while driving, everything
+is spoken.
 
-## How it works
+## What it does while you drive
 
-1. **Position.** The app waits for the GPS signal to settle before it starts
-   talking, because a phone's first position fixes can be kilometres off.
-2. **Research.** Every few kilometres it looks up the surroundings: reverse
-   geocoding, Wikipedia in the local language first, Wikivoyage for the general
-   character of an area, and a web search for the things encyclopedias are weak
-   on.
-3. **Choosing what to mention.** Each place gets a score based on how well known
-   it is, how much there is to say about it, and how close you will pass. The
-   bar is roughly what a good local guide would bother to mention. In the third
-   screenshot you can add special interests: if you ask for railways, a small
-   railway stop that would normally be skipped gets narrated.
-4. **Timing.** A place is announced once, shortly before you can see it, and on
-   the correct side of the road, based on your heading and speed. In the
-   screenshots: *1.1 km · straight ahead*.
-5. **Voice.** The narration is a single OpenAI realtime voice session. You can
-   hold a button to ask a question, and the narrator can look something up while
-   it answers.
+Every few kilometres it quietly looks up what is around you: Wikipedia, in the
+local language because that is usually where the good articles are, travel
+guides, and the web for the things encyclopedias miss. Then it decides what is
+worth mentioning. The bar I aimed for is what a good local guide sitting in the
+passenger seat would point out: famous enough, interesting enough, close enough
+to the road.
 
-## Practical details
+You can also tell it what you care about in the settings. If you say you like
+railways, it will happily talk about a small station that anyone else would
+drive past in silence.
 
-Your OpenAI key stays in your browser and is only ever sent to OpenAI. An hour
-of driving costs roughly $0.15 to $0.40. The other data sources (Nominatim,
-Wikipedia, Wikivoyage) are free.
+It tries to get the timing right too. A place is mentioned once, a little
+before it comes into view, and it tells you which side to look. In the
+screenshots: *1.1 km, straight ahead*.
 
-Because it is a browser tab, it cannot run with the screen off, so it keeps the
-screen awake the way a navigation app does. There is also a native iPhone
-version of the same engine.
+And if something makes you curious, you hold a button and ask. It answers, and
+looks things up if it needs to.
 
-The screenshots come from the app's built-in test drive, on the road from
-Monteriggioni to Siena. The GPS is scripted and the voice server is faked so
-that the same drive can be replayed during development, but the map and the
-places are real.
+## The practical bits
+
+Your OpenAI key stays on your phone and is only used to talk to OpenAI. An hour
+of driving costs somewhere between 15 and 40 cents. Everything else comes from
+free sources like Wikipedia.
+
+It runs in the browser, so it keeps your screen on while it works, like a
+navigation app does. There is also an iPhone version of the same thing.
+
+One honest note about the screenshots: they come from the app's built-in test
+drive, on the road from Monteriggioni to Siena. The car and the voice are
+simulated so I could replay the same drive while building the app, but the map
+and the places are real.
