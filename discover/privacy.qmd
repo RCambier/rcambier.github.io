@@ -1,0 +1,49 @@
+---
+title: "Discover privacy policy"
+page-layout: article
+---
+
+*Last updated 5 September 2026.*
+
+Discover ("the app") is published by Rodolphe Cambier. It follows your position while you drive and talks
+about the places you pass. It has no account, no server of its own, no analytics and no advertising. Nothing
+you do in the app is sent to us.
+
+## What leaves your phone, and where it goes
+
+| Data | Sent to | Why |
+|---|---|---|
+| Your position (coordinates) | Apple (reverse geocoding), Wikipedia and Wikivoyage (Wikimedia Foundation) | To name the town you are in and find the places around you. |
+| Where you are, in words: town, region, country, direction and speed. Names and short descriptions of nearby places. | OpenAI | So the guide knows what to talk about. Exact coordinates are sent only when the town cannot be named. |
+| Your voice, while the talk button is held and for a few seconds after the guide finishes speaking | OpenAI | To answer your question. The app does not record or store audio. |
+| Your OpenAI key | OpenAI only | To pay for the voice with your own OpenAI account. |
+
+OpenAI processes this data under its own [privacy policy](https://openai.com/policies/privacy-policy) and
+[API data usage policies](https://openai.com/policies/api-data-usage-policies). Wikimedia's policy is
+[here](https://foundation.wikimedia.org/wiki/Policy:Privacy_policy). Apple's map and geocoding services are
+covered by Apple's [privacy policy](https://www.apple.com/legal/privacy/).
+
+## What stays on your phone
+
+- Your OpenAI key, in the iPhone Keychain. The app shows only its last four characters after you save it.
+- Your settings: special interests, narrator, language, pace, chattiness, voice model.
+- An estimate of what each day of driving cost, computed from the token counts OpenAI reports. Kept for 31 days.
+
+Deleting the app deletes all of it.
+
+## Location in the background
+
+Discover keeps following your position with the screen locked, so it can keep narrating. Location is used
+only while a trip is running. The app does not build a history of where you have been.
+
+## Children
+
+The app is not directed at children under 13 and does not knowingly collect data from them.
+
+## Changes
+
+Changes to this policy are published on this page with a new date.
+
+## Contact
+
+[rodolphecambier@gmail.com](mailto:rodolphecambier@gmail.com)
