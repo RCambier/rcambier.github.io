@@ -1,107 +1,122 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="title desc" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
   <title id="title">Down the cliff riddle setup</title>
-  <desc id="desc">Illustration of a 100 meter cliff with a start point at top, a branch 50 meters below, and a 75 meter rope with a knife.</desc>
+  <desc id="desc">A 100 meter cliff. You stand at the top next to a tree. A branch sticks out of the cliff face 50 meters below the top. You have a 75 meter rope and a knife.</desc>
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#dcecf9"/>
-      <stop offset="1" stop-color="#f8fbfd"/>
+      <stop offset="0" stop-color="#d8e9f7"/>
+      <stop offset="1" stop-color="#f6fafd"/>
     </linearGradient>
     <linearGradient id="rock" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#9c7c56"/>
-      <stop offset="0.55" stop-color="#c2a077"/>
-      <stop offset="1" stop-color="#d8ba90"/>
+      <stop offset="0" stop-color="#9a7a55"/>
+      <stop offset="0.5" stop-color="#c2a077"/>
+      <stop offset="1" stop-color="#d9bc93"/>
     </linearGradient>
     <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#8fbf58"/>
       <stop offset="1" stop-color="#6a9a3d"/>
     </linearGradient>
     <radialGradient id="foliage" cx="0.35" cy="0.3" r="0.8">
-      <stop offset="0" stop-color="#4b9a4f"/>
+      <stop offset="0" stop-color="#4f9e52"/>
       <stop offset="1" stop-color="#2c703a"/>
     </radialGradient>
     <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#8a5a34"/>
-      <stop offset="1" stop-color="#623c1f"/>
+      <stop offset="1" stop-color="#5e3a1e"/>
     </linearGradient>
-    <marker id="redArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+    <marker id="redArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#d5271d"/>
     </marker>
-    <marker id="blackArrow" viewBox="0 0 10 10" refX="5" refY="5" markerHeight="8" markerWidth="8" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#222"/>
+    <marker id="darkArrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1c2a33"/>
     </marker>
     <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.15"/>
     </filter>
   </defs>
 
-  <rect width="1280" height="900" fill="url(#sky)"/>
+  <!-- Scale: cliff top y=100, bottom y=640, so 100 m = 540 px and the branch sits at y=370. -->
 
-  <path d="M700 140 L1280 140 L1280 815 L610 815 C650 762 585 712 632 660 C680 608 566 566 604 508 C632 462 692 434 660 386 C634 344 700 306 672 258 C650 218 712 182 700 140 Z" fill="url(#rock)"/>
-  <path d="M700 140 C712 182 650 218 672 258 C700 306 634 344 660 386 C692 434 632 462 604 508 C566 566 680 608 632 660 C585 712 650 762 610 815" fill="none" stroke="#8a6a48" stroke-width="3" opacity="0.5"/>
-  <path d="M760 200 C745 260 790 300 760 360" fill="none" stroke="#8a6a48" stroke-width="2" opacity="0.35"/>
-  <path d="M900 300 C880 400 930 460 895 560" fill="none" stroke="#8a6a48" stroke-width="2" opacity="0.3"/>
+  <rect width="1000" height="700" fill="url(#sky)"/>
 
-  <rect x="700" y="128" width="580" height="14" fill="url(#grass)"/>
+  <!-- valley floor -->
+  <rect x="0" y="640" width="1000" height="60" fill="url(#grass)"/>
 
-  <rect x="0" y="815" width="1280" height="85" fill="url(#grass)"/>
+  <!-- cliff -->
+  <path d="M560 100 L1000 100 L1000 640 L540 640 C528 606 562 572 548 522 C536 476 556 424 552 370 C548 340 572 330 560 280 C546 222 574 160 560 100 Z" fill="url(#rock)"/>
+  <path d="M560 100 C574 160 546 222 560 280 C572 330 548 340 552 370 C556 424 536 476 548 522 C562 572 528 606 540 640" fill="none" stroke="#7d5f40" stroke-width="3" opacity="0.5"/>
+  <path d="M640 170 C628 240 668 290 640 360" fill="none" stroke="#8a6a48" stroke-width="2" opacity="0.35"/>
+  <path d="M790 300 C772 400 818 470 786 570" fill="none" stroke="#8a6a48" stroke-width="2" opacity="0.3"/>
+  <path d="M700 460 C690 520 720 560 704 610" fill="none" stroke="#8a6a48" stroke-width="2" opacity="0.25"/>
 
-  <g transform="translate(-55 0)">
-    <ellipse cx="925" cy="118" rx="72" ry="20" fill="#2c703a" opacity="0.25"/>
-    <rect x="905" y="90" width="18" height="55" rx="6" fill="url(#wood)"/>
-    <circle cx="905" cy="80" r="42" fill="url(#foliage)"/>
-    <circle cx="945" cy="70" r="36" fill="url(#foliage)"/>
-    <circle cx="945" cy="105" r="38" fill="url(#foliage)"/>
-    <circle cx="900" cy="45" r="30" fill="url(#foliage)"/>
-  </g>
+  <!-- grass on the cliff top -->
+  <rect x="556" y="94" width="444" height="12" rx="4" fill="url(#grass)"/>
 
-  <g stroke="#1c2a33" stroke-width="5" stroke-linecap="round" fill="none">
-    <circle cx="810" cy="78" r="13" fill="#1c2a33" stroke="none"/>
-    <line x1="810" y1="93" x2="810" y2="128"/>
-    <line x1="810" y1="103" x2="792" y2="118"/>
-    <line x1="810" y1="103" x2="830" y2="118"/>
-    <line x1="810" y1="128" x2="793" y2="150"/>
-    <line x1="810" y1="128" x2="832" y2="150"/>
-  </g>
-
+  <!-- tree -->
   <g>
-    <path d="M700 500 C640 470 570 478 512 500" fill="none" stroke="url(#wood)" stroke-width="14" stroke-linecap="round"/>
-    <path d="M560 493 C540 478 545 460 565 452" fill="none" stroke="url(#wood)" stroke-width="8" stroke-linecap="round"/>
-    <path d="M620 483 C610 470 615 458 630 452" fill="none" stroke="url(#wood)" stroke-width="6" stroke-linecap="round"/>
+    <ellipse cx="770" cy="98" rx="60" ry="10" fill="#2c703a" opacity="0.25"/>
+    <rect x="760" y="50" width="16" height="50" rx="5" fill="url(#wood)"/>
+    <circle cx="748" cy="40" r="34" fill="url(#foliage)"/>
+    <circle cx="790" cy="34" r="30" fill="url(#foliage)"/>
+    <circle cx="786" cy="62" r="30" fill="url(#foliage)"/>
+    <circle cx="756" cy="14" r="24" fill="url(#foliage)"/>
   </g>
 
-  <rect x="60" y="60" width="340" height="200" rx="16" fill="#fff" stroke="#c7c7c7" stroke-width="2" filter="url(#softShadow)"/>
-  <text x="90" y="103" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#1c1c1c">equipment</text>
-  <path d="M100 190 C120 150 150 210 185 175 S250 145 285 185" fill="none" stroke="#e08a2a" stroke-width="9" stroke-linecap="round"/>
-  <path d="M100 190 C120 150 150 210 185 175 S250 145 285 185" fill="none" stroke="#f2a94a" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
-  <g transform="translate(295 155) rotate(-35)">
-    <rect x="-6" y="30" width="20" height="52" rx="5" fill="#7a4530" stroke="#4f2c1c" stroke-width="2"/>
-    <path d="M4 0 L28 40 L6 32 L-15 41 Z" fill="#d6d6d6" stroke="#8a8a8a" stroke-width="2"/>
-    <line x1="-3" y1="33" x2="12" y2="33" stroke="#333" stroke-width="3"/>
+  <!-- you, at the edge of the cliff -->
+  <g stroke="#1c2a33" stroke-width="5" stroke-linecap="round" fill="none">
+    <circle cx="612" cy="42" r="11" fill="#1c2a33" stroke="none"/>
+    <line x1="612" y1="55" x2="612" y2="80"/>
+    <line x1="612" y1="62" x2="596" y2="74"/>
+    <line x1="612" y1="62" x2="630" y2="72"/>
+    <line x1="612" y1="80" x2="600" y2="97"/>
+    <line x1="612" y1="80" x2="626" y2="97"/>
   </g>
-  <text x="90" y="233" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#1c1c1c">75 m rope + knife</text>
+  <text x="586" y="48" font-size="18" font-weight="700" fill="#1c2a33" text-anchor="end">you</text>
 
-  <rect x="565" y="28" width="195" height="54" rx="10" fill="#fff" stroke="#c7c7c7" stroke-width="2" filter="url(#softShadow)"/>
-  <path d="M760 55 L778 62 L760 69 Z" fill="#fff" stroke="#c7c7c7" stroke-width="2"/>
-  <text x="583" y="63" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#1c1c1c">you start here</text>
+  <!-- branch, 50 m below the top -->
+  <g fill="none" stroke="url(#wood)" stroke-linecap="round">
+    <path d="M558 372 C528 368 490 366 458 360" stroke-width="12"/>
+    <path d="M500 366 C490 354 494 344 506 338" stroke-width="6"/>
+    <path d="M530 368 C522 358 526 350 536 346" stroke-width="5"/>
+  </g>
+  <text x="470" y="398" font-size="18" font-weight="700" fill="#1c2a33">branch</text>
 
-  <rect x="220" y="453" width="300" height="52" rx="10" fill="#fff" stroke="#c7c7c7" stroke-width="2" filter="url(#softShadow)"/>
-  <path d="M520 479 L505 465 L505 493 Z" fill="#fff" stroke="#c7c7c7" stroke-width="2"/>
-  <text x="240" y="487" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" fill="#1c1c1c">branch, 50 m below top</text>
+  <!-- 50 m: top to branch -->
+  <g stroke="#d5271d" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.7">
+    <line x1="556" y1="100" x2="325" y2="100"/>
+    <line x1="454" y1="370" x2="385" y2="370"/>
+  </g>
+  <line x1="400" y1="105" x2="400" y2="365" stroke="#d5271d" stroke-width="3" marker-start="url(#redArrow)" marker-end="url(#redArrow)"/>
+  <rect x="366" y="216" width="68" height="38" rx="8" fill="#fff" stroke="#d5271d" stroke-width="2"/>
+  <text x="400" y="242" font-size="22" font-weight="700" fill="#1c1c1c" text-anchor="middle">50 m</text>
 
-  <rect x="60" y="678" width="440" height="127" rx="14" fill="#fff" stroke="#c7c7c7" stroke-width="2" filter="url(#softShadow)"/>
-  <text x="88" y="718" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" fill="#1c1c1c">question setup</text>
-  <text x="88" y="753" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#1c1c1c">Get from the top to the bottom</text>
-  <text x="88" y="782" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#1c1c1c">using only the 75 m rope and the knife.</text>
+  <!-- 100 m: top to bottom -->
+  <line x1="536" y1="640" x2="325" y2="640" stroke="#1c2a33" stroke-width="1.5" stroke-dasharray="6 5" opacity="0.6"/>
+  <line x1="340" y1="105" x2="340" y2="635" stroke="#1c2a33" stroke-width="3" marker-start="url(#darkArrow)" marker-end="url(#darkArrow)"/>
+  <rect x="300" y="486" width="80" height="38" rx="8" fill="#fff" stroke="#1c2a33" stroke-width="2"/>
+  <text x="340" y="512" font-size="22" font-weight="700" fill="#1c1c1c" text-anchor="middle">100 m</text>
 
-  <line x1="700" y1="140" x2="1150" y2="140" stroke="#d5271d" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.6"/>
-  <line x1="700" y1="500" x2="1150" y2="500" stroke="#d5271d" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.6"/>
-  <line x1="1150" y1="145" x2="1150" y2="495" stroke="#d5271d" stroke-width="4" marker-start="url(#redArrow)" marker-end="url(#redArrow)"/>
-  <rect x="1088" y="295" width="100" height="48" rx="10" fill="#fff" stroke="#d5271d" stroke-width="2.5"/>
-  <text x="1108" y="327" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#1c1c1c">50 m</text>
-
-  <line x1="1150" y1="140" x2="1225" y2="140" stroke="#555" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.6"/>
-  <line x1="700" y1="815" x2="1225" y2="815" stroke="#555" stroke-width="1.5" stroke-dasharray="6 6" opacity="0.6"/>
-  <line x1="1225" y1="145" x2="1225" y2="810" stroke="#222" stroke-width="4" marker-start="url(#blackArrow)" marker-end="url(#blackArrow)"/>
-  <rect x="1158" y="453" width="112" height="48" rx="10" fill="#fff" stroke="#222" stroke-width="2"/>
-  <text x="1178" y="485" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700" fill="#1c1c1c">100 m</text>
+  <!-- equipment -->
+  <rect x="40" y="40" width="240" height="170" rx="14" fill="#fff" stroke="#c7c7c7" stroke-width="2" filter="url(#softShadow)"/>
+  <text x="60" y="72" font-size="20" font-weight="700" fill="#1c1c1c">You have</text>
+  <!-- coiled rope -->
+  <g fill="none" stroke="#d98a2b" stroke-width="7" stroke-linecap="round">
+    <ellipse cx="112" cy="134" rx="36" ry="13"/>
+    <ellipse cx="112" cy="123" rx="36" ry="13"/>
+    <ellipse cx="112" cy="112" rx="36" ry="13"/>
+    <path d="M148 112 C160 118 158 134 146 146"/>
+  </g>
+  <g fill="none" stroke="#f2b25a" stroke-width="2" stroke-linecap="round" opacity="0.8">
+    <path d="M78 130 A36 13 0 0 1 112 121"/>
+    <path d="M78 119 A36 13 0 0 1 112 110"/>
+    <path d="M78 108 A36 13 0 0 1 112 99"/>
+  </g>
+  <text x="112" y="182" font-size="17" fill="#1c1c1c" text-anchor="middle">75 m rope</text>
+  <!-- knife -->
+  <g transform="translate(222 128) rotate(-40)">
+    <rect x="-7" y="8" width="14" height="38" rx="4" fill="#6b3f2a" stroke="#4a2a1a" stroke-width="1.5"/>
+    <rect x="-10" y="4" width="20" height="7" rx="2" fill="#8c8c8c"/>
+    <path d="M-7 5 L7 5 L4 -40 Q0 -50 -5 -40 Z" fill="#dcdcdc" stroke="#8a8a8a" stroke-width="1.5"/>
+    <line x1="-2" y1="-38" x2="-2" y2="2" stroke="#f5f5f5" stroke-width="1.5"/>
+  </g>
+  <text x="222" y="182" font-size="17" fill="#1c1c1c" text-anchor="middle">knife</text>
 </svg>
