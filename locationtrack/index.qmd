@@ -1,11 +1,11 @@
 ---
-title: "LocationTrack"
+title: "Daybound"
 subtitle: "Know where you stood, every night, in your own Google Sheet"
 page-layout: article
 title-block-banner: true
 ---
 
-LocationTrack is an iPhone app for people who live under day limits: UK settlement (ILR) and citizenship
+Daybound is an iPhone app for people who live under day limits: UK settlement (ILR) and citizenship
 absence rules, Schengen 90/180, tax residence tests, US Substantial Presence. It records the country you
 sleep in each night, automatically, and keeps everything in a Google Sheet that belongs to you.
 
