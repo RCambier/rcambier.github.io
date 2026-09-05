@@ -51,26 +51,26 @@
   <!-- grass on the cliff top -->
   <rect x="556" y="94" width="444" height="12" rx="4" fill="url(#grass)"/>
 
-  <!-- tree, just behind you at the edge -->
-  <g transform="translate(-90 0)">
-    <ellipse cx="770" cy="98" rx="60" ry="10" fill="#2c703a" opacity="0.25"/>
-    <rect x="760" y="50" width="16" height="50" rx="5" fill="url(#wood)"/>
-    <circle cx="748" cy="40" r="34" fill="url(#foliage)"/>
-    <circle cx="790" cy="34" r="30" fill="url(#foliage)"/>
-    <circle cx="786" cy="62" r="30" fill="url(#foliage)"/>
-    <circle cx="756" cy="14" r="24" fill="url(#foliage)"/>
+  <!-- tree, at the cliff edge -->
+  <g>
+    <ellipse cx="596" cy="98" rx="40" ry="10" fill="#2c703a" opacity="0.25"/>
+    <rect x="566" y="50" width="16" height="50" rx="5" fill="url(#wood)"/>
+    <circle cx="554" cy="40" r="34" fill="url(#foliage)"/>
+    <circle cx="596" cy="34" r="30" fill="url(#foliage)"/>
+    <circle cx="592" cy="62" r="30" fill="url(#foliage)"/>
+    <circle cx="562" cy="14" r="24" fill="url(#foliage)"/>
   </g>
 
-  <!-- you, at the edge of the cliff -->
+  <!-- you, next to the tree -->
   <g stroke="#1c2a33" stroke-width="5" stroke-linecap="round" fill="none">
-    <circle cx="612" cy="42" r="11" fill="#1c2a33" stroke="none"/>
-    <line x1="612" y1="55" x2="612" y2="80"/>
-    <line x1="612" y1="62" x2="596" y2="74"/>
-    <line x1="612" y1="62" x2="630" y2="72"/>
-    <line x1="612" y1="80" x2="600" y2="97"/>
-    <line x1="612" y1="80" x2="626" y2="97"/>
+    <circle cx="650" cy="42" r="11" fill="#1c2a33" stroke="none"/>
+    <line x1="650" y1="55" x2="650" y2="80"/>
+    <line x1="650" y1="62" x2="634" y2="74"/>
+    <line x1="650" y1="62" x2="668" y2="72"/>
+    <line x1="650" y1="80" x2="638" y2="97"/>
+    <line x1="650" y1="80" x2="664" y2="97"/>
   </g>
-  <text x="586" y="48" font-size="18" font-weight="700" fill="#1c2a33" text-anchor="end">you</text>
+  <text x="670" y="48" font-size="18" font-weight="700" fill="#1c2a33">you</text>
 
   <!-- branch, 50 m below the top -->
   <g fill="none" stroke="url(#wood)" stroke-linecap="round">
