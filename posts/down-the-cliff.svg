@@ -51,8 +51,8 @@
   <!-- grass on the cliff top -->
   <rect x="556" y="94" width="444" height="12" rx="4" fill="url(#grass)"/>
 
-  <!-- tree -->
-  <g>
+  <!-- tree, just behind you at the edge -->
+  <g transform="translate(-90 0)">
     <ellipse cx="770" cy="98" rx="60" ry="10" fill="#2c703a" opacity="0.25"/>
     <rect x="760" y="50" width="16" height="50" rx="5" fill="url(#wood)"/>
     <circle cx="748" cy="40" r="34" fill="url(#foliage)"/>
