@@ -123,7 +123,7 @@
     "href": "posts/2026-09-05-daybound-days-abroad-in-your-own-sheet.html#getting-it",
     "title": "Daybound — days abroad, in your own sheet",
     "section": "Getting it",
-    "text": "Getting it\nDaybound is on the App Store for a one-time price, with no subscription and no account with me. Every screen works with demo data before you sign in with Google, so you can look around first. It is not legal or tax advice; check the rules that apply to you."
+    "text": "Getting it\nDaybound is free on the App Store, with no subscription and no account with me. Every screen works with demo data before you sign in with Google, so you can look around first. It is not legal or tax advice; check the rules that apply to you."
   },
   {
     "objectID": "posts/2022-04-29-background-jobs.html",
@@ -266,11 +266,102 @@
     "text": "2.2 Computing the feature impact (simple approach)\nHere is the pseudo-logic - For every coalition - For every sample in the dataset, replace “0” in coalition with average feature value for that sample - For every feature of the sample - Compute model score wihtout and with the feature. The difference is the impact of that feature, on that sample, for that coalition.\nAggregate all the impacts\n\n# We will gather all feature impacts \nfeature_impacts = {col:[] for col in X.columns}\n\n# The mean values are used for when a feature needs to be \"removed\"\nmean_values = X.mean().values\n\n# For each coalition we have prepared (1s and 0s)\nfor coalition in tqdm(pd.DataFrame(coalitions).astype(bool).values, total=len(coalitions)): \n\n  # For each sample in the dataset\n  for sample in X.values: \n\n    # In the sample, replace all the '0s' of the coalition\n    # with the mean of that feature\n    sample_masked = sample.copy()\n    sample_masked[~coalition] = mean_values[~coalition] \n\n    # For each feature\n    for feature_idx, feature_name in enumerate(X.columns):\n\n      # Compute the score without the feature\n      sample_without_feature = sample_masked.copy()\n      sample_without_feature[feature_idx] = mean_values[feature_idx]\n      score_without_feature = lr.predict_proba([sample_without_feature])[0][1]\n\n      # Compute the score with the feature\n      sample_with_feature = sample_masked.copy()\n      sample_with_feature[feature_idx] = sample[feature_idx]\n      score_with_feature = lr.predict_proba([sample_with_feature])[0][1]\n\n      # Store the feature impact\n      feature_impacts[feature_name].append(score_with_feature - score_without_feature)\n\n\n\n\n\npd.DataFrame(feature_impacts, columns=X.columns).head()\n\n\n    \n      \n\n\n\n\n\n\nmean radius\nmean texture\nmean perimeter\nmean area\nmean smoothness\nmean compactness\nmean concavity\nmean concave points\nmean symmetry\nmean fractal dimension\n...\nworst radius\nworst texture\nworst perimeter\nworst area\nworst smoothness\nworst compactness\nworst concavity\nworst concave points\nworst symmetry\nworst fractal dimension\n\n\n\n\n0\n0.722058\n-0.126389\n0.869852\n-0.128361\n-0.000087\n-0.003189\n-0.005405\n-0.001073\n-3.318434e-04\n-0.000017\n...\n0.870383\n0.780434\n-0.128907\n-0.128907\n-0.000214\n-0.022046\n-0.028566\n-0.003150\n-0.002920\n-0.000195\n\n\n1\n0.856055\n-0.060093\n0.871019\n-0.128904\n0.000046\n0.000479\n0.000049\n-0.000233\n-2.085911e-07\n0.000007\n...\n0.870042\n0.188555\n-0.128906\n-0.128907\n0.000061\n0.003977\n0.002225\n-0.001500\n0.000262\n-0.000028\n\n\n2\n0.837193\n0.137117\n0.870927\n-0.128886\n-0.000052\n-0.001030\n-0.002803\n-0.000864\n-1.407096e-04\n0.000003\n...\n0.866727\n0.008583\n-0.128905\n-0.128905\n-0.000086\n-0.009560\n-0.012331\n-0.002686\n-0.001230\n-0.000020\n\n\n3\n-0.117599\n0.066944\n-0.126242\n0.790957\n-0.000182\n-0.003304\n-0.003923\n-0.000616\n-4.289558e-04\n-0.000038\n...\n-0.092544\n-0.039935\n0.412002\n0.789438\n-0.000554\n-0.031548\n-0.027105\n-0.002987\n-0.006344\n-0.000496\n\n\n4\n0.851585\n-0.113725\n0.871053\n-0.128902\n-0.000016\n-0.000529\n-0.002818\n-0.000606\n1.432269e-06\n0.000004\n...\n0.858891\n0.804422\n-0.128905\n-0.128897\n-0.000036\n0.002886\n-0.008952\n-0.001008\n0.000934\n0.000040\n\n\n\n\n5 rows × 30 columns\n\n      \n        \n  \n    \n    \n  \n      \n      \n  \n\n      \n    \n  \n\n\n\npd.DataFrame(feature_impacts).abs().mean().sort_values().iloc[-10:].plot.barh(figsize=(10, 6))"
   },
   {
+    "objectID": "discover/index.html",
+    "href": "discover/index.html",
+    "title": "Discover",
+    "section": "",
+    "text": "Discover is an iPhone app that follows the road and tells you about the places you pass: the castle ahead, the village on your left, what happened here. It speaks when something is worth a sentence and stays quiet the rest of the time. Hold the button to ask it anything."
+  },
+  {
+    "objectID": "discover/index.html#what-it-does",
+    "href": "discover/index.html#what-it-does",
+    "title": "Discover",
+    "section": "What it does",
+    "text": "What it does\n\nKnows what is coming up. It works out which places you are approaching, on which side, and how soon, and announces each one once, shortly before you see it.\nGrounded, not invented. Every narration is built from what the guide just read: Wikipedia in the local language, Wikivoyage for the character of the area, a live web search for what encyclopedias miss. It says when the record does not say.\nMade for the car. Narration keeps going with the screen locked, plays through the car speakers, and the steering-wheel buttons control it: pause stops the guide, next skips to the following place.\nYour interests, your narrator, your language. Add subjects you care about and it points out places a general guide would drive past. Three narrators, seven languages, your choice of how often it speaks."
+  },
+  {
+    "objectID": "discover/index.html#it-needs-an-openai-key",
+    "href": "discover/index.html#it-needs-an-openai-key",
+    "title": "Discover",
+    "section": "It needs an OpenAI key",
+    "text": "It needs an OpenAI key\nThe voice runs on OpenAI, and you pay OpenAI directly for what you use: about $0.20 to $0.40 for an hour of driving. The app itself is free and has no account, no server and no subscription. To connect it:\n\nCreate a free account at platform.openai.com. This is OpenAI’s developer site, separate from ChatGPT.\nAdd some credit under Billing. $10 lasts many hours. It is prepaid: when it runs out the guide goes quiet and nothing more is charged.\nCreate a key under API keys and copy it.\nOpen Discover and paste it. The app checks the key with OpenAI and tells you if it works."
+  },
+  {
+    "objectID": "discover/index.html#common-questions",
+    "href": "discover/index.html#common-questions",
+    "title": "Discover",
+    "section": "Common questions",
+    "text": "Common questions\nThe guide says “OpenAI refused the key”. The key was mistyped, deleted, or copied incompletely. Create a new one and paste it again in Settings.\nThe guide says “your OpenAI account has no credit”. Add credit under Billing on platform.openai.com.\nIt is quiet. Most of a drive is quiet on purpose: the guide speaks when something worth a sentence is coming up. Add subjects under Settings → Special interests, or set Chattiness to Often. In a tunnel or a dead zone it reconnects on its own.\nIt stops when I lock the phone. Allow location access “Always” in the iPhone Settings app under Discover, and leave the app running.\nWhat does it cost me? Settings → Spend shows an estimate for today and this month, computed on the phone from what OpenAI reports."
+  },
+  {
+    "objectID": "discover/index.html#your-data",
+    "href": "discover/index.html#your-data",
+    "title": "Discover",
+    "section": "Your data",
+    "text": "Your data\nThere is no Discover server and no account with us. See the privacy policy."
+  },
+  {
+    "objectID": "discover/index.html#contact",
+    "href": "discover/index.html#contact",
+    "title": "Discover",
+    "section": "Contact",
+    "text": "Contact\nrodolphecambier@gmail.com. Please say what the status line at the bottom of the screen said."
+  },
+  {
     "objectID": "riddles.html",
     "href": "riddles.html",
     "title": "Riddles!",
     "section": "",
     "text": "Riddles I found and liked. They mostly have satisfying answers.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe fake coin\n\n\ndifficulty 7\n\n\n\n\n\n\n\n\nMay 3, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nDown the cliff\n\n\ndifficulty 7\n\n\n\n\n\n\n\n\nMay 3, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nThe mirror flip\n\n\ndifficulty 8\n\n\n\n\n\n\n\n\nMar 16, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nThree’s a Crowd\n\n\ndifficulty 99\n\n\n\n\n\n\n\n\nJan 5, 2021\n\n\n\n\n\n\n\n\n\n\n\n\nThe newcomb poison\n\n\ndifficulty 99\n\n\n\n\n\n\n\n\nJan 5, 2021\n\n\n\n\n\n\n\n\n\n\n\n\nThe blind pill\n\n\ndifficulty 2\n\n\n\n\n\n\n\n\nJul 29, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nReversed number\n\n\ndifficulty 2\n\n\n\n\n\n\n\n\nApr 19, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nThe rope triangle\n\n\ndifficulty 2\n\n\n\n\n\n\n\n\nApr 19, 2020\n\n\n\n\n\n\n\n\n\n\n\n\nPotatoes\n\n\ndifficulty 1.5\n\n\n\n\n\n\n\n\nDec 26, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nSurprise birthday\n\n\ndifficulty 2\n\n\n\n\n\n\n\n\nDec 26, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nSimple Maths\n\n\ndifficulty 1.5\n\n\n\n\n\n\n\n\nDec 26, 2018\n\n\n\n\n\n\n\n\n\n\n\n\n4 Pieces\n\n\ndifficulty 2.5\n\n\n\n\n\n\n\n\nDec 26, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nKing’s poison\n\n\ndifficulty 2.5\n\n\n\n\n\n\n\n\nDec 25, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nPrisoner’s switch\n\n\ndifficulty 3\n\n\n\n\n\n\n\n\nDec 25, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nLost father\n\n\ndifficulty 2.5\n\n\n\n\n\n\n\n\nDec 25, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nGold coins\n\n\ndifficulty 2\n\n\n\n\n\n\n\n\nDec 25, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nCats and mouses\n\n\ndifficulty 1\n\n\n\n\n\n\n\n\nDec 25, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nRunning in circle\n\n\ndifficulty 2\n\n\n\n\n\n\n\n\nDec 25, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nBroken plane\n\n\ndifficulty 10\n\n\n\n\n\n\n\n\nDec 25, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nEvil professor\n\n\ndifficulty 99\n\n\n\n\n\n\n\n\nDec 18, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nLost in the woods\n\n\ndifficulty 3.5\n\n\n\n\n\n\n\n\nDec 18, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nPeeking\n\n\ndifficulty 1\n\n\n\n\n\n\n\n\nDec 10, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nGender\n\n\ndifficulty 99\n\n\n\n\n\n\n\n\nDec 10, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nPrisoners and trees\n\n\ndifficulty 4\n\n\n\n\n\n\n\n\nDec 10, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nBlue eyes\n\n\ndifficulty 5\n\n\n\n\n\n\n\n\nDec 10, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nException\n\n\ndifficulty 2\n\n\n\n\n\n\n\n\nDec 10, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nMagic logic\n\n\ndifficulty 3\n\n\n\n\n\n\n\n\nDec 10, 2018\n\n\n\n\n\n\n\n\n\n\n\n\nLighter\n\n\ndifficulty 2\n\n\n\n\n\n\n\n\nDec 10, 2018\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "discover/privacy.html",
+    "href": "discover/privacy.html",
+    "title": "Discover privacy policy",
+    "section": "",
+    "text": "Last updated 5 September 2026.\nDiscover (“the app”) is published by Rodolphe Cambier. It follows your position while you drive and talks about the places you pass. It has no account, no server of its own, no analytics and no advertising. Nothing you do in the app is sent to us."
+  },
+  {
+    "objectID": "discover/privacy.html#what-leaves-your-phone-and-where-it-goes",
+    "href": "discover/privacy.html#what-leaves-your-phone-and-where-it-goes",
+    "title": "Discover privacy policy",
+    "section": "What leaves your phone, and where it goes",
+    "text": "What leaves your phone, and where it goes\n\n\n\n\n\n\n\n\nData\nSent to\nWhy\n\n\n\n\nYour position (coordinates)\nApple (reverse geocoding), Wikipedia and Wikivoyage (Wikimedia Foundation)\nTo name the town you are in and find the places around you.\n\n\nWhere you are, in words: town, region, country, direction and speed. Names and short descriptions of nearby places.\nOpenAI\nSo the guide knows what to talk about. Exact coordinates are sent only when the town cannot be named.\n\n\nYour voice, while the talk button is held and for a few seconds after the guide finishes speaking\nOpenAI\nTo answer your question. The app does not record or store audio.\n\n\nYour OpenAI key\nOpenAI only\nTo pay for the voice with your own OpenAI account.\n\n\n\nOpenAI processes this data under its own privacy policy and API data usage policies. Wikimedia’s policy is here. Apple’s map and geocoding services are covered by Apple’s privacy policy."
+  },
+  {
+    "objectID": "discover/privacy.html#what-stays-on-your-phone",
+    "href": "discover/privacy.html#what-stays-on-your-phone",
+    "title": "Discover privacy policy",
+    "section": "What stays on your phone",
+    "text": "What stays on your phone\n\nYour OpenAI key, in the iPhone Keychain. The app shows only its last four characters after you save it.\nYour settings: special interests, narrator, language, pace, chattiness, voice model.\nAn estimate of what each day of driving cost, computed from the token counts OpenAI reports. Kept for 31 days.\n\nDeleting the app deletes all of it."
+  },
+  {
+    "objectID": "discover/privacy.html#location-in-the-background",
+    "href": "discover/privacy.html#location-in-the-background",
+    "title": "Discover privacy policy",
+    "section": "Location in the background",
+    "text": "Location in the background\nDiscover keeps following your position with the screen locked, so it can keep narrating. Location is used only while a trip is running. The app does not build a history of where you have been."
+  },
+  {
+    "objectID": "discover/privacy.html#children",
+    "href": "discover/privacy.html#children",
+    "title": "Discover privacy policy",
+    "section": "Children",
+    "text": "Children\nThe app is not directed at children under 13 and does not knowingly collect data from them."
+  },
+  {
+    "objectID": "discover/privacy.html#changes",
+    "href": "discover/privacy.html#changes",
+    "title": "Discover privacy policy",
+    "section": "Changes",
+    "text": "Changes\nChanges to this policy are published on this page with a new date."
+  },
+  {
+    "objectID": "discover/privacy.html#contact",
+    "href": "discover/privacy.html#contact",
+    "title": "Discover privacy policy",
+    "section": "Contact",
+    "text": "Contact\nrodolphecambier@gmail.com"
   },
   {
     "objectID": "posts/2026-08-10-discover-road-trip-narrator.html",

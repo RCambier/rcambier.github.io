@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Computer Science, usually Python – Rcambier’s Blog</title>
+<title>Discover – Rcambier’s Blog</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -29,26 +29,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,78 +74,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="canonical" href="https://rcambier.github.io/computer_science.html">
+<link rel="stylesheet" href="../styles.css">
+<link rel="canonical" href="https://rcambier.github.io/discover/">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Rcambier’s Blog</span>
     </a>
   </div>
@@ -158,25 +98,25 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./artificial_intelligence.html"> 
+    <a class="nav-link" href="../artificial_intelligence.html"> 
 <span class="menu-text">Artificial Intelligence</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./computer_science.html" aria-current="page"> 
+    <a class="nav-link" href="../computer_science.html"> 
 <span class="menu-text">Computer Science</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./riddles.html"> 
+    <a class="nav-link" href="../riddles.html"> 
 <span class="menu-text">Riddles</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -189,13 +129,14 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Computer Science, usually Python</h1>
+    <div class="quarto-title column-body">
+      <h1 class="title">Discover</h1>
+            <p class="subtitle lead">A guide that talks while you drive</p>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta">
 
       
     
@@ -203,114 +144,58 @@ window.Quarto = {
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p><img src="discover-logo.png" class="img-fluid" style="border-radius: 22px;" width="96"></p>
+<p>Discover is an iPhone app that follows the road and tells you about the places you pass: the castle ahead, the village on your left, what happened here. It speaks when something is worth a sentence and stays quiet the rest of the time. Hold the button to ask it anything.</p>
+<section id="what-it-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-it-does">What it does</h2>
+<ul>
+<li><strong>Knows what is coming up.</strong> It works out which places you are approaching, on which side, and how soon, and announces each one once, shortly before you see it.</li>
+<li><strong>Grounded, not invented.</strong> Every narration is built from what the guide just read: Wikipedia in the local language, Wikivoyage for the character of the area, a live web search for what encyclopedias miss. It says when the record does not say.</li>
+<li><strong>Made for the car.</strong> Narration keeps going with the screen locked, plays through the car speakers, and the steering-wheel buttons control it: pause stops the guide, next skips to the following place.</li>
+<li><strong>Your interests, your narrator, your language.</strong> Add subjects you care about and it points out places a general guide would drive past. Three narrators, seven languages, your choice of how often it speaks.</li>
+</ul>
+</section>
+<section id="it-needs-an-openai-key" class="level2">
+<h2 class="anchored" data-anchor-id="it-needs-an-openai-key">It needs an OpenAI key</h2>
+<p>The voice runs on OpenAI, and you pay OpenAI directly for what you use: about $0.20 to $0.40 for an hour of driving. The app itself is free and has no account, no server and no subscription. To connect it:</p>
+<ol type="1">
+<li>Create a free account at <a href="https://platform.openai.com/signup">platform.openai.com</a>. This is OpenAI’s developer site, separate from ChatGPT.</li>
+<li>Add some credit under <a href="https://platform.openai.com/settings/organization/billing/overview">Billing</a>. $10 lasts many hours. It is prepaid: when it runs out the guide goes quiet and nothing more is charged.</li>
+<li>Create a key under <a href="https://platform.openai.com/api-keys">API keys</a> and copy it.</li>
+<li>Open Discover and paste it. The app checks the key with OpenAI and tells you if it works.</li>
+</ol>
+</section>
+<section id="common-questions" class="level2">
+<h2 class="anchored" data-anchor-id="common-questions">Common questions</h2>
+<p><strong>The guide says “OpenAI refused the key”.</strong> The key was mistyped, deleted, or copied incompletely. Create a new one and paste it again in Settings.</p>
+<p><strong>The guide says “your OpenAI account has no credit”.</strong> Add credit under Billing on platform.openai.com.</p>
+<p><strong>It is quiet.</strong> Most of a drive is quiet on purpose: the guide speaks when something worth a sentence is coming up. Add subjects under Settings → Special interests, or set Chattiness to Often. In a tunnel or a dead zone it reconnects on its own.</p>
+<p><strong>It stops when I lock the phone.</strong> Allow location access “Always” in the iPhone Settings app under Discover, and leave the app running.</p>
+<p><strong>What does it cost me?</strong> Settings → Spend shows an estimate for today and this month, computed on the phone from what OpenAI reports.</p>
+</section>
+<section id="your-data" class="level2">
+<h2 class="anchored" data-anchor-id="your-data">Your data</h2>
+<p>There is no Discover server and no account with us. See the <a href="../discover/privacy.html">privacy policy</a>.</p>
+</section>
+<section id="contact" class="level2">
+<h2 class="anchored" data-anchor-id="contact">Contact</h2>
+<p><a href="mailto:rodolphecambier@gmail.com">rodolphecambier@gmail.com</a>. Please say what the status line at the bottom of the screen said.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cHJvZ3JhbW1pbmclMkNzeXN0ZW0=" data-listing-date-sort="1651186800000" data-listing-file-modified-sort="1786377907559" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="237">
-<div class="thumbnail"><a href="./posts/2022-04-29-background-jobs.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2022-04-29-background-jobs.html" class="no-external">Easy way to queue a job in the terminal</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2022-04-29-background-jobs.html" class="no-external">
-<p>How to use background jobs to quickly queue a job after a running command</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2022-04-29-background-jobs.html" class="no-external">
-<div class="listing-date">
-Apr 29, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cHJvZ3JhbW1pbmc=" data-listing-date-sort="1648767600000" data-listing-file-modified-sort="1786377907559" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="553">
-<div class="thumbnail"><a href="./posts/2022-04-01-multiprocessing.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2022-04-01-multiprocessing.html" class="no-external">Python multiprocessing with loading bar</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2022-04-01-multiprocessing.html" class="no-external">
-<p>Create a nice multiprocessing logic with a loading bar</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2022-04-01-multiprocessing.html" class="no-external">
-<div class="listing-date">
-Apr 1, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="cHJvZ3JhbW1pbmc=" data-listing-date-sort="1634252400000" data-listing-file-modified-sort="1786377907559" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
-<div class="thumbnail"><a href="./posts/2021-10-15-cython.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-10-15-cython.html" class="no-external">Cython for fast python</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2021-10-15-cython.html" class="no-external">
-<p>Trying out cython</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-10-15-cython.html" class="no-external">
-<div class="listing-date">
-Oct 15, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="cHJvZ3JhbW1pbmclMkNhaQ==" data-listing-date-sort="1632697200000" data-listing-file-modified-sort="1786377907558" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1055">
-<div class="thumbnail"><a href="./posts/2021-09-27-bayesian-seattle.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/2021-09-27-bayesian-seattle_files/figure-html/cell-2-output-7.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-09-27-bayesian-seattle.html" class="no-external">Bayesian riddle</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2021-09-27-bayesian-seattle.html" class="no-external">
-<p>The typical bayesian interview question, solved with PyMC3</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-09-27-bayesian-seattle.html" class="no-external">
-<div class="listing-date">
-Sep 27, 2021
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
