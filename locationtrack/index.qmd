@@ -3,6 +3,7 @@ title: "Daybound"
 subtitle: "Know where you stood, every night, in your own Google Sheet"
 page-layout: article
 title-block-banner: true
+include-in-header: google-site-verification.html
 ---
 
 Daybound is an iPhone app for people who live under day limits: UK settlement (ILR) and citizenship

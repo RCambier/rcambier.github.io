@@ -23,9 +23,8 @@ A hidden "app_config" tab in that sheet holds your bounds and preferences.
 **Google account.** If you sign in with Google, the app receives an access token and a refresh token, stored in
 the iOS Keychain on your phone, and your e-mail address to show which account is connected. By default the app
 asks only for the "drive.file" permission, which lets it create spreadsheets and read or write the ones it
-created; it cannot see your other files. If you choose "Use an existing sheet", the app asks for the wider
-Google Sheets permission (to read and write that sheet) and the Drive metadata read-only permission (to
-list your spreadsheets by name).
+created; it cannot see your other files. If you choose "Use an existing sheet", you paste the link to your sheet and the app asks for the
+Google Sheets permission to read and write that one sheet. It never lists or searches your Drive.
 
 **Google Maps Timeline import.** If you import a Timeline export file, its points are read on the phone and
 appended to your Location Log spreadsheet. The file itself is not kept.
