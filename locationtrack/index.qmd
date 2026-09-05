@@ -1,0 +1,33 @@
+---
+title: "LocationTrack"
+subtitle: "Know where you stood, every night, in your own Google Sheet"
+page-layout: article
+title-block-banner: true
+---
+
+LocationTrack is an iPhone app for people who live under day limits: UK settlement (ILR) and citizenship
+absence rules, Schengen 90/180, tax residence tests, US Substantial Presence. It records the country you
+sleep in each night, automatically, and keeps everything in a Google Sheet that belongs to you.
+
+## What it does
+
+- **Tracks by itself.** With "Always" location access, iOS wakes the app when you move; the app keeps the
+  country, time and a coarse position of each fix on the phone.
+- **Writes one row per night** to your own Google Sheet: date, country, evidence. Nothing is sent anywhere else.
+- **Counts days the way each law does.** Whole days only for UK continuous residence, any part of a day for
+  Schengen and the US test, where you are at midnight for tax residence.
+- **Projects your settlement date**: the earliest day you can apply for ILR given the 180-day rule, including a
+  restart after a breach.
+- **Keeps a full location log** in a second sheet you own, and imports your Google Maps Timeline export so the
+  past is yours too.
+- **Corrections are auditable.** The only manual action is "Correct this day", which needs a reason and writes
+  it to the sheet's evidence column.
+
+## Your data
+
+There is no LocationTrack server and no account with us. Your data lives on your phone and in your Google
+Drive. See the [privacy policy](privacy.qmd).
+
+## Contact
+
+[rodolphecambier@gmail.com](mailto:rodolphecambier@gmail.com)

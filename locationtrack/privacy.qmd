@@ -1,0 +1,62 @@
+---
+title: "LocationTrack privacy policy"
+page-layout: article
+---
+
+*Last updated 5 September 2026.*
+
+LocationTrack ("the app") is published by Rodolphe Cambier. This policy explains what the app does with
+your data. The short version: the app has no server, no analytics and no account with us; your data stays on
+your phone and in your own Google account.
+
+## Data the app handles
+
+**Location.** With your permission, iOS gives the app location fixes when you move. From each fix the app keeps
+the time, the country, the coordinates and the accuracy, on your phone. These samples are used to work out
+which country you slept in each night and, if you enable it, are copied to a "Location Log" spreadsheet in
+your own Google Drive.
+
+**Days and bounds.** The country for each day, your evidence notes, your corrections, and the day limits you
+track ("bounds") are stored in a Google Sheet that you choose or that the app creates in your Google Drive.
+A hidden "app_config" tab in that sheet holds your bounds and preferences.
+
+**Google account.** If you sign in with Google, the app receives an access token and a refresh token, stored in
+the iOS Keychain on your phone, and your e-mail address to show which account is connected. The app asks for
+the Google Sheets scope (to read and write your sheets) and the Drive metadata read-only scope (to list your
+spreadsheets by name so you can pick one).
+
+**Google Maps Timeline import.** If you import a Timeline export file, its points are read on the phone and
+appended to your Location Log spreadsheet. The file itself is not kept.
+
+## Where data goes
+
+- On your phone: samples, a cache of your sheet, pending writes, tokens.
+- In your Google Drive: the sheets described above, under your account and your control.
+- Nowhere else. The app does not run a server, does not collect analytics or crash reports, and does not share
+  data with third parties. Country names are looked up with Apple's on-device geocoder.
+
+## Use of Google user data
+
+LocationTrack's use and transfer of information received from Google APIs adheres to the
+[Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy),
+including the Limited Use requirements. Google data is used only to read and write the spreadsheets you
+connect, never for advertising, and is never sold or transferred to other parties.
+
+## Your control
+
+- Delete the app to remove everything stored on the phone.
+- Sign out in Settings to revoke the tokens on the phone; you can also revoke the app's access at
+  [myaccount.google.com/permissions](https://myaccount.google.com/permissions).
+- Delete or edit the spreadsheets in your Google Drive at any time; they are ordinary files that you own.
+
+## Children
+
+The app is not directed at children under 13.
+
+## Changes
+
+Changes to this policy are published on this page with a new date.
+
+## Contact
+
+[rodolphecambier@gmail.com](mailto:rodolphecambier@gmail.com)
