@@ -67,7 +67,7 @@ if anyone ever asks, the record explains itself.
 
 ## Getting it
 
-Daybound is on the App Store for a one-time price, with no subscription and no
-account with me. Every screen works with demo data before you sign in with
+Daybound is free on the App Store, with no subscription and no account with
+me. Every screen works with demo data before you sign in with
 Google, so you can look around first. It is not legal or tax advice; check the
 rules that apply to you.
