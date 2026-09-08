@@ -8,7 +8,7 @@ subtitle: difficulty 1.5
 layout: post
 published: true
 title: Simple Maths
-
+description: "Riddle: How do you make 26 by using 5, 5, 5 and 1. You have to use each exactly once. You can use the basic math operations (+, -, *, /, (, ) )."
 ---
 
 How do you make 26 by using 5, 5, 5 and 1. You have to use each exactly once. 

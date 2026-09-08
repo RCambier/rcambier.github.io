@@ -8,7 +8,7 @@ subtitle: difficulty 2
 layout: post
 published: true
 title: Running in circle
-
+description: "Riddle: If I can make it around a running track once by going 10 km/h, what speed should I be running a second lap to have an average speed of 20 km/h for the..."
 ---
 
 If I can make it around a running track once by going 10 km/h, what speed should I be running a second lap to have an average speed of 20 km/h for the two laps ?

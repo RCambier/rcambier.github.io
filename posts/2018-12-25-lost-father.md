@@ -8,7 +8,7 @@ subtitle: difficulty 2.5
 layout: post
 published: true
 title: Lost father
-
+description: "Riddle: A mother is 21 years older than her child. In 6 years she will be 5 times older. Where is the father? A maths riddle with a strange answer."
 ---
 
 Question: A mother is 21 years older than her child. In 6 years the mother will be 5 times older than her baby.

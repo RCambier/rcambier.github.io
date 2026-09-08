@@ -8,7 +8,7 @@ subtitle: kanban boards and notes stored in a Google Sheet you own
 layout: post
 published: true
 title: Memoria — a board your agents can write to
-
+description: "Memoria is a kanban board and a notebook that saves everything into a Google Sheet in your own Drive. There is no database and nothing to sign up for..."
 ---
 
 [**Memoria**](https://memoria-board.vercel.app/) is a kanban board and a

@@ -8,7 +8,7 @@ subtitle: difficulty 7
 layout: post
 published: true
 title: Down the cliff
-
+description: "Riddle: You are at the top of a 100 m cliff with a 75 m rope and a knife. A branch sticks out 50 m below. How do you get down safely?"
 ---
 
 You are standing at the top of a 100 meter cliff.

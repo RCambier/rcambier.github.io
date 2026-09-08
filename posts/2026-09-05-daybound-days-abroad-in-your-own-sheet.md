@@ -8,7 +8,7 @@ subtitle: an iPhone app that counts your days abroad and keeps them in a Google 
 layout: post
 published: true
 title: Daybound — days abroad, in your own sheet
-
+description: "Daybound is an iPhone app I built because I live in the UK on a visa, and the number of days I spend outside the country matters. For settlement you..."
 ---
 
 [**Daybound**](https://rcambier.github.io/locationtrack/) is an iPhone app I

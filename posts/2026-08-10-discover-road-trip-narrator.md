@@ -8,7 +8,7 @@ subtitle: a road trip guide that talks about what you are driving past
 layout: post
 published: true
 title: Discover — a road trip narrator
-
+description: "Discover is a little app I built for road trips. You put your phone on the dashboard, and while you drive it tells you about the places you are..."
 ---
 
 [**Discover**](https://discover-on-the-road.vercel.app/) is a little app I built

@@ -8,7 +8,7 @@ subtitle: difficulty 3
 layout: post
 published: true
 title: Magic logic
-
+description: "Riddle: Alice looks at five cards, hands four to Bob, and Bob names the fifth. No code, no sleight of hand. How does the trick work?"
 ---
 
 At a party last night, my friends Alice and Bob did a magic trick. Any ideas how it worked?

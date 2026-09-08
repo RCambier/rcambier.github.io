@@ -8,7 +8,7 @@ subtitle: difficulty 1
 layout: post
 published: true
 title: Cats and mouses
-
+description: "Riddle: If 3 cats take 3 minutes to catch 3 mouses, how many cats are needed to catch 100 mouses in 100 minutes ?"
 ---
 
 If 3 cats take 3 minutes to catch 3 mouses, how many cats are needed to catch 100 mouses in 100 minutes ?

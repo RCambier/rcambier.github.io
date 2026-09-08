@@ -8,7 +8,7 @@ subtitle: difficulty 8
 layout: post
 published: true
 title: The mirror flip
-
+description: "Riddle: You are looking to your reflection in a mirror. If you move your right hand, your reflection seems to be moving its left hand. However, if you move..."
 ---
 
 You are looking to your reflection in a mirror. 

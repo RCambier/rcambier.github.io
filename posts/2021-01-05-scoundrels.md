@@ -8,7 +8,7 @@ subtitle: difficulty 99
 layout: post
 published: true
 title: Three's a Crowd
-
+description: "Riddle: Three scoundrels must split $100 by majority vote, each wanting the most money. What is the outcome? A game theory riddle I have not solved yet."
 ---
 
 From: http://www.twinbear.com/riddles.html

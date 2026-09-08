@@ -11,6 +11,7 @@ listing:
     categories: riddle
 page-layout: full
 title-block-banner: true
+description: "Logic and maths riddles I found and liked, with hidden answers you reveal by hovering. Blue eyes, prisoners and switches, burning ropes, and more."
 ---
 
 Riddles I found and liked. They mostly have satisfying answers.

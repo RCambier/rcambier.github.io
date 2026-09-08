@@ -8,7 +8,7 @@ subtitle: difficulty 3
 layout: post
 published: true
 title: Prisoner's switch
-
+description: "Riddle: The warden meets with 23 new prisoners when they arrive. He tells them, \"You may meet today and plan a strategy. But after today, you will be in..."
 ---
 
 The warden meets with 23 new prisoners when they arrive. He tells them, "You may meet today and plan a strategy. But after today, you will be in isolated cells and will have no communication with one another. 

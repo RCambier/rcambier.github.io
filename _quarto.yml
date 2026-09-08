@@ -6,7 +6,11 @@ project:
 website:
   title: "Rcambier's Blog"
   site-url: https://rcambier.github.io
+  description: "Rodolphe Cambier's blog: machine learning and statistics from scratch in Python, computer science notes, and logic riddles."
   favicon: logo.png
+  image: profile.jpg
+  open-graph: true
+  twitter-card: true
   navbar:
     left: 
       - text: "Artificial Intelligence"

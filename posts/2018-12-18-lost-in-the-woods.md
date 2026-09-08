@@ -8,7 +8,7 @@ subtitle: difficulty 3.5
 layout: post
 published: true
 title: Lost in the woods
-
+description: "Riddle: You are in a square forest of side 100km. You are 2km away from its border, but you don't know in what direction or at what angle (It could be at 2km..."
 ---
 
 You are in a square forest of side 100km.

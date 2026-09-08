@@ -8,7 +8,7 @@ subtitle: difficulty 2
 layout: post
 published: true
 title: Surprise birthday
-
+description: "Riddle: Albert and Bernard just become friends with Cheryl, and they want to know when her birthday is. Cheryl gives them a list of 10 possible dates."
 ---
 
 Albert and Bernard just become friends with Cheryl, and they want to know when her birthday is. Cheryl gives them a list of 10 possible dates. 

@@ -6,6 +6,7 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/rodolphecambier/
+description: "About Rodolphe Cambier, the author of this blog."
 ---
 
 Thanks for passing by :)

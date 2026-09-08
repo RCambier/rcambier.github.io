@@ -8,7 +8,7 @@ subtitle: difficulty 4
 layout: post
 published: true
 title: Prisoners and trees
-
+description: "Riddle: Alice sees 12 trees, Bob sees 8, and neither knows the other's count. Each day they are asked if there are 18 or 20 trees. A common knowledge puzzle."
 ---
 
 Here is a logic puzzle that depends on the game theory concept of common knowledge. 

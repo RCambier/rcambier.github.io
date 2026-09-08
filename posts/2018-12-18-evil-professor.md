@@ -8,7 +8,7 @@ subtitle: difficulty 99
 layout: post
 published: true
 title: Evil professor
-
+description: "Riddle: The evil professor says to the students: you are going to have an exam next week. I'm not telling you which day, but I am telling you that it will be..."
 ---
 
 The evil professor says to the students: you are going to have an exam next week. I'm not telling you which day, but I am telling you that it will be unexpected (i.e., the day of the exam you won't be sure whether the exam is that day or not). 

@@ -8,7 +8,7 @@ subtitle: difficulty 2
 layout: post
 published: true
 title: Reversed number
-
+description: "Riddle: Can you find a 4 digits number that gets reversed when multiplied by 4?"
 ---
 
 Can you find a 4 digits number that gets reversed when multiplied by 4?

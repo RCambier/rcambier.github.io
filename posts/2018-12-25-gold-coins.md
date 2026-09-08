@@ -8,7 +8,7 @@ subtitle: difficulty 2
 layout: post
 published: true
 title: Gold coins
-
+description: "Riddle: There is a stack of 100 coins. Each coin has a silver side and a golden side. 20 coins are silver side up. The rest is golden side up. You are in a..."
 ---
 
 There is a stack of 100 coins.

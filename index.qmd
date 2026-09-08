@@ -7,8 +7,10 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: false
+  feed: true
 page-layout: full
 title-block-banner: true
+description: "Rodolphe Cambier's blog: machine learning and statistics from scratch in Python, computer science notes, small apps I built, and logic riddles."
 ---
 
 

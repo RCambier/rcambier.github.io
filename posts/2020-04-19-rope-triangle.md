@@ -8,7 +8,7 @@ subtitle: difficulty 2
 layout: post
 published: true
 title: The rope triangle
-
+description: "Riddle: Cut a rope at two random places. What is the probability that the three pieces can form a triangle?"
 ---
 
 You cut a rope in a random place. Then again in another random place. 

@@ -11,4 +11,5 @@ listing:
     categories: project
 page-layout: full
 title-block-banner: true
+description: "Small apps I built and put online: Daybound, Discover, Memoria, and other side projects."
 ---
