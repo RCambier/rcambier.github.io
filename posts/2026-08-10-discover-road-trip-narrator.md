@@ -4,62 +4,34 @@ aliases:
 categories:
  - project
 date: '2026-08-10'
-subtitle: a road trip guide that talks about what you are driving past
+subtitle: it talks about what you are driving past
 layout: post
 published: true
-title: Discover — a road trip narrator
-description: "Discover is a little app I built for road trips. You put your phone on the dashboard, and while you drive it tells you about the places you are..."
+title: Discover, a road trip narrator
+description: "A guide that talks while you drive: the castle ahead, the village on your left, what happened here. Runs on your own OpenAI key."
+image: discover-banner.png
 ---
 
-[**Discover**](https://discover-on-the-road.vercel.app/) is a little app I built
-for road trips. You put your phone on the dashboard, and while you drive it
-tells you about the places you are passing: the region, its history, the castle
-on the hill you would otherwise drive straight past. All you need is an OpenAI
-key.
+[**Discover**](https://discover-on-the-road.vercel.app/) is a small app I built for road trips.
+Put your phone on the dashboard and it tells you about what you are driving past: the castle on
+the hill, the village on your left, what happened here. Nothing to read, everything is spoken.
 
-::: {layout-ncol=3}
-![](discover-monteriggioni.png)
+::: {.phone-shots layout-ncol=3}
+![](discover-welcome.png)
 
-![](discover-abbadia.png)
+![](discover-map.png)
 
 ![](discover-settings.png)
 :::
 
-The screen is just a map. The violet marker is the place it is currently
-talking about, and the grey ones are places it considered but decided were not
-worth interrupting you for. There is nothing to read while driving, everything
-is spoken.
+Every few kilometres it looks up what is around you (Wikipedia in the local language, travel
+guides, the web) and decides if something is worth a sentence. The bar is what a good local guide
+in the passenger seat would point out. It speaks once, a bit before the place comes into view, and
+tells you which side to look. If you want to know more, hold the button and ask.
 
-## What it does while you drive
+You can tell it what you like in the settings. Say "railways" and it will happily talk about a
+small station everybody else drives past in silence.
 
-Every few kilometres it quietly looks up what is around you: Wikipedia, in the
-local language because that is usually where the good articles are, travel
-guides, and the web for the things encyclopedias miss. Then it decides what is
-worth mentioning. The bar I aimed for is what a good local guide sitting in the
-passenger seat would point out: famous enough, interesting enough, close enough
-to the road.
-
-You can also tell it what you care about in the settings. If you say you like
-railways, it will happily talk about a small station that anyone else would
-drive past in silence.
-
-It tries to get the timing right too. A place is mentioned once, a little
-before it comes into view, and it tells you which side to look. In the
-screenshots: *1.1 km, straight ahead*.
-
-And if something makes you curious, you hold a button and ask. It answers, and
-looks things up if it needs to.
-
-## The practical bits
-
-Your OpenAI key stays on your phone and is only used to talk to OpenAI. An hour
-of driving costs somewhere between 15 and 40 cents. Everything else comes from
-free sources like Wikipedia.
-
-It runs in the browser, so it keeps your screen on while it works, like a
-navigation app does. There is also an iPhone version of the same thing.
-
-One honest note about the screenshots: they come from the app's built-in test
-drive, on the road from Monteriggioni to Siena. The car and the voice are
-simulated so I could replay the same drive while building the app, but the map
-and the places are real.
+It runs on your own OpenAI key, which stays on the phone. An hour of driving costs about 20 to 40
+cents. There is a web version and an iPhone version. The screenshots are from the iPhone one, on
+the road near the Pont du Gard.

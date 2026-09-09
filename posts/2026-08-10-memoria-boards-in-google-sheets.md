@@ -4,50 +4,32 @@ aliases:
 categories:
  - project
 date: '2026-08-10'
-subtitle: kanban boards and notes stored in a Google Sheet you own
+subtitle: todos, notes and agent memories in a Google Sheet you own
 layout: post
 published: true
-title: Memoria — a board your agents can write to
-description: "Memoria is a kanban board and a notebook that saves everything into a Google Sheet in your own Drive. There is no database and nothing to sign up for..."
+title: Memoria, a board your agents can write to
+description: "A todo board, a notebook and a memory store for AI agents, all saved in a Google Sheet in your Drive. No database, no signup."
+image: memoria-landing.png
 ---
 
-[**Memoria**](https://memoria-board.vercel.app/) is a kanban board and a
-notebook that saves everything into a Google Sheet in your own Drive. There is
-no database and nothing to sign up for. You log in with Google, and your tasks
-become rows in a spreadsheet you own.
+[**Memoria**](https://memoria-board.vercel.app/) is a todo board, a notebook, and a memory store
+for AI agents. Everything it saves goes into a Google Sheet in your own Drive. There is no database and nothing to sign up
+for. Log in with Google, and your tasks are rows in a spreadsheet you own.
 
-![](memoria-landing.png)
+![](memoria-landing.png){.shot}
 
-The same sheet can also be used by AI agents. The board, your agents and the
-spreadsheet always see the same thing, because the spreadsheet is the only
-place where the data lives.
+Why a spreadsheet? Because it will still be readable in ten years, with or without this app. You
+can open it in Google Sheets and edit it there. The app can only see the files it created, nothing
+else in your Drive.
 
-![](memoria-board.png)
+The real reason I built it: I wanted a place where an AI agent can leave something for me, and
+where I can leave something for it. Not a chat log, not a file lost in some repo. If you use
+claude.ai or Claude Code, add Memoria as a connector, sign in with Google, and your agent can read
+the board, add tasks, move them around and take notes. It works when the agent runs on a schedule
+too, without me around.
 
-## Why a spreadsheet
+![](memoria-board.png){.shot}
 
-Because your data stays yours. Your tasks are just rows in a normal
-spreadsheet. You can open it in Google Sheets and edit it there whenever you
-want, and it will still be there, perfectly readable, in ten years, even if
-this app disappears. The app can only see the files it created or the ones you
-picked. It cannot look at anything else in your Drive.
-
-## Letting your agents use it
-
-This is the reason I built it. I wanted a place where an AI agent could leave
-something for me, and where I could leave something for it, that is not a chat
-log and not a file buried in some repo.
-
-If you use claude.ai or Claude Code, you can add Memoria as a connector, sign
-in with Google, and from then on your agent can read the board, add tasks, move
-them around and take notes. It works even when the agent runs on a schedule,
-without you there.
-
-## Trying it
-
-The easiest way is the hosted version at
-[memoria-board.vercel.app](https://memoria-board.vercel.app). If you would
-rather run your own copy, the code is open source and takes about fifteen
-minutes to deploy, all on free tiers.
-
-Source: [github.com/RCambier/Memoria](https://github.com/RCambier/Memoria). MIT.
+The hosted version is at [memoria-board.vercel.app](https://memoria-board.vercel.app). The code
+is on [GitHub](https://github.com/RCambier/Memoria), MIT, and runs on free tiers if you want your
+own copy.
