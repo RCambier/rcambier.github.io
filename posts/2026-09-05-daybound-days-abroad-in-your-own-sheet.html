@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-09-05">
-<meta name="description" content="Daybound is an iPhone app I built because I live in the UK on a visa, and the number of days I spend outside the country matters. For settlement you…">
+<meta name="description" content="An iPhone app that records the country you sleep in every night, writes it to your own Google Sheet, and counts days for UK settlement, Schengen and tax rules.">
 
-<title>Daybound — days abroad, in your own sheet – Rcambier’s Blog</title>
+<title>Daybound, days abroad in your own sheet – Rcambier’s Blog</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,17 +79,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Daybound — days abroad, in your own sheet – Rcambier’s Blog">
-<meta property="og:description" content="Daybound is an iPhone app I built because I live in the UK on a visa, and the number of days I spend outside the country matters. For settlement you…">
-<meta property="og:image" content="https://rcambier.github.io/posts/daybound-today.png">
+<meta property="og:title" content="Daybound, days abroad in your own sheet – Rcambier’s Blog">
+<meta property="og:description" content="An iPhone app that records the country you sleep in every night, writes it to your own Google Sheet, and counts days for UK settlement, Schengen and tax rules.">
+<meta property="og:image" content="https://rcambier.github.io/posts/daybound-banner.png">
 <meta property="og:site_name" content="Rcambier’s Blog">
-<meta property="og:image:height" content="2868">
-<meta property="og:image:width" content="1320">
-<meta name="twitter:title" content="Daybound — days abroad, in your own sheet – Rcambier’s Blog">
-<meta name="twitter:description" content="Daybound is an iPhone app I built because I live in the UK on a visa, and the number of days I spend outside the country matters. For settlement you…">
-<meta name="twitter:image" content="https://rcambier.github.io/posts/daybound-today.png">
-<meta name="twitter:image-height" content="2868">
-<meta name="twitter:image-width" content="1320">
+<meta property="og:image:height" content="1000">
+<meta property="og:image:width" content="1600">
+<meta name="twitter:title" content="Daybound, days abroad in your own sheet – Rcambier’s Blog">
+<meta name="twitter:description" content="An iPhone app that records the country you sleep in every night, writes it to your own Google Sheet, and counts days for UK settlement, Schengen and tax rules.">
+<meta name="twitter:image" content="https://rcambier.github.io/posts/daybound-banner.png">
+<meta name="twitter:image-height" content="1000">
+<meta name="twitter:image-width" content="1600">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://rcambier.github.io/posts/2026-09-05-daybound-days-abroad-in-your-own-sheet.html">
 </head>
@@ -144,11 +144,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Daybound — days abroad, in your own sheet</h1>
-            <p class="subtitle lead">an iPhone app that counts your days abroad and keeps them in a Google Sheet you own</p>
+      <h1 class="title">Daybound, days abroad in your own sheet</h1>
+            <p class="subtitle lead">an iPhone app that counts your days outside the country</p>
                   <div>
         <div class="description">
-          Daybound is an iPhone app I built because I live in the UK on a visa, and the number of days I spend outside the country matters. For settlement you…
+          An iPhone app that records the country you sleep in every night, writes it to your own Google Sheet, and counts days for UK settlement, Schengen and tax rules.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -183,41 +183,26 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><a href="https://rcambier.github.io/locationtrack/"><strong>Daybound</strong></a> is an iPhone app I built because I live in the UK on a visa, and the number of days I spend outside the country matters. For settlement you cannot be away more than 180 days in any twelve months. There is a Schengen limit too, and a tax one. I had been keeping all of this in a spreadsheet by hand for four years, one row per day, and I wanted the phone to do the writing for me without taking the spreadsheet away.</p>
-<div class="quarto-layout-panel" data-layout-ncol="3">
+<p><a href="https://rcambier.github.io/locationtrack/"><strong>Daybound</strong></a> is an iPhone app I built because I live in the UK on a visa, and my days outside the country matter. For settlement you cannot be away more than 180 days in any 12 months. There is a Schengen limit and a tax one too. For four years I kept this in a spreadsheet by hand, one row per day. I wanted the phone to do the writing, and to keep the spreadsheet.</p>
+<div class="phone-shots quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="daybound-today.png" class="img-fluid"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><img src="daybound-day.png" class="img-fluid"></p>
+<p><img src="daybound-settlement.png" class="img-fluid"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="daybound-globe.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
-<section id="what-it-does" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-does">What it does</h2>
-<p>It records the country you sleep in, every night, without you opening it. iOS wakes the app when the phone moves a few hundred metres or settles somewhere, the app works out the country, and the next morning it writes one row to your sheet: the date, the country, and a place for evidence like a flight number.</p>
-<p>Then it counts. The interesting part is that every rule counts a day differently. UK settlement only counts whole days outside the country, so the day you leave and the day you come back do not count. Schengen counts any part of a day, so they both do. The tax residence test looks at where you are at midnight. Daybound knows the definition for each rule, and when you open a day it tells you which rules it counts for and why.</p>
-<p>The settlement screen goes one step further and tells you the earliest day you can apply, starting from the day your visa started, and starting over if you ever broke the 180-day rule. I learned from it that I had broken it in 2023 without noticing.</p>
-</section>
-<section id="why-a-spreadsheet" class="level2">
-<h2 class="anchored" data-anchor-id="why-a-spreadsheet">Why a spreadsheet</h2>
-<p>Because these numbers matter for years, and an app is only as durable as the app. Your history is an ordinary Google Sheet in your own Drive. You can open it, send it to a lawyer, back it up, or delete the app; the rows stay. The app creates the sheet itself and can only see the files it created, nothing else in your Drive.</p>
-<p>There is a second sheet with every location fix the phone ever took, and you can import your Google Maps Timeline export into it, so the past is yours as well.</p>
-</section>
-<section id="the-one-manual-button" class="level2">
-<h2 class="anchored" data-anchor-id="the-one-manual-button">The one manual button</h2>
-<p>I removed every way of typing days in by hand. There is exactly one: “Correct this day”, and it asks why. The reason goes into the sheet next to the day, so if anyone ever asks, the record explains itself.</p>
-</section>
-<section id="getting-it" class="level2">
-<h2 class="anchored" data-anchor-id="getting-it">Getting it</h2>
-<p>Daybound is free on the App Store, with no subscription and no account with me. Every screen works with demo data before you sign in with Google, so you can look around first. It is not legal or tax advice; check the rules that apply to you.</p>
+<p>Every night it records the country you sleep in, without you opening it. The next morning it writes one row to your sheet: the date, the country, and a place for evidence like a flight number.</p>
+<p>Then it counts, and every rule counts differently. UK settlement only counts whole days away, so the day you leave and the day you come back do not count. Schengen counts any part of a day. Tax residence looks at where you are at midnight. Open a day and it tells you which rules it counts for and why. The settlement screen tells you the earliest day you can apply. That is how I found out I had broken the 180-day rule in 2023 without noticing.</p>
+<p>Your history is a normal Google Sheet in your Drive. Send it to a lawyer, back it up, delete the app: the rows stay. There is exactly one manual button, “Correct this day”, and it asks why. The reason goes in the sheet next to the day.</p>
+<p>It is free on the App Store, no subscription, no account with me. Every screen works with demo data before you sign in. It is not legal or tax advice.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

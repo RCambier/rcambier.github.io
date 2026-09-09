@@ -17,7 +17,7 @@
 <generator>quarto-1.10.18</generator>
 <lastBuildDate>Fri, 04 Sep 2026 23:00:00 GMT</lastBuildDate>
 <item>
-  <title>Daybound — days abroad, in your own sheet</title>
+  <title>Daybound, days abroad in your own sheet</title>
   <link>https://rcambier.github.io/posts/2026-09-05-daybound-days-abroad-in-your-own-sheet.html</link>
   <description><![CDATA[ 
 
@@ -25,49 +25,35 @@
 
 
 
-<p><a href="https://rcambier.github.io/locationtrack/"><strong>Daybound</strong></a> is an iPhone app I built because I live in the UK on a visa, and the number of days I spend outside the country matters. For settlement you cannot be away more than 180 days in any twelve months. There is a Schengen limit too, and a tax one. I had been keeping all of this in a spreadsheet by hand for four years, one row per day, and I wanted the phone to do the writing for me without taking the spreadsheet away.</p>
-<div class="quarto-layout-panel" data-layout-ncol="3">
+<p><a href="https://rcambier.github.io/locationtrack/"><strong>Daybound</strong></a> is an iPhone app I built because I live in the UK on a visa, and my days outside the country matter. For settlement you cannot be away more than 180 days in any 12 months. There is a Schengen limit and a tax one too. For four years I kept this in a spreadsheet by hand, one row per day. I wanted the phone to do the writing, and to keep the spreadsheet.</p>
+<div class="phone-shots quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="https://rcambier.github.io/posts/daybound-today.png" class="img-fluid"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><img src="https://rcambier.github.io/posts/daybound-day.png" class="img-fluid"></p>
+<p><img src="https://rcambier.github.io/posts/daybound-settlement.png" class="img-fluid"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="https://rcambier.github.io/posts/daybound-globe.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
-<section id="what-it-does" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-does">What it does</h2>
-<p>It records the country you sleep in, every night, without you opening it. iOS wakes the app when the phone moves a few hundred metres or settles somewhere, the app works out the country, and the next morning it writes one row to your sheet: the date, the country, and a place for evidence like a flight number.</p>
-<p>Then it counts. The interesting part is that every rule counts a day differently. UK settlement only counts whole days outside the country, so the day you leave and the day you come back do not count. Schengen counts any part of a day, so they both do. The tax residence test looks at where you are at midnight. Daybound knows the definition for each rule, and when you open a day it tells you which rules it counts for and why.</p>
-<p>The settlement screen goes one step further and tells you the earliest day you can apply, starting from the day your visa started, and starting over if you ever broke the 180-day rule. I learned from it that I had broken it in 2023 without noticing.</p>
-</section>
-<section id="why-a-spreadsheet" class="level2">
-<h2 class="anchored" data-anchor-id="why-a-spreadsheet">Why a spreadsheet</h2>
-<p>Because these numbers matter for years, and an app is only as durable as the app. Your history is an ordinary Google Sheet in your own Drive. You can open it, send it to a lawyer, back it up, or delete the app; the rows stay. The app creates the sheet itself and can only see the files it created, nothing else in your Drive.</p>
-<p>There is a second sheet with every location fix the phone ever took, and you can import your Google Maps Timeline export into it, so the past is yours as well.</p>
-</section>
-<section id="the-one-manual-button" class="level2">
-<h2 class="anchored" data-anchor-id="the-one-manual-button">The one manual button</h2>
-<p>I removed every way of typing days in by hand. There is exactly one: “Correct this day”, and it asks why. The reason goes into the sheet next to the day, so if anyone ever asks, the record explains itself.</p>
-</section>
-<section id="getting-it" class="level2">
-<h2 class="anchored" data-anchor-id="getting-it">Getting it</h2>
-<p>Daybound is free on the App Store, with no subscription and no account with me. Every screen works with demo data before you sign in with Google, so you can look around first. It is not legal or tax advice; check the rules that apply to you.</p>
+<p>Every night it records the country you sleep in, without you opening it. The next morning it writes one row to your sheet: the date, the country, and a place for evidence like a flight number.</p>
+<p>Then it counts, and every rule counts differently. UK settlement only counts whole days away, so the day you leave and the day you come back do not count. Schengen counts any part of a day. Tax residence looks at where you are at midnight. Open a day and it tells you which rules it counts for and why. The settlement screen tells you the earliest day you can apply. That is how I found out I had broken the 180-day rule in 2023 without noticing.</p>
+<p>Your history is a normal Google Sheet in your Drive. Send it to a lawyer, back it up, delete the app: the rows stay. There is exactly one manual button, “Correct this day”, and it asks why. The reason goes in the sheet next to the day.</p>
+<p>It is free on the App Store, no subscription, no account with me. Every screen works with demo data before you sign in. It is not legal or tax advice.</p>
 
 
-</section>
 
  ]]></description>
   <category>project</category>
   <guid>https://rcambier.github.io/posts/2026-09-05-daybound-days-abroad-in-your-own-sheet.html</guid>
   <pubDate>Fri, 04 Sep 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://rcambier.github.io/posts/daybound-banner.png" medium="image" type="image/png" height="90" width="144"/>
 </item>
 <item>
-  <title>Discover — a road trip narrator</title>
+  <title>Discover, a road trip narrator</title>
   <link>https://rcambier.github.io/posts/2026-08-10-discover-road-trip-narrator.html</link>
   <description><![CDATA[ 
 
@@ -75,44 +61,34 @@
 
 
 
-<p><a href="https://discover-on-the-road.vercel.app/"><strong>Discover</strong></a> is a little app I built for road trips. You put your phone on the dashboard, and while you drive it tells you about the places you are passing: the region, its history, the castle on the hill you would otherwise drive straight past. All you need is an OpenAI key.</p>
-<div class="quarto-layout-panel" data-layout-ncol="3">
+<p><a href="https://discover-on-the-road.vercel.app/"><strong>Discover</strong></a> is a small app I built for road trips. Put your phone on the dashboard and it tells you about what you are driving past: the castle on the hill, the village on your left, what happened here. Nothing to read, everything is spoken.</p>
+<div class="phone-shots quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><img src="https://rcambier.github.io/posts/discover-monteriggioni.png" class="img-fluid"></p>
+<p><img src="https://rcambier.github.io/posts/discover-welcome.png" class="img-fluid"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><img src="https://rcambier.github.io/posts/discover-abbadia.png" class="img-fluid"></p>
+<p><img src="https://rcambier.github.io/posts/discover-map.png" class="img-fluid"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="https://rcambier.github.io/posts/discover-settings.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
-<p>The screen is just a map. The violet marker is the place it is currently talking about, and the grey ones are places it considered but decided were not worth interrupting you for. There is nothing to read while driving, everything is spoken.</p>
-<section id="what-it-does-while-you-drive" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-does-while-you-drive">What it does while you drive</h2>
-<p>Every few kilometres it quietly looks up what is around you: Wikipedia, in the local language because that is usually where the good articles are, travel guides, and the web for the things encyclopedias miss. Then it decides what is worth mentioning. The bar I aimed for is what a good local guide sitting in the passenger seat would point out: famous enough, interesting enough, close enough to the road.</p>
-<p>You can also tell it what you care about in the settings. If you say you like railways, it will happily talk about a small station that anyone else would drive past in silence.</p>
-<p>It tries to get the timing right too. A place is mentioned once, a little before it comes into view, and it tells you which side to look. In the screenshots: <em>1.1 km, straight ahead</em>.</p>
-<p>And if something makes you curious, you hold a button and ask. It answers, and looks things up if it needs to.</p>
-</section>
-<section id="the-practical-bits" class="level2">
-<h2 class="anchored" data-anchor-id="the-practical-bits">The practical bits</h2>
-<p>Your OpenAI key stays on your phone and is only used to talk to OpenAI. An hour of driving costs somewhere between 15 and 40 cents. Everything else comes from free sources like Wikipedia.</p>
-<p>It runs in the browser, so it keeps your screen on while it works, like a navigation app does. There is also an iPhone version of the same thing.</p>
-<p>One honest note about the screenshots: they come from the app’s built-in test drive, on the road from Monteriggioni to Siena. The car and the voice are simulated so I could replay the same drive while building the app, but the map and the places are real.</p>
+<p>Every few kilometres it looks up what is around you (Wikipedia in the local language, travel guides, the web) and decides if something is worth a sentence. The bar is what a good local guide in the passenger seat would point out. It speaks once, a bit before the place comes into view, and tells you which side to look. If you want to know more, hold the button and ask.</p>
+<p>You can tell it what you like in the settings. Say “railways” and it will happily talk about a small station everybody else drives past in silence.</p>
+<p>It runs on your own OpenAI key, which stays on the phone. An hour of driving costs about 20 to 40 cents. There is a web version and an iPhone version. The screenshots are from the iPhone one, on the road near the Pont du Gard.</p>
 
 
-</section>
 
  ]]></description>
   <category>project</category>
   <guid>https://rcambier.github.io/posts/2026-08-10-discover-road-trip-narrator.html</guid>
   <pubDate>Sun, 09 Aug 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://rcambier.github.io/posts/discover-banner.png" medium="image" type="image/png" height="90" width="144"/>
 </item>
 <item>
-  <title>Memoria — a board your agents can write to</title>
+  <title>Memoria, a board your agents can write to</title>
   <link>https://rcambier.github.io/posts/2026-08-10-memoria-boards-in-google-sheets.html</link>
   <description><![CDATA[ 
 
@@ -120,31 +96,20 @@
 
 
 
-<p><a href="https://memoria-board.vercel.app/"><strong>Memoria</strong></a> is a kanban board and a notebook that saves everything into a Google Sheet in your own Drive. There is no database and nothing to sign up for. You log in with Google, and your tasks become rows in a spreadsheet you own.</p>
-<p><img src="https://rcambier.github.io/posts/memoria-landing.png" class="img-fluid"></p>
-<p>The same sheet can also be used by AI agents. The board, your agents and the spreadsheet always see the same thing, because the spreadsheet is the only place where the data lives.</p>
-<p><img src="https://rcambier.github.io/posts/memoria-board.png" class="img-fluid"></p>
-<section id="why-a-spreadsheet" class="level2">
-<h2 class="anchored" data-anchor-id="why-a-spreadsheet">Why a spreadsheet</h2>
-<p>Because your data stays yours. Your tasks are just rows in a normal spreadsheet. You can open it in Google Sheets and edit it there whenever you want, and it will still be there, perfectly readable, in ten years, even if this app disappears. The app can only see the files it created or the ones you picked. It cannot look at anything else in your Drive.</p>
-</section>
-<section id="letting-your-agents-use-it" class="level2">
-<h2 class="anchored" data-anchor-id="letting-your-agents-use-it">Letting your agents use it</h2>
-<p>This is the reason I built it. I wanted a place where an AI agent could leave something for me, and where I could leave something for it, that is not a chat log and not a file buried in some repo.</p>
-<p>If you use claude.ai or Claude Code, you can add Memoria as a connector, sign in with Google, and from then on your agent can read the board, add tasks, move them around and take notes. It works even when the agent runs on a schedule, without you there.</p>
-</section>
-<section id="trying-it" class="level2">
-<h2 class="anchored" data-anchor-id="trying-it">Trying it</h2>
-<p>The easiest way is the hosted version at <a href="https://memoria-board.vercel.app">memoria-board.vercel.app</a>. If you would rather run your own copy, the code is open source and takes about fifteen minutes to deploy, all on free tiers.</p>
-<p>Source: <a href="https://github.com/RCambier/Memoria">github.com/RCambier/Memoria</a>. MIT.</p>
+<p><a href="https://memoria-board.vercel.app/"><strong>Memoria</strong></a> is a todo board, a notebook, and a memory store for AI agents. Everything it saves goes into a Google Sheet in your own Drive. There is no database and nothing to sign up for. Log in with Google, and your tasks are rows in a spreadsheet you own.</p>
+<p><img src="https://rcambier.github.io/posts/memoria-landing.png" class="shot img-fluid"></p>
+<p>Why a spreadsheet? Because it will still be readable in ten years, with or without this app. You can open it in Google Sheets and edit it there. The app can only see the files it created, nothing else in your Drive.</p>
+<p>The real reason I built it: I wanted a place where an AI agent can leave something for me, and where I can leave something for it. Not a chat log, not a file lost in some repo. If you use claude.ai or Claude Code, add Memoria as a connector, sign in with Google, and your agent can read the board, add tasks, move them around and take notes. It works when the agent runs on a schedule too, without me around.</p>
+<p><img src="https://rcambier.github.io/posts/memoria-board.png" class="shot img-fluid"></p>
+<p>The hosted version is at <a href="https://memoria-board.vercel.app">memoria-board.vercel.app</a>. The code is on <a href="https://github.com/RCambier/Memoria">GitHub</a>, MIT, and runs on free tiers if you want your own copy.</p>
 
 
-</section>
 
  ]]></description>
   <category>project</category>
   <guid>https://rcambier.github.io/posts/2026-08-10-memoria-boards-in-google-sheets.html</guid>
   <pubDate>Sun, 09 Aug 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://rcambier.github.io/posts/memoria-landing.png" medium="image" type="image/png" height="90" width="144"/>
 </item>
 <item>
   <title>The fake coin</title>

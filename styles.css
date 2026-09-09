@@ -7,3 +7,24 @@
    }
 .answer-wrapper:hover .answer {visibility: visible}
 .answer-wrapper:active .answer {visibility: visible}
+/* listing thumbnails: same shape for every card */
+.quarto-listing-default .thumbnail img.thumbnail-image {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 12px;
+}
+
+/* screenshots inside posts */
+.phone-shots img {
+  border-radius: 22px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+}
+.phone-shots .quarto-layout-cell {
+  padding: 0 10px;
+}
+img.shot {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+}

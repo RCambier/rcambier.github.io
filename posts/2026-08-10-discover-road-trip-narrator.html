@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-08-10">
-<meta name="description" content="Discover is a little app I built for road trips. You put your phone on the dashboard, and while you drive it tells you about the places you are…">
+<meta name="description" content="A guide that talks while you drive: the castle ahead, the village on your left, what happened here. Runs on your own OpenAI key.">
 
-<title>Discover — a road trip narrator – Rcambier’s Blog</title>
+<title>Discover, a road trip narrator – Rcambier’s Blog</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -79,17 +79,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Discover — a road trip narrator – Rcambier’s Blog">
-<meta property="og:description" content="Discover is a little app I built for road trips. You put your phone on the dashboard, and while you drive it tells you about the places you are…">
-<meta property="og:image" content="https://rcambier.github.io/posts/discover-monteriggioni.png">
+<meta property="og:title" content="Discover, a road trip narrator – Rcambier’s Blog">
+<meta property="og:description" content="A guide that talks while you drive: the castle ahead, the village on your left, what happened here. Runs on your own OpenAI key.">
+<meta property="og:image" content="https://rcambier.github.io/posts/discover-banner.png">
 <meta property="og:site_name" content="Rcambier’s Blog">
-<meta property="og:image:height" content="2280">
-<meta property="og:image:width" content="1170">
-<meta name="twitter:title" content="Discover — a road trip narrator – Rcambier’s Blog">
-<meta name="twitter:description" content="Discover is a little app I built for road trips. You put your phone on the dashboard, and while you drive it tells you about the places you are…">
-<meta name="twitter:image" content="https://rcambier.github.io/posts/discover-monteriggioni.png">
-<meta name="twitter:image-height" content="2280">
-<meta name="twitter:image-width" content="1170">
+<meta property="og:image:height" content="1000">
+<meta property="og:image:width" content="1600">
+<meta name="twitter:title" content="Discover, a road trip narrator – Rcambier’s Blog">
+<meta name="twitter:description" content="A guide that talks while you drive: the castle ahead, the village on your left, what happened here. Runs on your own OpenAI key.">
+<meta name="twitter:image" content="https://rcambier.github.io/posts/discover-banner.png">
+<meta name="twitter:image-height" content="1000">
+<meta name="twitter:image-width" content="1600">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://rcambier.github.io/posts/2026-08-10-discover-road-trip-narrator.html">
 </head>
@@ -144,11 +144,11 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Discover — a road trip narrator</h1>
-            <p class="subtitle lead">a road trip guide that talks about what you are driving past</p>
+      <h1 class="title">Discover, a road trip narrator</h1>
+            <p class="subtitle lead">it talks about what you are driving past</p>
                   <div>
         <div class="description">
-          Discover is a little app I built for road trips. You put your phone on the dashboard, and while you drive it tells you about the places you are…
+          A guide that talks while you drive: the castle ahead, the village on your left, what happened here. Runs on your own OpenAI key.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -183,36 +183,25 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><a href="https://discover-on-the-road.vercel.app/"><strong>Discover</strong></a> is a little app I built for road trips. You put your phone on the dashboard, and while you drive it tells you about the places you are passing: the region, its history, the castle on the hill you would otherwise drive straight past. All you need is an OpenAI key.</p>
-<div class="quarto-layout-panel" data-layout-ncol="3">
+<p><a href="https://discover-on-the-road.vercel.app/"><strong>Discover</strong></a> is a small app I built for road trips. Put your phone on the dashboard and it tells you about what you are driving past: the castle on the hill, the village on your left, what happened here. Nothing to read, everything is spoken.</p>
+<div class="phone-shots quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><img src="discover-monteriggioni.png" class="img-fluid"></p>
+<p><img src="discover-welcome.png" class="img-fluid"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<p><img src="discover-abbadia.png" class="img-fluid"></p>
+<p><img src="discover-map.png" class="img-fluid"></p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
 <p><img src="discover-settings.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
-<p>The screen is just a map. The violet marker is the place it is currently talking about, and the grey ones are places it considered but decided were not worth interrupting you for. There is nothing to read while driving, everything is spoken.</p>
-<section id="what-it-does-while-you-drive" class="level2">
-<h2 class="anchored" data-anchor-id="what-it-does-while-you-drive">What it does while you drive</h2>
-<p>Every few kilometres it quietly looks up what is around you: Wikipedia, in the local language because that is usually where the good articles are, travel guides, and the web for the things encyclopedias miss. Then it decides what is worth mentioning. The bar I aimed for is what a good local guide sitting in the passenger seat would point out: famous enough, interesting enough, close enough to the road.</p>
-<p>You can also tell it what you care about in the settings. If you say you like railways, it will happily talk about a small station that anyone else would drive past in silence.</p>
-<p>It tries to get the timing right too. A place is mentioned once, a little before it comes into view, and it tells you which side to look. In the screenshots: <em>1.1 km, straight ahead</em>.</p>
-<p>And if something makes you curious, you hold a button and ask. It answers, and looks things up if it needs to.</p>
-</section>
-<section id="the-practical-bits" class="level2">
-<h2 class="anchored" data-anchor-id="the-practical-bits">The practical bits</h2>
-<p>Your OpenAI key stays on your phone and is only used to talk to OpenAI. An hour of driving costs somewhere between 15 and 40 cents. Everything else comes from free sources like Wikipedia.</p>
-<p>It runs in the browser, so it keeps your screen on while it works, like a navigation app does. There is also an iPhone version of the same thing.</p>
-<p>One honest note about the screenshots: they come from the app’s built-in test drive, on the road from Monteriggioni to Siena. The car and the voice are simulated so I could replay the same drive while building the app, but the map and the places are real.</p>
+<p>Every few kilometres it looks up what is around you (Wikipedia in the local language, travel guides, the web) and decides if something is worth a sentence. The bar is what a good local guide in the passenger seat would point out. It speaks once, a bit before the place comes into view, and tells you which side to look. If you want to know more, hold the button and ask.</p>
+<p>You can tell it what you like in the settings. Say “railways” and it will happily talk about a small station everybody else drives past in silence.</p>
+<p>It runs on your own OpenAI key, which stays on the phone. An hour of driving costs about 20 to 40 cents. There is a web version and an iPhone version. The screenshots are from the iPhone one, on the road near the Pont du Gard.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
