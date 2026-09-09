@@ -178,23 +178,25 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Your interests, your narrator, your language.</strong> Add subjects you care about and it points out places a general guide would drive past. Three narrators, seven languages, your choice of how often it speaks.</li>
 </ul>
 </section>
-<section id="it-needs-an-openai-key" class="level2">
-<h2 class="anchored" data-anchor-id="it-needs-an-openai-key">It needs an OpenAI key</h2>
-<p>The voice runs on OpenAI, and you pay OpenAI directly for what you use: about $0.20 to $0.40 for an hour of driving. The app itself is free and has no account, no server and no subscription. To connect it:</p>
+<section id="it-needs-two-keys" class="level2">
+<h2 class="anchored" data-anchor-id="it-needs-two-keys">It needs two keys</h2>
+<p>The words come from Claude, by Anthropic, and the voice from ElevenLabs. You pay each of them directly for what you use: about $0.30 an hour of driving for the words, and an ElevenLabs plan for the voice (the free plan gives about ten minutes of speech a month; Starter, $5, about thirty; Creator, $22, about two hours). Your questions are turned into text on the phone itself. The app is free and has no account, no server and no subscription. To connect it:</p>
 <ol type="1">
-<li>Create a free account at <a href="https://platform.openai.com/signup">platform.openai.com</a>. This is OpenAI’s developer site, separate from ChatGPT.</li>
-<li>Add some credit under <a href="https://platform.openai.com/settings/organization/billing/overview">Billing</a>. $10 lasts many hours. It is prepaid: when it runs out the guide goes quiet and nothing more is charged.</li>
-<li>Create a key under <a href="https://platform.openai.com/api-keys">API keys</a> and copy it.</li>
-<li>Open Discover and paste it. The app checks the key with OpenAI and tells you if it works.</li>
+<li>Create a free account at <a href="https://console.anthropic.com/login">console.anthropic.com</a>. This is Anthropic’s developer console, separate from the Claude app.</li>
+<li>Add some credit under <a href="https://console.anthropic.com/settings/billing">Billing</a>. $5 lasts many hours. It is prepaid: when it runs out the guide goes quiet and nothing more is charged.</li>
+<li>Create a key under <a href="https://console.anthropic.com/settings/keys">API keys</a> and copy it.</li>
+<li>Create an account at <a href="https://elevenlabs.io/app/sign-up">elevenlabs.io</a>, pick a plan under <a href="https://elevenlabs.io/app/subscription">Subscription</a>, and create a key under <a href="https://elevenlabs.io/app/settings/api-keys">API keys</a>.</li>
+<li>Open Discover and paste each key into its card. The app checks each key and tells you if it works.</li>
 </ol>
 </section>
 <section id="common-questions" class="level2">
 <h2 class="anchored" data-anchor-id="common-questions">Common questions</h2>
-<p><strong>The guide says “OpenAI refused the key”.</strong> The key was mistyped, deleted, or copied incompletely. Create a new one and paste it again in Settings.</p>
-<p><strong>The guide says “your OpenAI account has no credit”.</strong> Add credit under Billing on platform.openai.com.</p>
-<p><strong>It is quiet.</strong> Most of a drive is quiet on purpose: the guide speaks when something worth a sentence is coming up. Add subjects under Settings → Special interests, or set Chattiness to Often. In a tunnel or a dead zone it reconnects on its own.</p>
+<p><strong>The guide says “the key was refused”.</strong> The key was mistyped, deleted, expired, or copied incompletely. Create a new one and paste it again in Settings.</p>
+<p><strong>The guide says “the account has no credit”.</strong> Add credit under Billing in the Anthropic console, or check your ElevenLabs plan’s remaining characters.</p>
+<p><strong>It is quiet.</strong> Most of a drive is quiet on purpose: the guide speaks when something worth a sentence is coming up. Add subjects under Settings → Special interests, or set Chattiness to Often. In a tunnel or a dead zone it picks up again on its own.</p>
 <p><strong>It stops when I lock the phone.</strong> Allow location access “Always” in the iPhone Settings app under Discover, and leave the app running.</p>
-<p><strong>What does it cost me?</strong> Settings → Spend shows an estimate for today and this month, computed on the phone from what OpenAI reports.</p>
+<p><strong>Can I change the voice?</strong> Yes. Settings → Voice lists every voice on your ElevenLabs account, the model that reads it, and its stability, similarity and style.</p>
+<p><strong>What does it cost me?</strong> Settings → Spend shows an estimate for today and this month, computed on the phone from what Anthropic reports and the characters ElevenLabs spoke.</p>
 </section>
 <section id="your-data" class="level2">
 <h2 class="anchored" data-anchor-id="your-data">Your data</h2>

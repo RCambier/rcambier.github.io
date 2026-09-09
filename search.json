@@ -252,18 +252,18 @@
     "text": "What it does\n\nKnows what is coming up. It works out which places you are approaching, on which side, and how soon, and announces each one once, shortly before you see it.\nGrounded, not invented. Every narration is built from what the guide just read: Wikipedia in the local language, Wikivoyage for the character of the area, a live web search for what encyclopedias miss. It says when the record does not say.\nMade for the car. Narration keeps going with the screen locked, plays through the car speakers, and the steering-wheel buttons control it: pause stops the guide, next skips to the following place.\nYour interests, your narrator, your language. Add subjects you care about and it points out places a general guide would drive past. Three narrators, seven languages, your choice of how often it speaks."
   },
   {
-    "objectID": "discover/index.html#it-needs-an-openai-key",
-    "href": "discover/index.html#it-needs-an-openai-key",
+    "objectID": "discover/index.html#it-needs-two-keys",
+    "href": "discover/index.html#it-needs-two-keys",
     "title": "Discover",
-    "section": "It needs an OpenAI key",
-    "text": "It needs an OpenAI key\nThe voice runs on OpenAI, and you pay OpenAI directly for what you use: about $0.20 to $0.40 for an hour of driving. The app itself is free and has no account, no server and no subscription. To connect it:\n\nCreate a free account at platform.openai.com. This is OpenAI’s developer site, separate from ChatGPT.\nAdd some credit under Billing. $10 lasts many hours. It is prepaid: when it runs out the guide goes quiet and nothing more is charged.\nCreate a key under API keys and copy it.\nOpen Discover and paste it. The app checks the key with OpenAI and tells you if it works."
+    "section": "It needs two keys",
+    "text": "It needs two keys\nThe words come from Claude, by Anthropic, and the voice from ElevenLabs. You pay each of them directly for what you use: about $0.30 an hour of driving for the words, and an ElevenLabs plan for the voice (the free plan gives about ten minutes of speech a month; Starter, $5, about thirty; Creator, $22, about two hours). Your questions are turned into text on the phone itself. The app is free and has no account, no server and no subscription. To connect it:\n\nCreate a free account at console.anthropic.com. This is Anthropic’s developer console, separate from the Claude app.\nAdd some credit under Billing. $5 lasts many hours. It is prepaid: when it runs out the guide goes quiet and nothing more is charged.\nCreate a key under API keys and copy it.\nCreate an account at elevenlabs.io, pick a plan under Subscription, and create a key under API keys.\nOpen Discover and paste each key into its card. The app checks each key and tells you if it works."
   },
   {
     "objectID": "discover/index.html#common-questions",
     "href": "discover/index.html#common-questions",
     "title": "Discover",
     "section": "Common questions",
-    "text": "Common questions\nThe guide says “OpenAI refused the key”. The key was mistyped, deleted, or copied incompletely. Create a new one and paste it again in Settings.\nThe guide says “your OpenAI account has no credit”. Add credit under Billing on platform.openai.com.\nIt is quiet. Most of a drive is quiet on purpose: the guide speaks when something worth a sentence is coming up. Add subjects under Settings → Special interests, or set Chattiness to Often. In a tunnel or a dead zone it reconnects on its own.\nIt stops when I lock the phone. Allow location access “Always” in the iPhone Settings app under Discover, and leave the app running.\nWhat does it cost me? Settings → Spend shows an estimate for today and this month, computed on the phone from what OpenAI reports."
+    "text": "Common questions\nThe guide says “the key was refused”. The key was mistyped, deleted, expired, or copied incompletely. Create a new one and paste it again in Settings.\nThe guide says “the account has no credit”. Add credit under Billing in the Anthropic console, or check your ElevenLabs plan’s remaining characters.\nIt is quiet. Most of a drive is quiet on purpose: the guide speaks when something worth a sentence is coming up. Add subjects under Settings → Special interests, or set Chattiness to Often. In a tunnel or a dead zone it picks up again on its own.\nIt stops when I lock the phone. Allow location access “Always” in the iPhone Settings app under Discover, and leave the app running.\nCan I change the voice? Yes. Settings → Voice lists every voice on your ElevenLabs account, the model that reads it, and its stability, similarity and style.\nWhat does it cost me? Settings → Spend shows an estimate for today and this month, computed on the phone from what Anthropic reports and the characters ElevenLabs spoke."
   },
   {
     "objectID": "discover/index.html#your-data",
@@ -291,21 +291,21 @@
     "href": "discover/privacy.html",
     "title": "Discover privacy policy",
     "section": "",
-    "text": "Last updated 5 September 2026.\nDiscover (“the app”) is published by Rodolphe Cambier. It follows your position while you drive and talks about the places you pass. It has no account, no server of its own, no analytics and no advertising. Nothing you do in the app is sent to us."
+    "text": "Last updated 9 September 2026.\nDiscover (“the app”) is published by Rodolphe Cambier. It follows your position while you drive and talks about the places you pass. It has no account, no server of its own, no analytics and no advertising. Nothing you do in the app is sent to us."
   },
   {
     "objectID": "discover/privacy.html#what-leaves-your-phone-and-where-it-goes",
     "href": "discover/privacy.html#what-leaves-your-phone-and-where-it-goes",
     "title": "Discover privacy policy",
     "section": "What leaves your phone, and where it goes",
-    "text": "What leaves your phone, and where it goes\n\n\n\n\n\n\n\n\nData\nSent to\nWhy\n\n\n\n\nYour position (coordinates)\nApple (reverse geocoding), Wikipedia and Wikivoyage (Wikimedia Foundation)\nTo name the town you are in and find the places around you.\n\n\nWhere you are, in words: town, region, country, direction and speed. Names and short descriptions of nearby places.\nOpenAI\nSo the guide knows what to talk about. Exact coordinates are sent only when the town cannot be named.\n\n\nYour voice, while the talk button is held and for a few seconds after the guide finishes speaking\nOpenAI\nTo answer your question. The app does not record or store audio.\n\n\nYour OpenAI key\nOpenAI only\nTo pay for the voice with your own OpenAI account.\n\n\n\nOpenAI processes this data under its own privacy policy and API data usage policies. Wikimedia’s policy is here. Apple’s map and geocoding services are covered by Apple’s privacy policy."
+    "text": "What leaves your phone, and where it goes\n\n\n\n\n\n\n\n\nData\nSent to\nWhy\n\n\n\n\nYour position (coordinates)\nApple (reverse geocoding), Wikipedia and Wikivoyage (Wikimedia Foundation)\nTo name the town you are in and find the places around you.\n\n\nWhere you are, in words: town, region, country, direction and speed. Names and short descriptions of nearby places.\nAnthropic\nSo the guide knows what to talk about. Exact coordinates are sent only when the town cannot be named.\n\n\nYour questions, as text\nAnthropic\nTo answer them. Your voice is turned into text on the phone by Apple’s speech recognition (on the phone where the language allows it, else by Apple’s servers). The app does not record or store audio.\n\n\nThe words the guide says\nElevenLabs\nTo turn them into speech.\n\n\nYour Anthropic key\nAnthropic only\nTo pay for the words with your own account.\n\n\nYour ElevenLabs key\nElevenLabs only\nTo pay for the voice with your own account.\n\n\n\nAnthropic processes this data under its privacy policy and commercial terms; ElevenLabs under its privacy policy. Wikimedia’s policy is here. Apple’s map, geocoding and speech services are covered by Apple’s privacy policy."
   },
   {
     "objectID": "discover/privacy.html#what-stays-on-your-phone",
     "href": "discover/privacy.html#what-stays-on-your-phone",
     "title": "Discover privacy policy",
     "section": "What stays on your phone",
-    "text": "What stays on your phone\n\nYour OpenAI key, in the iPhone Keychain. The app shows only its last four characters after you save it.\nYour settings: special interests, narrator, language, pace, chattiness, voice model.\nAn estimate of what each day of driving cost, computed from the token counts OpenAI reports. Kept for 31 days.\n\nDeleting the app deletes all of it."
+    "text": "What stays on your phone\n\nYour Anthropic and ElevenLabs keys, in the iPhone Keychain. The app shows only the last four characters of each after you save it.\nYour settings: special interests, manner, voice, language, pace, chattiness, models.\nAn estimate of what each day of driving cost, computed from the token counts Anthropic reports and the characters ElevenLabs spoke. Kept for 31 days.\n\nDeleting the app deletes all of it."
   },
   {
     "objectID": "discover/privacy.html#location-in-the-background",

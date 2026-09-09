@@ -161,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><em>Last updated 5 September 2026.</em></p>
+<p><em>Last updated 9 September 2026.</em></p>
 <p>Discover (“the app”) is published by Rodolphe Cambier. It follows your position while you drive and talks about the places you pass. It has no account, no server of its own, no analytics and no advertising. Nothing you do in the app is sent to us.</p>
 <section id="what-leaves-your-phone-and-where-it-goes" class="level2">
 <h2 class="anchored" data-anchor-id="what-leaves-your-phone-and-where-it-goes">What leaves your phone, and where it goes</h2>
@@ -186,29 +186,39 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 <tr class="even">
 <td>Where you are, in words: town, region, country, direction and speed. Names and short descriptions of nearby places.</td>
-<td>OpenAI</td>
+<td>Anthropic</td>
 <td>So the guide knows what to talk about. Exact coordinates are sent only when the town cannot be named.</td>
 </tr>
 <tr class="odd">
-<td>Your voice, while the talk button is held and for a few seconds after the guide finishes speaking</td>
-<td>OpenAI</td>
-<td>To answer your question. The app does not record or store audio.</td>
+<td>Your questions, as text</td>
+<td>Anthropic</td>
+<td>To answer them. Your voice is turned into text on the phone by Apple’s speech recognition (on the phone where the language allows it, else by Apple’s servers). The app does not record or store audio.</td>
 </tr>
 <tr class="even">
-<td>Your OpenAI key</td>
-<td>OpenAI only</td>
-<td>To pay for the voice with your own OpenAI account.</td>
+<td>The words the guide says</td>
+<td>ElevenLabs</td>
+<td>To turn them into speech.</td>
+</tr>
+<tr class="odd">
+<td>Your Anthropic key</td>
+<td>Anthropic only</td>
+<td>To pay for the words with your own account.</td>
+</tr>
+<tr class="even">
+<td>Your ElevenLabs key</td>
+<td>ElevenLabs only</td>
+<td>To pay for the voice with your own account.</td>
 </tr>
 </tbody>
 </table>
-<p>OpenAI processes this data under its own <a href="https://openai.com/policies/privacy-policy">privacy policy</a> and <a href="https://openai.com/policies/api-data-usage-policies">API data usage policies</a>. Wikimedia’s policy is <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">here</a>. Apple’s map and geocoding services are covered by Apple’s <a href="https://www.apple.com/legal/privacy/">privacy policy</a>.</p>
+<p>Anthropic processes this data under its <a href="https://www.anthropic.com/legal/privacy">privacy policy</a> and <a href="https://www.anthropic.com/legal/commercial-terms">commercial terms</a>; ElevenLabs under its <a href="https://elevenlabs.io/privacy-policy">privacy policy</a>. Wikimedia’s policy is <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">here</a>. Apple’s map, geocoding and speech services are covered by Apple’s <a href="https://www.apple.com/legal/privacy/">privacy policy</a>.</p>
 </section>
 <section id="what-stays-on-your-phone" class="level2">
 <h2 class="anchored" data-anchor-id="what-stays-on-your-phone">What stays on your phone</h2>
 <ul>
-<li>Your OpenAI key, in the iPhone Keychain. The app shows only its last four characters after you save it.</li>
-<li>Your settings: special interests, narrator, language, pace, chattiness, voice model.</li>
-<li>An estimate of what each day of driving cost, computed from the token counts OpenAI reports. Kept for 31 days.</li>
+<li>Your Anthropic and ElevenLabs keys, in the iPhone Keychain. The app shows only the last four characters of each after you save it.</li>
+<li>Your settings: special interests, manner, voice, language, pace, chattiness, models.</li>
+<li>An estimate of what each day of driving cost, computed from the token counts Anthropic reports and the characters ElevenLabs spoke. Kept for 31 days.</li>
 </ul>
 <p>Deleting the app deletes all of it.</p>
 </section>
