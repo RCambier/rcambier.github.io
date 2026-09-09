@@ -23,34 +23,44 @@ the rest of the time. Hold the button to ask it anything.
 - **Your interests, your narrator, your language.** Add subjects you care about and it points out places a
   general guide would drive past. Three narrators, seven languages, your choice of how often it speaks.
 
-## It needs an OpenAI key
+## It needs two keys
 
-The voice runs on OpenAI, and you pay OpenAI directly for what you use: about $0.20 to $0.40 for an hour of
-driving. The app itself is free and has no account, no server and no subscription. To connect it:
+The words come from Claude, by Anthropic, and the voice from ElevenLabs. You pay each of them directly for
+what you use: about $0.30 an hour of driving for the words, and an ElevenLabs plan for the voice (the free
+plan gives about ten minutes of speech a month; Starter, $5, about thirty; Creator, $22, about two hours).
+Your questions are turned into text on the phone itself. The app is free and has no account, no server
+and no subscription. To connect it:
 
-1. Create a free account at [platform.openai.com](https://platform.openai.com/signup). This is OpenAI's
-   developer site, separate from ChatGPT.
-2. Add some credit under [Billing](https://platform.openai.com/settings/organization/billing/overview).
-   $10 lasts many hours. It is prepaid: when it runs out the guide goes quiet and nothing more is charged.
-3. Create a key under [API keys](https://platform.openai.com/api-keys) and copy it.
-4. Open Discover and paste it. The app checks the key with OpenAI and tells you if it works.
+1. Create a free account at [console.anthropic.com](https://console.anthropic.com/login). This is
+   Anthropic's developer console, separate from the Claude app.
+2. Add some credit under [Billing](https://console.anthropic.com/settings/billing). $5 lasts many hours.
+   It is prepaid: when it runs out the guide goes quiet and nothing more is charged.
+3. Create a key under [API keys](https://console.anthropic.com/settings/keys) and copy it.
+4. Create an account at [elevenlabs.io](https://elevenlabs.io/app/sign-up), pick a plan under
+   [Subscription](https://elevenlabs.io/app/subscription), and create a key under
+   [API keys](https://elevenlabs.io/app/settings/api-keys).
+5. Open Discover and paste each key into its card. The app checks each key and tells you if it works.
 
 ## Common questions
 
-**The guide says "OpenAI refused the key".** The key was mistyped, deleted, or copied incompletely. Create a
-new one and paste it again in Settings.
+**The guide says "the key was refused".** The key was mistyped, deleted, expired, or copied incompletely.
+Create a new one and paste it again in Settings.
 
-**The guide says "your OpenAI account has no credit".** Add credit under Billing on platform.openai.com.
+**The guide says "the account has no credit".** Add credit under Billing in the Anthropic console, or
+check your ElevenLabs plan's remaining characters.
 
 **It is quiet.** Most of a drive is quiet on purpose: the guide speaks when something worth a sentence is
 coming up. Add subjects under Settings → Special interests, or set Chattiness to Often. In a tunnel or a dead
-zone it reconnects on its own.
+zone it picks up again on its own.
 
 **It stops when I lock the phone.** Allow location access "Always" in the iPhone Settings app under Discover,
 and leave the app running.
 
+**Can I change the voice?** Yes. Settings → Voice lists every voice on your ElevenLabs account, the model
+that reads it, and its stability, similarity and style.
+
 **What does it cost me?** Settings → Spend shows an estimate for today and this month, computed on the phone
-from what OpenAI reports.
+from what Anthropic reports and the characters ElevenLabs spoke.
 
 ## Your data
 
