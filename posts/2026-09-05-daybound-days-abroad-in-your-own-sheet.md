@@ -40,5 +40,5 @@ Your history is a normal Google Sheet in your Drive. Send it to a lawyer, back i
 app: the rows stay. There is exactly one manual button, "Correct this day", and it asks why. The
 reason goes in the sheet next to the day.
 
-It is free on the App Store, no subscription, no account with me. Every screen works with demo
+It is free on the [App Store](https://apps.apple.com/app/daybound-days-abroad-tracker/id6808946479), no subscription, no account with me. Every screen works with demo
 data before you sign in. It is not legal or tax advice.

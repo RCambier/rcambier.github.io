@@ -10,6 +10,8 @@ Daybound is an iPhone app for people who live under day limits: UK settlement (I
 absence rules, Schengen 90/180, tax residence tests, US Substantial Presence. It records the country you
 sleep in each night, automatically, and keeps everything in a Google Sheet that belongs to you.
 
+[**Download Daybound on the App Store**](https://apps.apple.com/app/daybound-days-abroad-tracker/id6808946479) (free, iPhone).
+
 ## What it does
 
 - **Tracks by itself.** With "Always" location access, iOS wakes the app when you move; the app keeps the
