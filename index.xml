@@ -42,7 +42,7 @@
 <p>Every night it records the country you sleep in, without you opening it. The next morning it writes one row to your sheet: the date, the country, and a place for evidence like a flight number.</p>
 <p>Then it counts, and every rule counts differently. UK settlement only counts whole days away, so the day you leave and the day you come back do not count. Schengen counts any part of a day. Tax residence looks at where you are at midnight. Open a day and it tells you which rules it counts for and why. The settlement screen tells you the earliest day you can apply. That is how I found out I had broken the 180-day rule in 2023 without noticing.</p>
 <p>Your history is a normal Google Sheet in your Drive. Send it to a lawyer, back it up, delete the app: the rows stay. There is exactly one manual button, “Correct this day”, and it asks why. The reason goes in the sheet next to the day.</p>
-<p>It is free on the App Store, no subscription, no account with me. Every screen works with demo data before you sign in. It is not legal or tax advice.</p>
+<p>It is free on the <a href="https://apps.apple.com/app/daybound-days-abroad-tracker/id6808946479">App Store</a>, no subscription, no account with me. Every screen works with demo data before you sign in. It is not legal or tax advice.</p>
 
 
 
