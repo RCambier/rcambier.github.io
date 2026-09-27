@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-09-27">
-<meta name="description" content="An MCP layer that lets Claude or ChatGPT check a local business’s free times and book it. It starts with barbers and hairdressers in Hackney Wick.">
+<meta name="description" content="One MCP server and one open API that let Claude, ChatGPT or any app check a local business’s free times and book it. It starts with barbers and hairdressers in Hackney Wick.">
 
-<title>AI Barber Booking, an MCP layer for local services – Rcambier’s Blog</title>
+<title>AI Services Booking, one MCP for local services – Rcambier’s Blog</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -114,14 +114,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="AI Barber Booking, an MCP layer for local services – Rcambier’s Blog">
-<meta property="og:description" content="An MCP layer that lets Claude or ChatGPT check a local business’s free times and book it. It starts with barbers and hairdressers in Hackney Wick.">
+<meta property="og:title" content="AI Services Booking, one MCP for local services – Rcambier’s Blog">
+<meta property="og:description" content="One MCP server and one open API that let Claude, ChatGPT or any app check a local business’s free times and book it. It starts with barbers and hairdressers in Hackney Wick.">
 <meta property="og:image" content="https://rcambier.github.io/posts/ai-barber-booking-banner.png">
 <meta property="og:site_name" content="Rcambier’s Blog">
 <meta property="og:image:height" content="1000">
 <meta property="og:image:width" content="1600">
-<meta name="twitter:title" content="AI Barber Booking, an MCP layer for local services – Rcambier’s Blog">
-<meta name="twitter:description" content="An MCP layer that lets Claude or ChatGPT check a local business’s free times and book it. It starts with barbers and hairdressers in Hackney Wick.">
+<meta name="twitter:title" content="AI Services Booking, one MCP for local services – Rcambier’s Blog">
+<meta name="twitter:description" content="One MCP server and one open API that let Claude, ChatGPT or any app check a local business’s free times and book it. It starts with barbers and hairdressers in Hackney Wick.">
 <meta name="twitter:image" content="https://rcambier.github.io/posts/ai-barber-booking-banner.png">
 <meta name="twitter:image-height" content="1000">
 <meta name="twitter:image-width" content="1600">
@@ -179,11 +179,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">AI Barber Booking, an MCP layer for local services</h1>
+      <h1 class="title">AI Services Booking, one MCP for local services</h1>
             <p class="subtitle lead">a booking layer for AI assistants, starting with hairdressers</p>
                   <div>
         <div class="description">
-          An MCP layer that lets Claude or ChatGPT check a local business’s free times and book it. It starts with barbers and hairdressers in Hackney Wick.
+          One MCP server and one open API that let Claude, ChatGPT or any app check a local business’s free times and book it. It starts with barbers and hairdressers in Hackney Wick.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -218,14 +218,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p><a href="https://ai-barber-booking.vercel.app/"><strong>AI Barber Booking</strong></a> started with a simple question: can I ask Claude to book me a haircut? Not really. It finds the barber, gives me a link, and that is it. It cannot see when they are free, and it cannot book. Same for the physio, the dog groomer and most local services.</p>
-<p>So the idea is one MCP layer that makes most of these services bookable by AI. They all look the same underneath: a menu with prices and durations, people, opening hours, a diary. I am starting with hairdressers and barbers, because a haircut is the easiest thing to ask your phone for.</p>
+<p><strong>AI Services Booking</strong> started with a simple question: can I ask Claude to book me a haircut? Not really. It finds the barber, gives me a link, and that is it. It cannot see when they are free, and it cannot book. Same for the physio, the dog groomer and most local services.</p>
+<p>So the idea is one MCP for all of them, not one per trade. They all look the same underneath: a menu with prices and durations, people, opening hours, a diary. I am starting with hairdressers and barbers, because a haircut is the easiest thing to ask your phone for.</p>
 <p><img src="ai-barber-booking-demo.png" class="shot img-fluid"></p>
-<p>The MCP server gives an assistant what it needs: find a shop, read the menu, check free times, hold a slot while you say yes, then book, move or cancel. I made up a salon, Atelier Nord, gave Claude one sentence, and it booked me a skin fade. A second Claude found a bug on its first try, which I suppose is the point.</p>
-<p>Then I checked 17 barbers and salons around Hackney Wick. None of them can be booked by an AI yet. Each one gets its own page showing the same client asking the same phone twice: once the booking goes next door, once it lands in their diary.</p>
+<p>The MCP server gives an assistant what it needs: find a business, read the menu, check free times, hold a slot while you say yes, then book, move or cancel. The same operations are also a plain open API, for anything that does not speak MCP yet, like a ChatGPT action or a small script. I made up a salon, Atelier Nord, gave Claude one sentence, and it booked me a skin fade. A second Claude found a bug on its first try, which I suppose is the point.</p>
+<p>Then I checked 17 barbers and salons around Hackney Wick. None of them can be booked by an AI yet. They get a pitch site, <a href="https://ai-barber-booking.vercel.app/">AI Barber Booking</a>, and each one gets its own page showing the same client asking the same phone twice: once the booking goes next door, once it lands in their diary.</p>
 <p>Next is setup in a few minutes, for any shop on any booking tool. Then the next trade.</p>
 <p>Try it with Claude Code:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> mcp add <span class="at">--transport</span> http ai-barber-booking https://ai-barber-booking.vercel.app/api/mcp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">claude</span> mcp add <span class="at">--transport</span> http ai-services-booking https://ai-services-booking.vercel.app/api/mcp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Or without MCP (<a href="https://ai-services-booking.vercel.app/api/v1/openapi.json">all endpoints</a>):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">curl</span> <span class="st">"https://ai-services-booking.vercel.app/api/v1/businesses?query=skin+fade"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 
