@@ -17,7 +17,7 @@
 <generator>quarto-1.10.18</generator>
 <lastBuildDate>Sat, 26 Sep 2026 23:00:00 GMT</lastBuildDate>
 <item>
-  <title>AI Barber Booking, so your assistant can book the barber</title>
+  <title>AI Barber Booking, an MCP layer for local services</title>
   <link>https://rcambier.github.io/posts/2026-09-27-ai-barber-booking.html</link>
   <description><![CDATA[ 
 
@@ -25,11 +25,12 @@
 
 
 
-<p><a href="https://ai-barber-booking.vercel.app/"><strong>AI Barber Booking</strong></a> started with a simple question: can I ask Claude to book me a haircut? Today, mostly no. An assistant can find a barber and give you a link. It cannot see when the barber is free, and it cannot book.</p>
+<p><a href="https://ai-barber-booking.vercel.app/"><strong>AI Barber Booking</strong></a> started with a simple question: can I ask Claude to book me a haircut? Today, mostly no. An assistant can find a barber and give you a link. It cannot see when the barber is free, and it cannot book. The same is true for the physio, the dog groomer, the nail salon and most other local services.</p>
+<p>The goal is one MCP layer that makes most of these services bookable by AI assistants. The booking model is the same everywhere: services with a duration and a price, people who do them, opening hours and a diary. I start with hairdressers and barbers because there are many of them, they already live in booking tools, and a haircut is the easiest thing to ask a phone for.</p>
 <p>So I built the missing piece: an MCP server with the tools an assistant needs. It can search shops, read the menu and prices, check free times, hold a slot for ten minutes while you say yes, then confirm, move or cancel the booking. To test it end to end I made up a salon, Atelier Nord, and gave Claude one sentence: “Book me a skin fade near Hackney Wick on Tuesday afternoon.” It booked it. The first real test also found a bug: the hold lived in one server’s memory, and the confirm reached another server. Holds and bookings now live in Postgres, and the database refuses two bookings for the same barber at the same time.</p>
 <p><img src="https://rcambier.github.io/posts/ai-barber-booking-demo.png" class="shot img-fluid"></p>
 <p>Then the other half: the shops. I checked the public pages of 17 barbers and salons around Hackney Wick and East Village. Most take bookings online on Fresha or Treatwell. None of them can be booked by an AI assistant. The site is one page for them, with the same client asking the same phone twice: without us, the booking goes next door; with us, it lands in their diary. Each shop gets its own version of the page, with its name and what we already found about it.</p>
-<p>Next is making setup take minutes: read the shop’s services from its booking page, and use calendar links, which every booking tool shares, so assistants only offer times that are really free.</p>
+<p>Next is making setup take minutes for any business: read its services from its booking page, and use calendar links, which every booking tool shares, so assistants only offer times that are really free. Then the next trade after hair.</p>
 <p>Try it with Claude Code:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
 background-color: null;
