@@ -8,7 +8,7 @@ subtitle: it talks about what you are driving past
 layout: post
 published: true
 title: Discover, a road trip narrator
-description: "A guide that talks while you drive: the castle ahead, the village on your left, what happened here. Runs on your own OpenAI key."
+description: "A guide that talks while you drive: the castle ahead, the village on your left, what happened here. Claude writes the words and ElevenLabs speaks them, on your own keys."
 image: discover-banner.png
 ---
 
@@ -32,6 +32,9 @@ tells you which side to look. If you want to know more, hold the button and ask.
 You can tell it what you like in the settings. Say "railways" and it will happily talk about a
 small station everybody else drives past in silence.
 
-It runs on your own OpenAI key, which stays on the phone. An hour of driving costs about 20 to 40
-cents. There is a web version and an iPhone version. The screenshots are from the iPhone one, on
+The words come from Claude, by Anthropic, and the voice from ElevenLabs. It runs on your own key
+for each, and both stay on the phone. An hour of driving costs about 30 cents for the words, plus an
+ElevenLabs plan for the voice (the free one gives about ten minutes of speech a month). You can pick
+any voice on your ElevenLabs account. The [app page](../discover/index.qmd) shows how to get both
+keys. There is a web version and an iPhone version. The screenshots are from the iPhone one, on
 the road near the Pont du Gard.
