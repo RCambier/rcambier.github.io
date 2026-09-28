@@ -33,7 +33,23 @@ They get a pitch site, [AI Barber Booking](https://ai-barber-booking.vercel.app/
 its own page showing the same client asking the same phone twice: once the booking goes next door,
 once it lands in their diary.
 
-Next is setup in a few minutes, for any shop on any booking tool. Then the next trade.
+Setup is now self-serve. A shop pastes the link to its public booking page, on Fresha, Treatwell,
+Booksy, Square or its own site, and Claude reads it in under a minute: services, prices, durations,
+team, opening hours. The owner unticks what they don't want booked and confirms. That is the whole
+form.
+
+Booking tools rarely let anyone write into them, but they all speak calendar links. So the sync
+goes through iCal, both ways: the shop's calendar blocks our free times, and our bookings land in
+their diary as busy time. I tested it with a fake salon on Fresha and on Treatwell. Fresha works
+both ways. Treatwell only imports, per team member, so a Treatwell-only shop cannot block our slots
+yet.
+
+Each shop gets its own dashboard at a private link, with its calendar, bookings, services and
+connections. On my side, a sales funnel shows how far each pitch page got, from viewed to live. And
+there is a [developer site](https://ai-booking-developers.vercel.app/) with a quickstart for
+Claude, ChatGPT and plain HTTP.
+
+Next is the first real shop. Then the next trade.
 
 Try it with Claude Code:
 
