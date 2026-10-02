@@ -13,6 +13,12 @@ image: claude-sport-banner.png
 resources:
  - claude-sport-mascot.mp4
  - claude-sport-mascot.png
+ - bounce-running.gif
+ - bounce-cycling.gif
+ - bounce-tennis.gif
+ - bounce-football.gif
+ - bounce-plugging.gif
+ - bounce-thinking.gif
 ---
 
 **Claude Sport** is an iPhone app I am building. The idea is that it knows the whole context: the
@@ -24,6 +30,20 @@ From that, it suggests only the next one to three things to do.
 </video>
 
 A small round mascot does the sports. Claude does the thinking.
+
+::: {.mascot-gifs layout-ncol=3}
+![](bounce-running.gif)
+
+![](bounce-cycling.gif)
+
+![](bounce-tennis.gif)
+
+![](bounce-football.gif)
+
+![](bounce-plugging.gif)
+
+![](bounce-thinking.gif)
+:::
 
 No forms. I just tell it, by voice or in a sentence: "the knee is fine again", "I want to run with
 friends when it is sunny".
