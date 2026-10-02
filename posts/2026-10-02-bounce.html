@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Computer science notes, usually in Python: Cython, multiprocessing, background jobs, and other things I had to understand properly.">
+<meta name="dcterms.date" content="2026-10-02">
+<meta name="description" content="An iPhone app I am building that learns my sports history, my goals in my own words, my injuries and how I recover, then suggests only the next one to three things to do.">
 
-<title>Computer Science, usually Python – Rcambier’s Blog</title>
+<title>Bounce, what to do next – Rcambier’s Blog</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -30,26 +31,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,86 +76,32 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Computer Science, usually Python – Rcambier’s Blog">
-<meta property="og:description" content="Computer science notes, usually in Python: Cython, multiprocessing, background jobs, and other things I had to understand properly.">
-<meta property="og:image" content="https://rcambier.github.io/profile.jpg">
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Bounce, what to do next – Rcambier’s Blog">
+<meta property="og:description" content="An iPhone app I am building that learns my sports history, my goals in my own words, my injuries and how I recover, then suggests only the next one to three things to do.">
+<meta property="og:image" content="https://rcambier.github.io/posts/bounce-banner.png">
 <meta property="og:site_name" content="Rcambier’s Blog">
-<meta name="twitter:title" content="Computer Science, usually Python – Rcambier’s Blog">
-<meta name="twitter:description" content="Computer science notes, usually in Python: Cython, multiprocessing, background jobs, and other things I had to understand properly.">
-<meta name="twitter:image" content="https://rcambier.github.io/profile.jpg">
+<meta property="og:image:height" content="1000">
+<meta property="og:image:width" content="1600">
+<meta name="twitter:title" content="Bounce, what to do next – Rcambier’s Blog">
+<meta name="twitter:description" content="An iPhone app I am building that learns my sports history, my goals in my own words, my injuries and how I recover, then suggests only the next one to three things to do.">
+<meta name="twitter:image" content="https://rcambier.github.io/posts/bounce-banner.png">
+<meta name="twitter:image-height" content="1000">
+<meta name="twitter:image-width" content="1600">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://rcambier.github.io/computer_science.html">
+<link rel="canonical" href="https://rcambier.github.io/posts/2026-10-02-bounce.html">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Rcambier’s Blog</span>
     </a>
   </div>
@@ -167,25 +112,25 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./artificial_intelligence.html"> 
+    <a class="nav-link" href="../artificial_intelligence.html"> 
 <span class="menu-text">Artificial Intelligence</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./computer_science.html" aria-current="page"> 
+    <a class="nav-link" href="../computer_science.html"> 
 <span class="menu-text">Computer Science</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./riddles.html"> 
+    <a class="nav-link" href="../riddles.html"> 
 <span class="menu-text">Riddles</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
+    <a class="nav-link" href="../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -198,133 +143,107 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
-      <h1 class="title">Computer Science, usually Python</h1>
+    <div class="quarto-title column-body">
+      <h1 class="title">Bounce, what to do next</h1>
+            <p class="subtitle lead">an iPhone sports app that knows the whole context</p>
                   <div>
         <div class="description">
-          Computer science notes, usually in Python: Cython, multiprocessing, background jobs, and other things I had to understand properly.
+          An iPhone app I am building that learns my sports history, my goals in my own words, my injuries and how I recover, then suggests only the next one to three things to do.
         </div>
       </div>
-                </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">project</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta">
 
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">October 2, 2026</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p><strong>Bounce</strong> is an iPhone app I am building. Most sports apps want a form first, then a plan picked from a menu, and then they follow the plan whatever happens. I wanted the opposite: an app that already knows the whole context. The sports I did over the years, what I want now in my own words, my injuries and how they healed. From that, it only tells me the next one to three things to do.</p>
+<video autoplay="" loop="" muted="" playsinline="" poster="bounce-mascot.png" aria-label="The Bounce mascot cycling, playing tennis, running, juggling a football, skipping rope, lifting weights and doing yoga" style="display: block; width: 100%; max-width: 400px; margin: 1.5rem auto; border-radius: 16px;">
+<source src="bounce-mascot.mp4" type="video/mp4">
+</video>
+<p>A small round mascot does the sports. Claude does the thinking.</p>
+<div class="mascot-gifs quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="bounce-running.gif" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="bounce-cycling.gif" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="bounce-tennis.gif" class="img-fluid"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="bounce-football.gif" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="bounce-plugging.gif" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="bounce-thinking.gif" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>There is one input bar, and no forms. I type or talk to it: “I feel a bit sick since Sunday”, “the knee is fine again”, “I want to run with friends when it is sunny”. I can also add a photo, a scan of a doctor’s letter, or a file. Voice is transcribed on the phone, so the audio never leaves it.</p>
+<div class="phone-shots quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="bounce-today.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="bounce-up-next.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>The Today screen is the mascot, one sentence, my goals, and the next sessions. They land in free slots of my calendar, when the weather is good for outside, and at real places: the gym I pay for, the club, the park where I usually run. Each card shows the shape of the session, and one tap sends it to the Apple Watch or the calendar.</p>
+<p>Every morning it compares my heart rate variability, resting heart rate and sleep with my own normal, not with an average person, and says if today is for going hard or going easy. When something hurts, it asks one question a day, “How’s your right shoulder today?”, from 0 to 10. When I say I am sick, it shows up in my health as “probably a cold”, and the plan stays easy until I say I am better.</p>
+<p>When it is not sure, it asks instead of guessing: “In June 2024 you had an ankle X-ray. What happened?” I answer in a sentence, or point it to the report. It only opens a report attached to an email when I tap.</p>
+<div class="phone-shots quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="bounce-trends.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="bounce-training.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>The You tab has my trends, with gaps shown as gaps and the device each line comes from. Below that, what it learned about me as short facts, each with where it comes from, and my injuries and illnesses with their dates and how far along the recovery is.</p>
+<p>It reads from many places. Apple Health, and through it the watch, Garmin, WHOOP or Oura. Strava. Gmail and Google Calendar, where it finds the gym I pay for, the races I entered, and the physio visits around an old injury. The iPhone calendar, the weather, my everyday movement, the music I play on runs, and my photos, where it spots the sports in old pictures. Tap any source to see what it reads, why, and what Claude gets. Turn it off and everything it gave is forgotten.</p>
+<p>The data stays on the phone, in one file and in the phone’s own backup. To think, it sends a written summary to Claude, through a small relay that keeps and logs nothing. No exact location, no email addresses, no photos. One screen shows the whole path after each read: what was read, what is kept, the exact text that was sent, and what came back.</p>
+<p>It is in early testing on TestFlight, and for now I am the only tester.</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="cHJvZ3JhbW1pbmclMkNzeXN0ZW0=" data-listing-date-sort="1651186800000" data-listing-file-modified-sort="1786377907559" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="237">
-<div class="thumbnail"><a href="./posts/2022-04-29-background-jobs.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2022-04-29-background-jobs.html" class="no-external">Easy way to queue a job in the terminal</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2022-04-29-background-jobs.html" class="no-external">
-<p>How to use background jobs to quickly queue a job after a running command</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2022-04-29-background-jobs.html" class="no-external">
-<div class="listing-date">
-Apr 29, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="cHJvZ3JhbW1pbmc=" data-listing-date-sort="1648767600000" data-listing-file-modified-sort="1786377907559" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="553">
-<div class="thumbnail"><a href="./posts/2022-04-01-multiprocessing.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2022-04-01-multiprocessing.html" class="no-external">Python multiprocessing with loading bar</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2022-04-01-multiprocessing.html" class="no-external">
-<p>Create a nice multiprocessing logic with a loading bar</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2022-04-01-multiprocessing.html" class="no-external">
-<div class="listing-date">
-Apr 1, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="cHJvZ3JhbW1pbmc=" data-listing-date-sort="1634252400000" data-listing-file-modified-sort="1786377907559" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="140">
-<div class="thumbnail"><a href="./posts/2021-10-15-cython.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-10-15-cython.html" class="no-external">Cython for fast python</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2021-10-15-cython.html" class="no-external">
-<p>Trying out cython</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-10-15-cython.html" class="no-external">
-<div class="listing-date">
-Oct 15, 2021
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="cHJvZ3JhbW1pbmclMkNhaQ==" data-listing-date-sort="1632697200000" data-listing-file-modified-sort="1786377907558" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1055">
-<div class="thumbnail"><a href="./posts/2021-09-27-bayesian-seattle.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="posts/2021-09-27-bayesian-seattle_files/figure-html/cell-2-output-7.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/2021-09-27-bayesian-seattle.html" class="no-external">Bayesian riddle</a>
-</h3>
-<div class="delink listing-description"><a href="./posts/2021-09-27-bayesian-seattle.html" class="no-external">
-<p>The typical bayesian interview question, solved with PyMC3</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/2021-09-27-bayesian-seattle.html" class="no-external">
-<div class="listing-date">
-Sep 27, 2021
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

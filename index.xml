@@ -15,7 +15,82 @@
 <link>https://rcambier.github.io/</link>
 </image>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Sat, 26 Sep 2026 23:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 01 Oct 2026 23:00:00 GMT</lastBuildDate>
+<item>
+  <title>Bounce, what to do next</title>
+  <link>https://rcambier.github.io/posts/2026-10-02-bounce.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><strong>Bounce</strong> is an iPhone app I am building. Most sports apps want a form first, then a plan picked from a menu, and then they follow the plan whatever happens. I wanted the opposite: an app that already knows the whole context. The sports I did over the years, what I want now in my own words, my injuries and how they healed. From that, it only tells me the next one to three things to do.</p>
+<video autoplay="" loop="" muted="" playsinline="" poster="bounce-mascot.png" aria-label="The Bounce mascot cycling, playing tennis, running, juggling a football, skipping rope, lifting weights and doing yoga" style="display: block; width: 100%; max-width: 400px; margin: 1.5rem auto; border-radius: 16px;">
+<source src="bounce-mascot.mp4" type="video/mp4">
+</video>
+<p>A small round mascot does the sports. Claude does the thinking.</p>
+<div class="mascot-gifs quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="https://rcambier.github.io/posts/bounce-running.gif" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="https://rcambier.github.io/posts/bounce-cycling.gif" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="https://rcambier.github.io/posts/bounce-tennis.gif" class="img-fluid"></p>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="https://rcambier.github.io/posts/bounce-football.gif" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="https://rcambier.github.io/posts/bounce-plugging.gif" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
+<p><img src="https://rcambier.github.io/posts/bounce-thinking.gif" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>There is one input bar, and no forms. I type or talk to it: “I feel a bit sick since Sunday”, “the knee is fine again”, “I want to run with friends when it is sunny”. I can also add a photo, a scan of a doctor’s letter, or a file. Voice is transcribed on the phone, so the audio never leaves it.</p>
+<div class="phone-shots quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://rcambier.github.io/posts/bounce-today.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://rcambier.github.io/posts/bounce-up-next.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>The Today screen is the mascot, one sentence, my goals, and the next sessions. They land in free slots of my calendar, when the weather is good for outside, and at real places: the gym I pay for, the club, the park where I usually run. Each card shows the shape of the session, and one tap sends it to the Apple Watch or the calendar.</p>
+<p>Every morning it compares my heart rate variability, resting heart rate and sleep with my own normal, not with an average person, and says if today is for going hard or going easy. When something hurts, it asks one question a day, “How’s your right shoulder today?”, from 0 to 10. When I say I am sick, it shows up in my health as “probably a cold”, and the plan stays easy until I say I am better.</p>
+<p>When it is not sure, it asks instead of guessing: “In June 2024 you had an ankle X-ray. What happened?” I answer in a sentence, or point it to the report. It only opens a report attached to an email when I tap.</p>
+<div class="phone-shots quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://rcambier.github.io/posts/bounce-trends.png" class="img-fluid"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="https://rcambier.github.io/posts/bounce-training.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+<p>The You tab has my trends, with gaps shown as gaps and the device each line comes from. Below that, what it learned about me as short facts, each with where it comes from, and my injuries and illnesses with their dates and how far along the recovery is.</p>
+<p>It reads from many places. Apple Health, and through it the watch, Garmin, WHOOP or Oura. Strava. Gmail and Google Calendar, where it finds the gym I pay for, the races I entered, and the physio visits around an old injury. The iPhone calendar, the weather, my everyday movement, the music I play on runs, and my photos, where it spots the sports in old pictures. Tap any source to see what it reads, why, and what Claude gets. Turn it off and everything it gave is forgotten.</p>
+<p>The data stays on the phone, in one file and in the phone’s own backup. To think, it sends a written summary to Claude, through a small relay that keeps and logs nothing. No exact location, no email addresses, no photos. One screen shows the whole path after each read: what was read, what is kept, the exact text that was sent, and what came back.</p>
+<p>It is in early testing on TestFlight, and for now I am the only tester.</p>
+
+
+
+ ]]></description>
+  <category>project</category>
+  <guid>https://rcambier.github.io/posts/2026-10-02-bounce.html</guid>
+  <pubDate>Thu, 01 Oct 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://rcambier.github.io/posts/bounce-banner.png" medium="image" type="image/png" height="90" width="144"/>
+</item>
 <item>
   <title>AI Services Booking, one MCP for local services</title>
   <link>https://rcambier.github.io/posts/2026-09-27-ai-barber-booking.html</link>
@@ -12276,296 +12351,6 @@ Sklearn score 0.8187667560321715 0.8537880905786972</code></pre>
   <category>ai</category>
   <guid>https://rcambier.github.io/posts/2021-09-14-linear-regression.html</guid>
   <pubDate>Mon, 13 Sep 2021 23:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Hypothesis testing</title>
-  <link>https://rcambier.github.io/posts/2021-09-13-hypothesis-testing.html</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<section id="hypothesis-testing" class="level1">
-<h1>Hypothesis testing</h1>
-<div id="cell-2" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-10T23:16:33.184655Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-10T23:16:33.184572Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-10T23:16:33.267236Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-10T23:16:33.266886Z&quot;}}" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> scipy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> sp </span>
-<span id="cb1-2"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> np </span></code></pre></div></div>
-</div>
-<section id="a-typical-statement" class="level3">
-<h3 class="anchored" data-anchor-id="a-typical-statement">A typical statement</h3>
-<p>A particular brand of tires claims that its deluxe tire averages at least 50,000 miles before it needs to be replaced. From past studies of this tire, the standard deviation is known to be 8,000. A survey of owners of that tire design is conducted. From the 28 tires surveyed, the mean lifespan was 46,500 miles with a standard deviation of 9,800 miles. Using 𝛼=0.05 , is the data highly inconsistent with the claim?</p>
-<div id="cell-4" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-10T23:16:33.268424Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-10T23:16:33.268344Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-10T23:16:33.270633Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-10T23:16:33.270279Z&quot;}}" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># What we know of the population</span></span>
-<span id="cb2-2">claim_pop_mean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">50_000</span></span>
-<span id="cb2-3">pop_std <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8000</span></span>
-<span id="cb2-4"></span>
-<span id="cb2-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># What we know of the sample</span></span>
-<span id="cb2-6">n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">28</span></span>
-<span id="cb2-7">sample_mean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">46_500</span></span>
-<span id="cb2-8">sample_std <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">9800</span></span>
-<span id="cb2-9"></span>
-<span id="cb2-10"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># The chances of Type 1 error we are ready to accept</span></span>
-<span id="cb2-11">alpha <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.05</span></span></code></pre></div></div>
-</div>
-<p>The question can be formulated as: - “Compared to the mean of that population (50_000), how crazy is the sample mean (46_500) ? With an alpha of 0.05”</p>
-<p>which becomes - “Using the sample deviation of the mean of that population, how far is the sample mean ? With an alpha of 0.05”</p>
-<p>which becomes - “Is the sample mean further away than 1.64 times the standard error of that population ?”</p>
-<div id="cell-6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-10T23:16:33.271544Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-10T23:16:33.271486Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-10T23:16:33.273060Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-10T23:16:33.272790Z&quot;}}" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># 1. How far is the sample_mean from the pop_mean ?</span></span>
-<span id="cb3-2"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># H0 =&gt; pop_mean &gt;= 50_000</span></span>
-<span id="cb3-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># H1 =&gt; pop_mean &lt; 50_000</span></span>
-<span id="cb3-4"></span>
-<span id="cb3-5">population_standard_error <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">8000</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> np.sqrt(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">28</span>) <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># "If you grab a random sample mean, how is it going to variate"</span></span>
-<span id="cb3-6">how_far_we_are_from_pop_mean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">46_500</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">50_000</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> population_standard_error <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># How far is this specific sample mean from the population mean. </span></span></code></pre></div></div>
-</div>
-<p>There are different ways to reject the null hypothesis.</p>
-<p>We can look at wether we are smaller or not than 0.05.</p>
-<div id="cell-8" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-10T23:16:33.273846Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-10T23:16:33.273797Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-10T23:16:34.028425Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-10T23:16:34.028129Z&quot;}}" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">how_far_we_are_in_z <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sp.stats.norm.cdf(how_far_we_are_from_pop_mean) </span>
-<span id="cb4-2">how_far_we_are_in_z</span></code></pre></div></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>np.float64(0.010305579572800306)</code></pre>
-</div>
-</div>
-<p>In this case we are at 0.01, which means that in the distribution of sample means, we are so extreme that there is no way that the sample mean we observed actually came from the sample mean distribution that we built looking at the population.</p>
-<p>Another way is to look at how far we go on the axis, not in term of percentage (like 0,05 being 5%) but in term of distance from the population mean. This would look like the following</p>
-<div id="cell-10" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-10T23:16:34.041115Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-10T23:16:34.041000Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-10T23:16:34.043078Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-10T23:16:34.042692Z&quot;}}" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1">how_far_we_are_from_pop_mean</span></code></pre></div></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<pre><code>np.float64(-2.315032397181517)</code></pre>
-</div>
-</div>
-<p>To know if this is a value too extreme or not, we can compare it to how far 0.05 is on the same axis:</p>
-<div id="cell-12" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-10T23:16:34.043965Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-10T23:16:34.043900Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-10T23:16:34.045829Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-10T23:16:34.045540Z&quot;}}" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> sp.stats.norm.ppf(<span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.95</span>)</span></code></pre></div></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>np.float64(-1.644853626951472)</code></pre>
-</div>
-</div>
-</section>
-</section>
-<section id="when-you-dont-have-the-population-standard-deviation" class="level1">
-<h1>When you don’t have the population standard deviation</h1>
-<p>Realistically however, you often don’t have the population standard deviation. In this case, you need to estimate it from the sample.</p>
-<p>Doing that is less accurate. In order to compensate a bit, we need to model the “spread of sample means” a bit differently.</p>
-<p>Since normally we allow the sample mean to only go “so far” from the population mean. We will force it to be “even a bit further”. The way we do this is by using a “heavy tail” distribution for the sample mean. That way, the 0.05 mark will be further to the right or to the left, and we are forced to be a little bit more sure of ourselves before saying anything.</p>
-<p>Let’s use the sample problem as above, but pretend that we don’t know that the population has a standard deviation of 8000. We are forced to use the 9800 that we discovered experimentally.</p>
-<div id="cell-15" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-10T23:16:34.046767Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-10T23:16:34.046722Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-10T23:16:34.049390Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-10T23:16:34.049016Z&quot;}}" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># What we know of the population</span></span>
-<span id="cb10-2">claim_pop_mean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">50_000</span></span>
-<span id="cb10-3"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># --- pop_std = 8000 # we don't know this anymore ---</span></span>
-<span id="cb10-4"></span>
-<span id="cb10-5"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># What we know of the sample</span></span>
-<span id="cb10-6">n <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">28</span></span>
-<span id="cb10-7">sample_mean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">46_500</span></span>
-<span id="cb10-8">sample_std <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">9800</span></span>
-<span id="cb10-9"></span>
-<span id="cb10-10"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># The chances of Type 1 error we are ready to accept</span></span>
-<span id="cb10-11">alpha <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.05</span></span>
-<span id="cb10-12"></span>
-<span id="cb10-13"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># 1. How far is the sample_mean from the pop_mean ?</span></span>
-<span id="cb10-14"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># H0 =&gt; pop_mean &gt;= 50_000</span></span>
-<span id="cb10-15"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># H1 =&gt; pop_mean &lt; 50_000</span></span>
-<span id="cb10-16"></span>
-<span id="cb10-17">population_standard_error <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">9800</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> np.sqrt(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">28</span>) <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># "If you grab a random sample mean, how is it going to variate"</span></span>
-<span id="cb10-18">how_far_we_are_from_pop_mean <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> (<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">46_500</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">50_000</span>) <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> population_standard_error <span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># How far is this specific sample mean from the population mean. </span></span>
-<span id="cb10-19"></span>
-<span id="cb10-20">how_far_we_are_in_z <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sp.stats.t.cdf(how_far_we_are_from_pop_mean, df<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>) </span>
-<span id="cb10-21">how_far_we_are_in_z</span></code></pre></div></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>np.float64(0.03478161702239143)</code></pre>
-</div>
-</div>
-<p>We still reject the null hypothesis. But notice how much less confident we are ! Even if the standard deviation we sample was exactly 8000 (like the population one), we would still be less confident than if we received the standard deviation through a trustful source.</p>
-<p>This is the whole point of this T student distribution !</p>
-</section>
-<section id="confidence-interval" class="level1">
-<h1>Confidence interval</h1>
-<p>Confidence interval are only in the point of view of the sample we just took.</p>
-<p>From that sample, let’s just add a standard error on each side and see how far this goes.</p>
-<div id="cell-19" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-08-10T23:16:34.050287Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-08-10T23:16:34.050237Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-08-10T23:16:34.052560Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-08-10T23:16:34.052230Z&quot;}}" data-outputid="e02f5e88-ea43-4ba6-f7bb-a6623f0aab5f" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1">how_much_we_allow_on_t_distrib <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> sp.stats.t.ppf(<span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.975</span>, df<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span>n<span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>)</span>
-<span id="cb12-2">sample_mean_standard_error <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">9800</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">/</span> np.sqrt(n)</span>
-<span id="cb12-3">how_much_we_allow_in_problem_domain <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> how_much_we_allow_on_t_distrib <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">*</span> sample_mean_standard_error</span>
-<span id="cb12-4">how_much_we_allow_in_problem_domain</span>
-<span id="cb12-5">[<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">46_500</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">-</span> how_much_we_allow_in_problem_domain, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">46_500</span> <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> how_much_we_allow_in_problem_domain]</span></code></pre></div></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>[np.float64(42699.95670465797), np.float64(50300.04329534203)]</code></pre>
-</div>
-</div>
-
-
-</section>
-
- ]]></description>
-  <category>ai</category>
-  <guid>https://rcambier.github.io/posts/2021-09-13-hypothesis-testing.html</guid>
-  <pubDate>Sun, 12 Sep 2021 23:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
