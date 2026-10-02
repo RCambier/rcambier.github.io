@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-10-02">
-<meta name="description" content="An iPhone app I am building that learns my sports history, my goals in my own words, my injuries and how I recover, then suggests only the next one to three things to do.">
+<meta name="description" content="An iPhone app that reads sports and health data from many sources, merges it on the phone, and suggests only the next one to three sessions.">
 
 <title>Bounce, what to do next – Rcambier’s Blog</title>
 <style>
@@ -80,13 +80,13 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Bounce, what to do next – Rcambier’s Blog">
-<meta property="og:description" content="An iPhone app I am building that learns my sports history, my goals in my own words, my injuries and how I recover, then suggests only the next one to three things to do.">
+<meta property="og:description" content="An iPhone app that reads sports and health data from many sources, merges it on the phone, and suggests only the next one to three sessions.">
 <meta property="og:image" content="https://rcambier.github.io/posts/bounce-banner.png">
 <meta property="og:site_name" content="Rcambier’s Blog">
 <meta property="og:image:height" content="1000">
 <meta property="og:image:width" content="1600">
 <meta name="twitter:title" content="Bounce, what to do next – Rcambier’s Blog">
-<meta name="twitter:description" content="An iPhone app I am building that learns my sports history, my goals in my own words, my injuries and how I recover, then suggests only the next one to three things to do.">
+<meta name="twitter:description" content="An iPhone app that reads sports and health data from many sources, merges it on the phone, and suggests only the next one to three sessions.">
 <meta name="twitter:image" content="https://rcambier.github.io/posts/bounce-banner.png">
 <meta name="twitter:image-height" content="1000">
 <meta name="twitter:image-width" content="1600">
@@ -148,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
             <p class="subtitle lead">an iPhone sports app that knows the whole context</p>
                   <div>
         <div class="description">
-          An iPhone app I am building that learns my sports history, my goals in my own words, my injuries and how I recover, then suggests only the next one to three things to do.
+          An iPhone app that reads sports and health data from many sources, merges it on the phone, and suggests only the next one to three sessions.
         </div>
       </div>
                           <div class="quarto-categories">
@@ -183,11 +183,11 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><strong>Bounce</strong> is an iPhone app I am building. Most sports apps want a form first, then a plan picked from a menu, and then they follow the plan whatever happens. I wanted the opposite: an app that already knows the whole context, because it reads all the places where my sport already leaves a trace. The sports I did over the years, what I want now in my own words, my injuries and how they healed. From that, it only tells me the next one to three things to do.</p>
+<p><strong>Bounce</strong> is an iPhone app, in testing, that reads a person’s sports and health history from the apps and devices they already use, and suggests only the next one to three sessions. There is no plan to pick and no form to fill in.</p>
 <video autoplay="" loop="" muted="" playsinline="" poster="bounce-mascot.png" aria-label="The Bounce mascot cycling, playing tennis, running, juggling a football, skipping rope, lifting weights and doing yoga" style="display: block; width: 100%; max-width: 400px; margin: 1.5rem auto; border-radius: 16px;">
 <source src="bounce-mascot.mp4" type="video/mp4">
 </video>
-<p>A small round mascot does the sports. Claude does the thinking.</p>
+<p>A round mascot does the sports. Claude does the reasoning.</p>
 <div class="mascot-gifs quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -198,15 +198,29 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>The part I spent the most time on is the data. My watch knows my heart and my sleep. Strava knows who I run with. My calendar knows when I stopped playing tennis. My email knows the gym I pay for and the physio visits after my knee injury. My photos know which sports I did years ago. No single app has all of it, so Bounce connects to everything at once during the setup, while the mascot plugs in the cables, and reads it all in parallel.</p>
+<p><strong>Sources.</strong> The setup connects every source at once and reads them in parallel:</p>
+<ul>
+<li>Apple Health, including what the Apple Watch, Garmin, WHOOP and Oura write to it: workouts, heart rate, heart rate variability, sleep, VO₂ max.</li>
+<li>Strava: activities, their names, and who took part.</li>
+<li>Gmail: gym memberships, clubs, race entries, and care emails such as physio or imaging appointments.</li>
+<li>Google Calendar and the iPhone calendar: free time in the coming week, and past sport events.</li>
+<li>Location and weather: the city, the forecast, the places where workouts start, and gyms, pools and parks nearby.</li>
+<li>Everyday movement, the music played during workouts, and the photo library, where sports in photos are detected on the phone.</li>
+</ul>
+<p>Each source has a page that says what it reads, why, and what Claude receives. Turning a source off disconnects it and deletes what it gave.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="bounce-plugging.gif" class="img-fluid quarto-figure quarto-figure-center figure-img" width="260"></p>
 </figure>
 </div>
-<p>Today that is Apple Health, and through it the Apple Watch, Garmin, WHOOP or Oura. Strava. Gmail and Google Calendar. The iPhone calendar. Location, weather, and the places I train: the park, the club, the gym and what is near it. My everyday movement. The music I play on runs. My photos, where it spots the sports in old pictures, on the phone.</p>
-<p>The sources overlap and disagree. The same run is in Garmin, in Apple Health and in Strava. Two devices measure my sleep and do not agree. So the phone merges everything before Claude sees it. Each session counts once, with the distance from the GPS watch, the heart rate from whoever has it, and the name and the friends from Strava. Each trend follows one device instead of an average of several, and the metric page shows how the others compare. What I say beats what an email suggests, a doctor’s report beats a guess, and newer beats older. When sources disagree in a way that changes the plan, it asks me. Tap any source to see what it reads, why, and what Claude gets. Turn it off and everything it gave is forgotten.</p>
-<p>There is one input bar, and no forms. I type or talk to it: “I feel a bit sick since Sunday”, “the knee is fine again”, “I want to run with friends when it is sunny”. I can also add a photo, a scan of a doctor’s letter, or a file. Voice is transcribed on the phone, so the audio never leaves it.</p>
+<p><strong>Merging.</strong> Sources overlap and disagree. The same run can be in Garmin, Apple Health and Strava, and two devices can report different sleep. The phone merges the data before Claude sees it:</p>
+<ul>
+<li>A session recorded several times counts once. Distance comes from the GPS device, heart rate from the record that has it, and the name and group size from Strava.</li>
+<li>Each metric follows one device, the one with the most recent data, never an average of several. The metric page compares the others and lets the person choose.</li>
+<li>An event in two calendars counts once.</li>
+<li>For health and goals, the person’s own words come first, then medical reports, then emails, then device data. Newer information replaces older. When a conflict changes the plan, the app asks.</li>
+</ul>
+<p><strong>Input.</strong> One input bar takes text, voice, photos, document scans and files: “I feel a bit sick since Sunday”, “the knee is fine again”, “I want to run with friends when it is sunny”. Speech is transcribed on the phone.</p>
 <div class="phone-shots quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -217,9 +231,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>The Today screen is the mascot, one sentence, my goals, and the next sessions. They land in free slots of my calendar, when the weather is good for outside, and at real places: the gym I pay for, the club, the park where I usually run. Each card shows the shape of the session, and one tap sends it to the Apple Watch or the calendar.</p>
-<p>Every morning it compares my heart rate variability, resting heart rate and sleep with my own normal, not with an average person, and says if today is for going hard or going easy. When something hurts, it asks one question a day, “How’s your right shoulder today?”, from 0 to 10. When I say I am sick, it shows up in my health as “probably a cold”, and the plan stays easy until I say I am better.</p>
-<p>When it is not sure, it asks instead of guessing: “In June 2024 you had an ankle X-ray. What happened?” I answer in a sentence, or point it to the report. It only opens a report attached to an email when I tap.</p>
+<p><strong>Today.</strong> One sentence, the goals, and the next one to three sessions. Sessions go in free calendar slots, in good weather for outdoor sports, at places the person uses: the gym they pay for, the club, the usual park. Each card shows the steps and their minutes, and can be sent to the Apple Watch or the calendar.</p>
+<p><strong>Recovery.</strong> Every day, heart rate variability, resting heart rate and sleep are compared with the person’s own baseline to rate readiness. For an injury, the app asks for a pain score from 0 to 10. An illness such as “sick since Sunday” is recorded with its start date, and the plan stays easy until it is over.</p>
+<p><strong>Questions.</strong> When the data is unclear, Claude asks instead of guessing: “In June 2024 you had an ankle X-ray. What happened?” The answer can be a sentence or a document. A report attached to an email is downloaded only after a tap.</p>
 <div class="phone-shots quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -230,9 +244,9 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>The You tab has my trends, with gaps shown as gaps and the device each line comes from. Below that, what it learned about me as short facts, each with where it comes from, and my injuries and illnesses with their dates and how far along the recovery is.</p>
-<p>The data stays on the phone, in one file and in the phone’s own backup. To think, it sends a written summary to Claude, through a small relay that keeps and logs nothing. No exact location, no email addresses, no photos. One screen shows the whole path after each read: what was read, what is kept, the exact text that was sent, and what came back.</p>
-<p>It is in early testing on TestFlight, and for now I am the only tester.</p>
+<p><strong>You.</strong> Trends show gaps where there is no data and name the device behind each line. Below them: short facts the app learned, each with its source, and injuries and illnesses with their dates and recovery.</p>
+<p><strong>Privacy.</strong> The data stays on the phone, in the app’s storage and the phone’s own backup. For each update, the phone sends a written summary to Claude through a relay that stores and logs nothing. The summary has no exact location, no email addresses and no photos. One screen shows each step of the last update: what was read, what is stored, the exact text sent, and the answer.</p>
+<p>Bounce is in testing on TestFlight.</p>
 
 
 
