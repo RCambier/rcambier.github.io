@@ -23,6 +23,20 @@ website:
         file: projects.qmd
     right:
       - about.qmd
+      - icon: linkedin
+        href: https://www.linkedin.com/in/rodolphecambier/
+        aria-label: LinkedIn
+      - icon: github
+        href: https://github.com/RCambier
+        aria-label: GitHub
+  page-footer:
+    center:
+      - text: "Rodolphe Cambier"
+        href: https://rcambier.github.io/about.html
+      - text: "LinkedIn"
+        href: https://www.linkedin.com/in/rodolphecambier/
+      - text: "GitHub"
+        href: https://github.com/RCambier
 format:
   html:
     theme: cosmo
